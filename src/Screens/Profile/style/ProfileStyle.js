@@ -7,7 +7,7 @@ const ProfileStyle = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        gap: 8
+        gap: 10
     },
     background: {
         position: 'absolute',
@@ -17,10 +17,33 @@ const ProfileStyle = StyleSheet.create({
         bottom: 0,
         height: Screen_Size.height
     },
-    header: {
+    Header: {
         backgroundColor: Secondary_Colors.White90,
         width: Screen_Size.width,
         height: "28%"
+    },
+    UserPAndUserNPlace: {
+        backgroundColor: 'blue',
+        height: "70%",
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    UserPAndUserNContent: {
+        backgroundColor: 'cyan',
+        width: "90%",
+        height: "100%"
+    },
+    UserCredentialPlace: {
+        backgroundColor: 'red',
+        height: "30%",
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    UserCredentialContent: {
+        backgroundColor: 'green',
+        width: "90%",
+        height: "100%"
     },
     MainContent: {
         backgroundColor: Secondary_Colors.White90,

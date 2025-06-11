@@ -8,7 +8,15 @@ export default function Profile() {
     return (
         <View style={ProfileStyle.body}>
             <LinearGradient colors={[Primmary_Colors.BluishWhite, Primmary_Colors.Azure]} style={ProfileStyle.background} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} />
-            <View style={ProfileStyle.header}></View>
+            <View style={ProfileStyle.Header}>
+                <View style={ProfileStyle.UserPAndUserNPlace}>
+                    <View style={ProfileStyle.UserPAndUserNContent}>
+                    </View>
+                </View>
+                <View style={ProfileStyle.UserCredentialPlace}>
+                    <View style={ProfileStyle.UserCredentialContent}></View>
+                </View>
+            </View>
             <View style={ProfileStyle.MainContent}></View>
         </View>
     )
