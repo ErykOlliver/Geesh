@@ -1,6 +1,6 @@
 import { useFonts } from 'expo-font';
 import NavContainer from './src/routes';
-
+import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView } from 'react-native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -12,6 +12,12 @@ export default function App() {
     return null;
   }
   return (
-    <NavContainer />
+    <SafeAreaView style={{ flex: 1, paddingBottom: 30 }}>
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : ' undefined'} style={{ flex: 1 }}>
+        <ScrollView contentContainerStyle={{flexGrow: 1}}>
+          <NavContainer />
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 }

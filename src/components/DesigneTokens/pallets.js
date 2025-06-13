@@ -7,4 +7,6 @@ export const Secondary_Colors = {
     White: '#FFFFFF',
     White90: '#F9F9F9',
     White80: '#F3F3F3',
+    White70: '#EEEEEE',
+    Gray: '#5E5E5E'
 }
