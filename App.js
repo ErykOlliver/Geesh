@@ -13,8 +13,8 @@ export default function App() {
   }
   return (
     <SafeAreaView style={{ flex: 1, paddingBottom: 30 }}>
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : ' undefined'} style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={{flexGrow: 1}}>
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
           <NavContainer />
         </ScrollView>
       </KeyboardAvoidingView>

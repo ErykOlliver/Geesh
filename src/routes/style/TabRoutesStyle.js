@@ -11,7 +11,7 @@ const TabRoutesStyle = StyleSheet.create({
         paddingTop: 5,
     },
     TabLabel: {
-        fontSize: Text_Sizes.p,
+        fontSize: Text_Sizes.h5,
         marginTop: 1,
         fontFamily: Geesh_Fonts.InriaBold
     }

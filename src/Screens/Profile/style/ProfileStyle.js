@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size } from "../../../components/DesigneTokens/metrics";
+import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 
@@ -62,8 +62,8 @@ const ProfileStyle = StyleSheet.create({
     },
     IDTxT: {
         fontSize: 24 * (Screen_Size.width / 1080),
-        fontFamily: Geesh_Fonts.InriaRegular,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontFamily: Geesh_Fonts.InriaRegular
     },
     UserCredentialPlace: {
         height: "30%",
@@ -94,7 +94,7 @@ const ProfileStyle = StyleSheet.create({
     },
 
     ENTxT: {
-        fontSize: 16,
+        fontSize: 32 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.InriaRegular
     },
     MainContent: {
@@ -107,7 +107,7 @@ const ProfileStyle = StyleSheet.create({
     },
     MCContainer: {
         width: '90%',
-        height: '100%',
+        height: '69%',
         gap: 8,
         marginTop: 15
     },
@@ -115,9 +115,57 @@ const ProfileStyle = StyleSheet.create({
     SettingsPlace: {
     },
     STTxT: {
-        fontSize: 24,
+        fontSize: Text_Sizes.h3,
         fontFamily: Geesh_Fonts.InriaBold
     },
+    Option: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 10,
+        alignItems: 'center',
+        paddingVertical: 5,
+    },
+    IconPlace: {
+        display: 'flex',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        
+    },
+    GBAndOPTxT: {
+        flex: 1,
+        flexDirection: 'row',
+        borderBottomWidth: 0.5,
+        justifyContent: 'center',
+        paddingVertical: 8,
+        alignItems: 'center'
+    },
+    OpTLabel: {
+        paddingVertical: 8,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'flex-start'
+    },
+    OptionTxT: {
+        fontSize: Text_Sizes.h4,
+        fontFamily: Geesh_Fonts.InriaRegular
+    },
+    GenericButton: {
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        backgroundColor: Secondary_Colors.White70,
+        width: 100,
+        height: 40,
+        borderRadius: 100,
+    },
+    Ball: {
+        width: 40,
+        height: 40,
+        borderRadius: '100%',
+        backgroundColor: Primmary_Colors.Azure
+    }
 
 })
 
