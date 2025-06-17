@@ -1,15 +1,19 @@
-import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Linking } from "react-native"
+import { useState } from "react"
+import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Linking, Switch, Button } from "react-native"
 import { HugeiconsIcon } from "@hugeicons/react-native"
 import { AiPhone01Icon, FlashIcon, Home01Icon, HugeiconsFreeIcons, InfantIcon, InformationCircleIcon, InformationSquareIcon, InstagramIcon, LanguageSkillIcon, LibrariesIcon, Mail01Icon, Moon02Icon, Notification01Icon, PencilEdit01Icon, PlayListAddFreeIcons, RecoveryMailIcon, ResetPasswordIcon, SmartPhone01Icon, SmartPhone02Icon, User02Icon, User03Icon, VersusIcon, ViewFreeIcons, WebDesignIcon } from "@hugeicons/core-free-icons"
 import { Screen_Size } from "../../../components/DesigneTokens/metrics"
 import ProfileStyle from "../style/ProfileStyle"
 import { version } from "react"
 import DropdownComponent from "../../../components/Reuse/DropDown/Dropdown"
+import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 
 export default function MainContent() {
     const OpenInstagram = () => {
         Linking.openURL('https://www.google.com');
     }
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <View style={ProfileStyle.MainContent}>
             <View style={ProfileStyle.MCContainer}>
@@ -25,9 +29,14 @@ export default function MainContent() {
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Night Theme</Text>
                                     </View>
-                                    <TouchableOpacity style={ProfileStyle.GenericButton}>
-                                        <View style={ProfileStyle.Ball}></View>
-                                    </TouchableOpacity>
+                                    <Switch
+                                        trackColor={{ false: Secondary_Colors.White70, true: Secondary_Colors.White70 }}
+                                        thumbColor={isEnabled ? Primmary_Colors.BluishWhite : Primmary_Colors.Azure}
+                                        ios_backgroundColor="#3e3e3e"
+                                        onValueChange={toggleSwitch}
+                                        value={isEnabled}
+                                        style={{}}
+                                    />
                                 </View>
                             </View>
                             <View style={ProfileStyle.Option}>
@@ -38,9 +47,14 @@ export default function MainContent() {
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Notifications</Text>
                                     </View>
-                                    <TouchableOpacity style={ProfileStyle.GenericButton}>
-                                        <View style={ProfileStyle.Ball}></View>
-                                    </TouchableOpacity>
+                                    <Switch
+                                        trackColor={{ false: Secondary_Colors.White70, true: Secondary_Colors.White70 }}
+                                        thumbColor={isEnabled ? Primmary_Colors.BluishWhite : Primmary_Colors.Azure}
+                                        ios_backgroundColor="#3e3e3e"
+                                        onValueChange={toggleSwitch}
+                                        value={isEnabled}
+                                        style={{}}
+                                    />
                                 </View>
                             </View>
                             <View style={ProfileStyle.Option}>
@@ -51,7 +65,7 @@ export default function MainContent() {
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Language</Text>
                                     </View>
-                                    <DropdownComponent/>
+                                    <DropdownComponent />
                                 </View>
                             </View>
                         </View>

@@ -50,13 +50,9 @@ const DropdownComponent = () => {
 export default DropdownComponent;
 
 const styles = StyleSheet.create({
-    container: {
-        fontFamily: Geesh_Fonts.InriaRegular
-    },
     dropdown: {
         height: 40,
         width: 150,
-        gap: 10,
         backgroundColor: Secondary_Colors.White70,
         borderRadius: 8,
         paddingHorizontal: 8,
