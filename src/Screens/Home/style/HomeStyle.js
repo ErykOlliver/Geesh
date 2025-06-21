@@ -95,11 +95,14 @@ export default StyleSheet.create({
     marginBottom: 8,
   },
 Header: {
+    backgroundColor: Secondary_Colors.White,
     display: 'flex',
-    height: "10%",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    height: "9%",
     width: '100%',
-    justifyContent: 'center',
-    marginLeft: '4%',
+    gap: "60%"
 },
 Title: {
     fontSize: 36,

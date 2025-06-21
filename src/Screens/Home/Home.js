@@ -3,12 +3,14 @@ import { View, Text, TouchableOpacity } from "react-native";
 import HomeStyle from "./style/HomeStyle"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Home() {
  return (
       <View style={HomeStyle.Main}>
         <View style={HomeStyle.Header}>
         <Text style={HomeStyle.Title}>Home</Text>
+        <Ionicons name="notifications-outline" size={30} color="black" />
         </View>
       
     <View style={HomeStyle.body}>
