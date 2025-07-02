@@ -1,21 +1,18 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size } from "../../../components/DesigneTokens/metrics";
-import { Secondary_Colors } from "../../../components/DesigneTokens/pallets";
-
+import {Text_Sizes} from "../../../components/DesigneTokens/metrics";
+import { Secondary_Colors,Primmary_Colors } from "../../../components/DesigneTokens/pallets";
+import InriaBold from "../../../components/DesigneTokens/fonts";
 
 export default StyleSheet.create({
     Main: {
-    flex: 1,
     marginTop: 30, 
-    },
-    body: {
     flex: 1,
     alignItems: 'center',
-    gap: 120,
-    backgroundColor: "#e5e5e5",
+    gap: 25,
+    backgroundColor: Secondary_Colors.White70,
     width: "100%",
     height: "100%",
-  },
+    },
   Titulo: {
     flex: 1,
     alignItems: 'center',
@@ -25,7 +22,7 @@ export default StyleSheet.create({
   btn: {
     width: 275,
     height: 75,
-    backgroundColor: "#029FFC",
+    backgroundColor: Primmary_Colors.Azure,
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -35,7 +32,7 @@ export default StyleSheet.create({
     fontSize: 17,
   },
   cor: {
-    color: "#029FFC",
+    color: Primmary_Colors.Azure,
     fontWeight: "bold",
   },
   texto: {
@@ -77,7 +74,7 @@ export default StyleSheet.create({
   },
   valor: {
     fontSize: 16,
-    color: '#029FFC',
+    color: Primmary_Colors.Azure,
     fontWeight: 'bold',
   },
   bateria: {
@@ -105,6 +102,7 @@ Header: {
     gap: "60%"
 },
 Title: {
-    fontSize: 36,
+fontFamily: InriaBold,
+fontSize: Text_Sizes.h1,
 }
 });
