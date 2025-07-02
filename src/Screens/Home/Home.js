@@ -3,14 +3,15 @@ import { View, Text, TouchableOpacity } from "react-native";
 import HomeStyle from "./style/HomeStyle"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"
-import { Ionicons } from '@expo/vector-icons';
+import {Notification01FreeIcons } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react-native";
 
 export default function Home() {
  return (
       <View style={HomeStyle.Main}>
         <View style={HomeStyle.Header}>
         <Text style={HomeStyle.Title}>Home</Text>
-        <Ionicons name="notifications-outline" size={30} color="black" />
+        <HugeiconsIcon icon={Notification01FreeIcons}/>
         </View>
       
     <View style={HomeStyle.body}>
@@ -24,7 +25,7 @@ export default function Home() {
         </View>
         <View style={HomeStyle.row}>
           <Text style={HomeStyle.status}>Availble energy:</Text>
-          <Text style={HomeStyle.valor}>Active</Text>
+          <Text style={HomeStyle.valor}>Availble</Text>
         </View>
         <View style={HomeStyle.row}>
           <Text style={HomeStyle.status}>Usage rate:</Text>

@@ -5,8 +5,8 @@ import { Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 export default StyleSheet.create({
     Main: {
-        flex: 1,
-        marginTop: 30, 
+    flex: 1,
+    marginTop: 30, 
     },
     body: {
     flex: 1,
