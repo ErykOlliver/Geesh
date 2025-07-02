@@ -2,22 +2,27 @@ import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get('screen');
 
-export const Text_Sizes = {
-    h1: 32,
-    h2: 20,
-    body: 16,
-    small: 14,
-    p: 12
+const Text_Sizes = {
+    h1: 100 * (width / 1080),
+    h2: 48 * (width / 1080),
+    h3: 40 * (width / 1080),
+    h4: 36 * (width / 1080),
+    h5: 32 * (width / 1080),
+    body: 16 * (width / 1080),
+    small: 14 * (width / 1080),
+    p: 12 * (width / 1080)
 }
 
-export const Icon_Sizes = {
+const Icon_Sizes = {
     IconXL: 48,
     IconL: 32,
     IconM: 24,
     IconS: 20
 }
 
-export const Screen_Size = {
+const Screen_Size = {
     width: width,
     height: height
 }
+
+export { Screen_Size, Icon_Sizes, Text_Sizes }
