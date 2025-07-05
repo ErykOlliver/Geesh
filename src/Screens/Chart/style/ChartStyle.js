@@ -11,7 +11,7 @@ const ChartStyle = StyleSheet.create({
     },
     HeaderContainer: {
         width: "90%",
-        paddingTop: 60 * (Screen_Size.width / 1080),
+        paddingTop: 70 * (Screen_Size.width / 1080),
         paddingBottom: 15 * (Screen_Size.width / 1080),
         alignItems: 'center',
         display: 'flex',
