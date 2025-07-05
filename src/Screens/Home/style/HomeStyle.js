@@ -1,23 +1,23 @@
 import { StyleSheet } from "react-native";
-import {Text_Sizes} from "../../../components/DesigneTokens/metrics";
-import { Secondary_Colors,Primmary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Text_Sizes } from "../../../components/DesigneTokens/metrics";
+import { Secondary_Colors, Primmary_Colors } from "../../../components/DesigneTokens/pallets";
 import InriaBold from "../../../components/DesigneTokens/fonts";
 
 export default StyleSheet.create({
-    Main: {
-    marginTop: 30, 
+  Main: {
+    marginTop: 30,
     flex: 1,
     alignItems: 'center',
     gap: 25,
     backgroundColor: Secondary_Colors.White70,
     width: "100%",
     height: "100%",
-    },
+  },
   Titulo: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 90,
+    marginTop: 130,
   },
   btn: {
     width: 275,
@@ -26,6 +26,11 @@ export default StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 2, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 10,
   },
   btnText: {
     color: "#fff",
@@ -44,8 +49,8 @@ export default StyleSheet.create({
     height: 25,
     borderRadius: 25,
     backgroundColor: "#6EF768",
-    marginBottom: 20,
-    borderWidth: 3,
+    marginBottom: 13,
+    borderWidth: 2,
     borderColor: "black",
     boxShadow: 'inset 0 0 5px rgba(0,0,0,0.3)'
   },
@@ -84,6 +89,13 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginBottom: 16,
     alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 2, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 10,
   },
   bateriaTitulo: {
     fontSize: 18,
@@ -91,7 +103,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginBottom: 8,
   },
-Header: {
+  Header: {
     backgroundColor: Secondary_Colors.White,
     display: 'flex',
     flexDirection: 'row',
@@ -99,10 +111,15 @@ Header: {
     justifyContent: 'space-evenly',
     height: "9%",
     width: '100%',
-    gap: "60%"
-},
-Title: {
-fontFamily: InriaBold,
-fontSize: Text_Sizes.h1,
-}
+    gap: "56%",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    elevation: 6,
+  },
+  Title: {
+    fontFamily: InriaBold,
+    fontSize: Text_Sizes.h1,
+  }
 });
