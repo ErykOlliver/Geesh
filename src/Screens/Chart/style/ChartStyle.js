@@ -1,8 +1,14 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import MainContent from "../components/MainContent";
 
 const ChartStyle = StyleSheet.create({
+    Body: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: 10
+    },
     Header: {
         display: 'flex',
         justifyContent: 'center',
@@ -32,6 +38,20 @@ const ChartStyle = StyleSheet.create({
     ChartIndicator: {
         fontSize: 36 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.PoppinsLight
+    },
+    MainContent: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: Screen_Size.width,
+    },
+
+    MainContentContainer: {
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 230,
+
     }
 })
 

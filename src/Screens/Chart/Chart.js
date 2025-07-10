@@ -7,7 +7,7 @@ import MainContent from "./components/MainContent"
 
 export default function Chart() {
     return (
-        <View>
+        <View style={ChartStyle.Body}>
             <Header />
             <MainContent />
         </View>
