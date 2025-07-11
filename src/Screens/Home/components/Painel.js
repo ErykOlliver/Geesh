@@ -27,7 +27,7 @@ export default function Painel() {
       </View>
       <View style={HomeStyle.row}>
         <Text style={HomeStyle.status}>Available energy:</Text>
-        <Text style={HomeStyle.valor}>Available</Text>
+        <Text style={HomeStyle.valor}>Active</Text>
       </View>
       <View style={HomeStyle.row}>
         <Text style={HomeStyle.status}>Usage rate:</Text>
