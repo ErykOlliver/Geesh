@@ -50,7 +50,7 @@ const ChartStyle = StyleSheet.create({
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        gap: 230,
+        gap: 250,
 
     }
 })

@@ -68,10 +68,28 @@ export default function BarChart(props: BarChartProps) {
                             fontSize={Text_Sizes.h4}
                             fill="#333"
                             textAnchor="middle"
-                            transform={`rotate(-45, ${x}, ${height + 15})`}
+                            transform={`rotate(-90, ${x}, ${height + 10})`}
                         >
 
                             {label}
+                        </Text>
+                    );
+                })}
+                {props.data.map((value, index) => {
+                    const barHeight = (value / maxvalue) * height;
+                    const x = index * (barWidth + spaceBetweenBars) + (barWidth + 10) / 2;
+                    const y = height - barHeight - 5; // 5px acima da barra
+
+                    return (
+                        <Text
+                            key={`value-${index}`}
+                            x={x}
+                            y={y}
+                            fontSize={Text_Sizes.h6 ?? 10}
+                            fill="#333"
+                            textAnchor="middle"
+                        >
+                            {value}
                         </Text>
                     );
                 })}
