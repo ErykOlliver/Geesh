@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Dimensions, View } from "react-native";
-import Svg, { Line, Rect, Text } from "react-native-svg";
+import Svg, { Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
 import style from "./style/style";
 import { Primmary_Colors } from "../../DesigneTokens/pallets";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts";
@@ -43,7 +43,13 @@ export default function BarChart(props: BarChartProps) {
                         />
                     );
                 })};
-
+                <Defs>
+                    <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
+                        <Stop offset="0%" stopColor={Primmary_Colors.BluishWhite} stopOpacity={0.9} />
+                        <Stop offset="60%" stopColor={Primmary_Colors.Azure} stopOpacity={0.9} />
+                        <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
+                    </LinearGradient>
+                </Defs>
                 {props.data.map((value, index) => {
                     const barHeight = (value / maxvalue) * height
                     const x = index * (barWidth + spaceBetweenBars)
@@ -55,7 +61,7 @@ export default function BarChart(props: BarChartProps) {
                             y={y}
                             width={barWidth + 10}
                             height={height}
-                            fill={Primmary_Colors.Azure}
+                            fill="url(#BCGradient)"
                             rx={15}
                         />
                     );
