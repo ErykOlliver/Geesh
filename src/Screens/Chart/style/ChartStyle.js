@@ -47,11 +47,9 @@ const ChartStyle = StyleSheet.create({
     },
 
     MainContentContainer: {
-        flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        gap: 250,
-
+        alignItems: 'center',
     }
 })
 
