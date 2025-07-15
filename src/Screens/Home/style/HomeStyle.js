@@ -19,6 +19,13 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginTop: 130,
   },
+  btnGradient: {
+  width: '100%',
+  height: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 10,
+},
   btn: {
     width: 275,
     height: 75,
