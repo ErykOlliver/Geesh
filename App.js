@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import NavContainer from './src/routes';
+import Login from './src/Screens/Login/Login';
 
 
 export default function App() {
@@ -12,6 +12,6 @@ export default function App() {
     return null;
   }
   return (
-    <NavContainer />
+    <Login />
   );
 }
