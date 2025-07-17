@@ -1,18 +1,46 @@
 import { StyleSheet } from "react-native";
-import { Text_Sizes } from "../../../components/DesigneTokens/metrics";
+import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import { Secondary_Colors, Primmary_Colors } from "../../../components/DesigneTokens/pallets";
-import InriaBold from "../../../components/DesigneTokens/fonts";
+import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 
 export default StyleSheet.create({
-  Main: {
-    marginTop: 30,
-    flex: 1,
+  //#region Body
+  Body: {
     alignItems: 'center',
-    gap: 25,
-    backgroundColor: Secondary_Colors.White70,
-    width: "100%",
-    height: "100%",
+    width: Screen_Size.width,
+    height: Screen_Size.height,
   },
+  //#endregion
+
+
+  //#region Header
+  Header: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: "#00000",
+    shadowOpacity: 25,
+    elevation: 1.5,
+    width: Screen_Size.width,
+    height: 170 * (Screen_Size.width / 1080),
+    backgroundColor: Secondary_Colors.White,
+  },
+
+  Content: {
+    display: 'flex',
+    paddingTop: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '90%'
+  },
+
+  Title: {
+    fontFamily: Geesh_Fonts.PoppinsRegular,
+    fontSize: Text_Sizes.h1,
+  },
+  //#endregion
+
   Titulo: {
     flex: 1,
     alignItems: 'center',
@@ -20,12 +48,12 @@ export default StyleSheet.create({
     marginTop: 130,
   },
   btnGradient: {
-  width: '100%',
-  height: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 10,
-},
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
   btn: {
     width: 275,
     height: 75,
@@ -110,23 +138,4 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginBottom: 8,
   },
-  Header: {
-    backgroundColor: Secondary_Colors.White,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    height: "9%",
-    width: '100%',
-    gap: "56%",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 6,
-  },
-  Title: {
-    fontFamily: InriaBold,
-    fontSize: Text_Sizes.h1,
-  }
 });

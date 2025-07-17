@@ -6,6 +6,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     'InriaSans-Regular': require('./src/components/fonts/Inria_Sans/InriaSans-Regular.ttf'),
     'InriaSans-Bold': require('./src/components/fonts/Inria_Sans/InriaSans-Bold.ttf'),
+    'Poppins-Regular': require('./src/components/fonts/Poppins/Poppins-Regular.ttf'),
   })
 
   if (!fontsLoaded) {

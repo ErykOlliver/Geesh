@@ -7,7 +7,7 @@ import Active from "./components/Active";
 
 export default function Home() {
   return (
-    <View style={HomeStyle.Main}>
+    <View style={HomeStyle.Body}>
       <Header />
       <Painel />
       <Active />
