@@ -7,7 +7,7 @@ import { Icon_Sizes } from "../../../components/DesigneTokens/metrics";
 import { ZapIcon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 
-export default function Painel() {
+export default function Panel() {
   return (
     <View style={HomeStyle.Painel}>
       <Text style={HomeStyle.bateriaTitulo}>Battery panel</Text>

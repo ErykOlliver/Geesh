@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import { Secondary_Colors, Primmary_Colors } from "../../../components/DesigneTokens/pallets";
 import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import MainContent from "../components/MainContent";
 
 export default StyleSheet.create({
   //#region Body
@@ -22,11 +23,11 @@ export default StyleSheet.create({
     shadowOpacity: 25,
     elevation: 1.5,
     width: Screen_Size.width,
-    height: 170 * (Screen_Size.width / 1080),
+    height: "30%" * (Screen_Size.width / 1080),
     backgroundColor: Secondary_Colors.White,
   },
 
-  Content: {
+  H_Content: {
     display: 'flex',
     paddingTop: 30,
     flexDirection: 'row',
@@ -39,6 +40,23 @@ export default StyleSheet.create({
     fontFamily: Geesh_Fonts.PoppinsRegular,
     fontSize: Text_Sizes.h1,
   },
+  //#endregion
+
+  //#region MainContent
+
+  MainContent: {
+    alignItems: 'center',
+    width: Screen_Size.width,
+    backgroundColor: Secondary_Colors.White80
+  },
+
+  M_Content: {
+    width: "90%",
+    height: '91%',
+    borderWidth: 1,
+    alignItems: 'center'
+  },
+
   //#endregion
 
   Titulo: {
