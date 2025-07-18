@@ -57,6 +57,7 @@ export default StyleSheet.create({
     width: "90%",
     height: '80%',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   //#endregion
@@ -136,52 +137,56 @@ export default StyleSheet.create({
   ActivePlace: {
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    width: '100%'
+    width: '100%',
+    height: 448 * (Screen_Size.width / 1080),
+    paddingHorizontal: 100 * (Screen_Size.width / 1080),
+    paddingVertical: 20 * (Screen_Size.width / 1080),
+    gap: 42 * (Screen_Size.width / 1080)
   },
 
   Indicator: {
-    width: 25,
-    height: 25,
-    borderRadius: 25,
-    backgroundColor: "#6EF768",
-    marginBottom: 13,
-    borderWidth: 2,
+    borderWidth: 1,
+    width: 50 * (Screen_Size.width / 1080),
+    height: 50 * (Screen_Size.width / 1080),
+    borderRadius: 100,
     borderColor: "black",
-    boxShadow: 'inset 0 0 5px rgba(0,0,0,0.3)'
+  },
+
+  IndicatorGradient: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    borderRadius: 100
+  },
+
+  ActiveButton: {
+    alignItems: 'center',
+    width: 650 * (Screen_Size.width / 1080),
+    height: 150 * (Screen_Size.width / 1080),
+    borderRadius: 15 * (Screen_Size.width / 1080),
+    justifyContent: 'center',
   },
 
   ActiveBatteryGradient: {
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
+    position: 'absolute',
+    borderRadius: 15 * (Screen_Size.width / 1080),
   },
-  ActiveButton: {
-    width: 275,
-    height: 75,
-    backgroundColor: Geesh_Primmary_Colors.Azure,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 10,
-  },
+
   ActiveButtonText: {
-    color: "#fff",
-    fontSize: 17,
+    color: Geesh_Secondary_Colors.White,
+    fontSize: Text_Sizes.h4,
+    fontFamily: Geesh_Fonts.InriaBold
   },
+
+  devices: {
+    fontSize: Text_Sizes.h5,
+    fontFamily: Geesh_Fonts.InriaLight
+  },
+
   devicesMark: {
     color: Geesh_Primmary_Colors.Azure,
-    fontWeight: "bold",
-  },
-  devices: {
-    fontSize: 12,
-    paddingTop: 10,
   },
 
   //#endregion
