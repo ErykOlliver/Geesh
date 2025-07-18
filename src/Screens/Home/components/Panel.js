@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import HomeStyle from '../style/HomeStyle';
-import { Primmary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Geesh_Primmary_Colors } from "../../../components/DesigneTokens/pallets";
 import { LinearGradient } from "expo-linear-gradient";
 import { Icon_Sizes } from "../../../components/DesigneTokens/metrics";
 import { EnergyIcon, ZapIcon } from '@hugeicons/core-free-icons';
@@ -10,19 +10,10 @@ import { Shadow } from 'react-native-shadow-2';
 
 export default function Panel() {
   const BatteryGradient = [
-    Primmary_Colors.BluishWhite,
-    Primmary_Colors.Azure
+    Geesh_Primmary_Colors.BluishWhite,
+    Geesh_Primmary_Colors.Azure
   ]
 
-  const StartPos = {
-    x: 1,
-    y: 0
-  }
-
-  const EndPos = {
-    x: 0,
-    y: 0
-  }
   return (
 
     <Shadow distance={3.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.08)' endColor='rgba(0, 0, 0, 0)' style={HomeStyle.Panel}>
@@ -30,8 +21,8 @@ export default function Panel() {
       <View style={HomeStyle.Battery}>
         <View style={HomeStyle.BatteryInnerShadow}></View>
         <View style={{ position: 'absolute', width: '100%', height: '100%', alignItems: 'flex-start' }}>
-          <LinearGradient colors={BatteryGradient} start={StartPos} end={EndPos} style={HomeStyle.BatteryEnergy} />
-        </View> 
+          <LinearGradient colors={BatteryGradient} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} style={HomeStyle.BatteryEnergy} />
+        </View>
         <Image source={require('../../../img/icons/EnergyIcon.png')} style={{ width: Icon_Sizes.Icon5xl, height: Icon_Sizes.Icon5xl }} />
       </View>
 

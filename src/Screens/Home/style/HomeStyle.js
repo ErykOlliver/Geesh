@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
-import { Secondary_Colors, Primmary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Geesh_Secondary_Colors, Geesh_Primmary_Colors } from "../../../components/DesigneTokens/pallets";
 import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 import MainContent from "../components/MainContent";
 
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: Screen_Size.width,
     height: Screen_Size.height,
-    backgroundColor: Secondary_Colors.White80
+    backgroundColor: Geesh_Secondary_Colors.White80
   },
   //#endregion
 
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     height: 270 * (Screen_Size.width / 1080),
     width: Screen_Size.width,
-    backgroundColor: Secondary_Colors.White,
+    backgroundColor: Geesh_Secondary_Colors.White,
   },
 
   H_Content: {
@@ -46,6 +46,7 @@ export default StyleSheet.create({
   Main_Content: {
     alignItems: 'center',
     paddingTop: 30 * (Screen_Size.width / 1080),
+    height: Screen_Size.height,
     justifyContent: 'flex-start',
     width: Screen_Size.width,
     height: Screen_Size.height,
@@ -54,9 +55,8 @@ export default StyleSheet.create({
   M_Content: {
     display: 'flex',
     width: "90%",
-    height: '83.3%',
+    height: '80%',
     alignItems: 'center',
-    justifyContent: 'flex-start'
   },
 
   //#endregion
@@ -66,7 +66,7 @@ export default StyleSheet.create({
   Panel: {
     display: 'flex',
     width: 920 * (Screen_Size.width / 1080),
-    backgroundColor: Secondary_Colors.White,
+    backgroundColor: Geesh_Secondary_Colors.White,
     paddingVertical: 15,
     paddingHorizontal: 20 * (Screen_Size.width / 1080),
     borderRadius: 25 * (Screen_Size.width / 1080),
@@ -131,45 +131,16 @@ export default StyleSheet.create({
 
   //#endregion
 
-  Titulo: {
-    flex: 1,
+  //#region Active Place
+
+  ActivePlace: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 130,
+    borderWidth: 1,
+    width: '100%'
   },
-  btnGradient: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  btn: {
-    width: 275,
-    height: 75,
-    backgroundColor: Primmary_Colors.Azure,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 10,
-  },
-  btnText: {
-    color: "#fff",
-    fontSize: 17,
-  },
-  cor: {
-    color: Primmary_Colors.Azure,
-    fontWeight: "bold",
-  },
-  texto: {
-    fontSize: 12,
-    paddingTop: 10,
-  },
-  circulo: {
+
+  Indicator: {
     width: 25,
     height: 25,
     borderRadius: 25,
@@ -179,4 +150,40 @@ export default StyleSheet.create({
     borderColor: "black",
     boxShadow: 'inset 0 0 5px rgba(0,0,0,0.3)'
   },
+
+  ActiveBatteryGradient: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
+  ActiveButton: {
+    width: 275,
+    height: 75,
+    backgroundColor: Geesh_Primmary_Colors.Azure,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 2, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 10,
+  },
+  ActiveButtonText: {
+    color: "#fff",
+    fontSize: 17,
+  },
+  devicesMark: {
+    color: Geesh_Primmary_Colors.Azure,
+    fontWeight: "bold",
+  },
+  devices: {
+    fontSize: 12,
+    paddingTop: 10,
+  },
+
+  //#endregion
+
 });
