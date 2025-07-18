@@ -25,7 +25,7 @@ export default function Panel() {
   }
   return (
 
-    <Shadow distance={5} offset={[0, 2]} startColor='rgba(0, 0, 0, 0.15)' endColor='rgba(0, 0, 0, 0)' style={HomeStyle.Panel}>
+    <Shadow distance={3.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.08)' endColor='rgba(0, 0, 0, 0)' style={HomeStyle.Panel}>
       <Text style={HomeStyle.BatteryTitle}>Battery Panel</Text>
       <View style={HomeStyle.Battery}>
         <View style={HomeStyle.BatteryInnerShadow}></View>

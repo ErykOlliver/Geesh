@@ -11,6 +11,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: Screen_Size.width,
     height: Screen_Size.height,
+    backgroundColor: Secondary_Colors.White80
   },
   //#endregion
 
@@ -20,10 +21,7 @@ export default StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: "#00000",
     height: 270 * (Screen_Size.width / 1080),
-    shadowOpacity: 25,
-    elevation: 5,
     width: Screen_Size.width,
     backgroundColor: Secondary_Colors.White,
   },
@@ -51,7 +49,6 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     width: Screen_Size.width,
     height: Screen_Size.height,
-    backgroundColor: Secondary_Colors.White80
   },
 
   M_Content: {
