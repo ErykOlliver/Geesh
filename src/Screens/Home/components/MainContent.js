@@ -6,7 +6,7 @@ import Active from "./Active";
 
 export default function MainContent() {
     return (
-        <View style={HomeStyle.MainContent}>
+        <View style={HomeStyle.Main_Content}>
             <View style={HomeStyle.M_Content}>
                 <Panel />
                 <Active />

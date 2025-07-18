@@ -2,7 +2,7 @@ import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get('screen');
 
-const Text_Sizes = {
+const Geesh_Text_Size = {
     h1: 100 * (width / 1080),
     h2: 48 * (width / 1080),
     h3: 40 * (width / 1080),
@@ -13,7 +13,7 @@ const Text_Sizes = {
     p: 12 * (width / 1080)
 }
 
-const Icon_Sizes = {
+const Geesh_Icon_Size = {
     Icon5xl: 110 * (width / 1080),
     Icon4xl: 94 * (width / 1080),
     Icon3xl: 76 * (width / 1080),
@@ -25,9 +25,9 @@ const Icon_Sizes = {
     IconS: 20 * (width / 1080)
 }
 
-const Screen_Size = {
+const Geesh_Screen_Size = {
     width: width,
     height: height
 }
 
-export { Screen_Size, Icon_Sizes, Text_Sizes }
+export { Geesh_Screen_Size as Screen_Size, Geesh_Icon_Size as Icon_Sizes, Geesh_Text_Size as Text_Sizes }
