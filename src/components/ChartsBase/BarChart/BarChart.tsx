@@ -12,10 +12,12 @@ type BarChartProps = {
 }
 
 const Aspect_Ration = 9 / 16;
-const maxvalue = 250;
+
+const maxValue = 250;
+const step = 50;
+const barWidth = 13;
 const spaceBetweenBars = 22;
 const chartHeight = 250;
-const barWidth = 13;
 const chartWidth = Screen_Size.width - 40;
 
 
@@ -24,38 +26,37 @@ export default function BarChart(props: BarChartProps) {
     const height = width * Aspect_Ration;
     const fontSize = 15;
 
+    const valueToY = (value: number) => height - (value / maxValue) * height;
+
+    const yTicks = [];
+    for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
-        <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Svg width={width} height={height}>
-                {props.data.map((value, index) => {
-                    const barHeight = (value / 100) * height; // Normalizando a altura da barra (0-100)
-                    const x = index * (barWidth + spaceBetweenBars) + barWidth / 2;
-                    const y = height - barHeight; // Posição da barra
-                    const labelX = x + barWidth / 2 + 10; // desloca o texto para o lado da barra
-                    const labelY = y + barHeight / 2; // centraliza o texto na altura da barra
-
+        <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+            <Svg width={fontSize * 2.5} height={height + 10}>
+                {yTicks.map((tick, index) => {
+                    const y = valueToY(tick)
                     return (
                         <Text
                             key={index}
-                            x={labelX}
-                            y={labelY}
+                            x={28}
+                            y={y}
                             fontSize={fontSize}
                             fill="#1c1c1c"
-                            textAnchor="start"
+                            textAnchor="end"
                             alignmentBaseline="middle"
                             fontFamily={Geesh_Fonts.InriaRegular}
                         >
-                            {value}
+                            {tick}
                         </Text>
                     );
                 })}
             </Svg>
 
-            <View style={{ marginLeft: 10, marginRight: 10 }} >
+            <View>
                 {/* Main */}
-                <View style={{ display: 'flex', flexDirection: 'row-reverse' }}>
-                    <Svg width={width} height={height}>
+                <View style={{ display: 'flex' }}>
+                    <Svg width={width - 40} height={height}>
                         {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
                             const y = height * ratio;
                             return (
@@ -79,7 +80,7 @@ export default function BarChart(props: BarChartProps) {
                             </LinearGradient>
                         </Defs>
                         {props.data.map((value, index) => {
-                            const barHeight = (value / maxvalue) * height
+                            const barHeight = (value / maxValue) * height
                             const x = index * (barWidth + spaceBetweenBars)
                             const y = height - barHeight;
                             return (
@@ -87,7 +88,7 @@ export default function BarChart(props: BarChartProps) {
                                     key={index}
                                     x={x}
                                     y={y}
-                                    width={barWidth + 10}
+                                    width={barWidth + 15}
                                     height={height}
                                     fill="url(#BCGradient)"
                                     rx={15}
@@ -95,7 +96,7 @@ export default function BarChart(props: BarChartProps) {
                             );
                         })}
                     </Svg>
-                    <Svg width={15} height={height}>
+                    <Svg width={width - 50} height={height}>
                         {props.data.map((value, index) => {
                             const x = 20
                             const y = height * value;
@@ -117,7 +118,7 @@ export default function BarChart(props: BarChartProps) {
                     </Svg>
                 </View>
                 <View>
-                    <Svg width={width} height={height + 30}>
+                    <Svg width={chartWidth} height={height + 50}>
                         {props.labels.map((label, index) => {
                             const x = index * (barWidth + spaceBetweenBars) + barWidth / 2;
                             const labelY = height + 20;
@@ -126,7 +127,7 @@ export default function BarChart(props: BarChartProps) {
                                     key={index}
                                     x={x + 22}
                                     y={labelY}
-                                    fontSize={11}
+                                    fontSize={Text_Sizes.h5}
                                     fill="#333"
                                     textAnchor="middle"
                                     transform={`rotate(-45, ${x + 22}, ${labelY})`}
