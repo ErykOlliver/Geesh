@@ -32,33 +32,35 @@ export default function BarChart(props: BarChartProps) {
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
-        <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-            <Svg width={fontSize * 2.5} height={height + 10}>
-                {yTicks.map((tick, index) => {
-                    const y = valueToY(tick)
-                    return (
-                        <Text
-                            key={index}
-                            x={28}
-                            y={y}
-                            fontSize={fontSize}
-                            fill="#1c1c1c"
-                            textAnchor="end"
-                            alignmentBaseline="middle"
-                            fontFamily={Geesh_Fonts.InriaRegular}
-                        >
-                            {tick}
-                        </Text>
-                    );
-                })}
-            </Svg>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', borderWidth: 1, borderColor: 'red', height: chartHeight + 5 }}>
+            <View style={{ borderWidth: 2, borderColor: 'red' }}>
+                <Svg width={fontSize * 2.5} height={height + 10}>
+                    {yTicks.map((tick, index) => {
+                        const y = valueToY(tick)
+                        return (
+                            <Text
+                                key={index}
+                                x={28}
+                                y={y}
+                                fontSize={fontSize}
+                                fill="#1c1c1c"
+                                textAnchor="end"
+                                alignmentBaseline="middle"
+                                fontFamily={Geesh_Fonts.InriaRegular}
+                            >
+                                {tick}
+                            </Text>
+                        );
+                    })}
+                </Svg>
+            </View>
 
-            <View>
+            <View style={{ borderWidth: 2, height: chartHeight + 5 }}>
                 {/* Main */}
-                <View style={{ display: 'flex' }}>
-                    <Svg width={width - 40} height={height}>
+                <View style={{ display: 'flex', borderWidth: 2, borderColor: 'green' }}>
+                    <Svg width={width - 40} height={chartHeight}>
                         {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
-                            const y = height * ratio;
+                            const y = chartHeight * ratio;
                             return (
                                 <Line
                                     key={index}
@@ -117,7 +119,7 @@ export default function BarChart(props: BarChartProps) {
                         })}
                     </Svg>
                 </View>
-                <View>
+                <View style={{ borderWidth: 2, borderColor: 'pink' }}>
                     <Svg width={chartWidth} height={height + 50}>
                         {props.labels.map((label, index) => {
                             const x = index * (barWidth + spaceBetweenBars) + barWidth / 2;
