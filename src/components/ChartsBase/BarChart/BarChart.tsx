@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Dimensions, View } from "react-native";
+import { Dimensions, View, } from "react-native";
 import Svg, { Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
 import { Primmary_Colors } from "../../DesigneTokens/pallets";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts";
 import { Screen_Size, Text_Sizes } from "../../DesigneTokens/metrics";
+import ValueInLeft from "./components/ValueInLeft";
 
 
 type BarChartProps = {
@@ -26,33 +27,13 @@ export default function BarChart(props: BarChartProps) {
     const height = width * Aspect_Ration;
     const fontSize = Text_Sizes.body;
 
-    const valueToY = (value: number) => chartHeight - (value / maxValue) * chartHeight;
-
     const yTicks = [];
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
         <View style={{ flexDirection: 'row', width: '100%', justifyContent: 'center', borderWidth: 1, borderColor: 'cyan', height: chartHeight + 5 }}>
             <View style={{ borderWidth: 2, borderColor: 'purple', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Svg width={fontSize * 3.5} height={height + 10}>
-                    {yTicks.map((tick, index) => {
-                        const y = valueToY(tick)
-                        return (
-                            <Text
-                                key={index}
-                                x={30}
-                                y={y}
-                                fontSize={fontSize}
-                                fill="#1c1c1c"
-                                textAnchor="end"
-                                alignmentBaseline="middle"
-                                fontFamily={Geesh_Fonts.InriaRegular}
-                            >
-                                {tick}
-                            </Text>
-                        );
-                    })}
-                </Svg>
+                <ValueInLeft data={yTicks} />
             </View>
 
             <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'blue', width: '100%' }}>
