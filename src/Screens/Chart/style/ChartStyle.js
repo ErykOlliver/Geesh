@@ -40,16 +40,21 @@ const ChartStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.PoppinsLight
     },
     MainContent: {
-        flex: 1,
+        borderWidth: 5,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         width: Screen_Size.width,
+        height: '100%'
     },
 
     MainContentContainer: {
         display: 'flex',
-        flexDirection: 'column',
+        justifyContent: 'flex-start',
         alignItems: 'center',
+        width: '90%',
+        height: '81%',
+        flexDirection: 'column',
+        borderWidth: 1
     }
 })
 
