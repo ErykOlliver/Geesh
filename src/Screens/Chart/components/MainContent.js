@@ -10,7 +10,7 @@ export default function MainContent() {
     return (
         <View style={ChartStyle.MainContent}>
             <View style={ChartStyle.MainContentContainer}>
-                <BarChart data={data} labels={labels} />
+                <BarChart title="General Energy Usage" data={data} labels={labels} />
             </View>
         </View>
     )
