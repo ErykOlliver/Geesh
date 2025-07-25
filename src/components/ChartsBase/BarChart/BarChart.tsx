@@ -22,7 +22,7 @@ const barWidth = 20;
 
 
 export default function BarChart(props: BarChartProps) {
-    const [ChartSize, SetChartSize] = useState({ width: 0, height: 0 })
+    const [ChartSize, SetChartSize] = useState({ width: 455, height: 0 })
     const monthsInBottom = 3;
     const sizeOfTextMonths = Text_Sizes.h5;
     const sizeBottomBarOfMonths = sizeOfTextMonths * monthsInBottom;
@@ -34,25 +34,25 @@ export default function BarChart(props: BarChartProps) {
     return (
         <View
             style={{
-                borderWidth: 1,
-                borderColor: 'cyan',
-                width: ChartSize.width,
+                width: '100%',
                 height: chartHeight
             }}
             onLayout={(event) => {
                 const { width, height } = event.nativeEvent.layout;
-                SetChartSize({ width, height })
+                if (ChartSize.width !== width || ChartSize.height !== height) {
+                    SetChartSize({ width, height });
+                }
             }}>
 
             <View style={{ display: 'flex', flexDirection: 'row', width: '100%', height: '100%' }}>
 
 
-                <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: ChartSize.height }}>
+                <View style={{ display: 'flex', paddingHorizontal: 5, alignItems: 'center', justifyContent: 'center', height: ChartSize.height }}>
                     <ValueInLeft data={yTicks.reverse()} />
                 </View>
 
-                <View style={{ borderWidth: 1, height: ChartSize.height, borderColor: 'red', maxWidth: '100%' }}>
-                    <Svg width={ChartSize.width} height={ChartSize.height}>
+                <View style={{ height: ChartSize.height, width: ChartSize.width - 38, overflow: 'hidden' }}>
+                    <Svg width='100%' height='100%'>
                         {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
                             const y = ChartSize.height * ratio;
                             return (
@@ -77,8 +77,8 @@ export default function BarChart(props: BarChartProps) {
                         </Defs>
                         {props.data.map((value, index) => {
                             const totalBars = props.data.length;
-                            const dynamicSpacing = 8;
-                            const dynamicBarWidth = (ChartSize.width - (totalBars - 1) * dynamicSpacing) / totalBars;
+                            const dynamicSpacing = 5;
+                            const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
 
                             const barHeight = (value / maxValue) * ChartSize.height;
                             const x = index * (dynamicBarWidth + dynamicSpacing);
@@ -90,9 +90,9 @@ export default function BarChart(props: BarChartProps) {
                                     x={x}
                                     y={y}
                                     width={dynamicBarWidth}
-                                    height={barHeight} 
+                                    height={ChartSize.height}
                                     fill="url(#BCGradient)"
-                                    rx={4} 
+                                    rx={8}
                                 />
                             );
                         })}
