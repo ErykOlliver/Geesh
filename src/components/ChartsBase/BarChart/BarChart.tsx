@@ -12,20 +12,21 @@ type BarChartProps = {
     labels: string[];
 }
 
-const Aspect_Ration = 9 / 16;
 
 const maxValue = 250;
 const step = 50;
 const barWidth = 13;
 const spaceBetweenBars = 22;
 const chartHeight = 250;
-const chartWidth = Screen_Size.width - 40;
+const chartWidth = 365;
 
 
 export default function BarChart(props: BarChartProps) {
-    const [width, setWidth] = useState(Screen_Size.width);
-    const height = width * Aspect_Ration;
-    const fontSize = Text_Sizes.body;
+    const [ChartSize, SetChartSize] = useState({ width: 0, height: 0 })
+    const monthsInBottom = 3;
+    const sizeOfTextMonths = Text_Sizes.h5;
+    const sizeBottomBarOfMonths = sizeOfTextMonths * monthsInBottom;
+
 
     const yTicks = [];
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
@@ -36,9 +37,11 @@ export default function BarChart(props: BarChartProps) {
                 <ValueInLeft data={yTicks.reverse()} />
             </View>
 
-            <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'red', width: '100%' }}>
-                {/* Main */}
-                <Svg width={chartWidth} height={chartHeight}>
+            <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'red', width: '100%' }} onLayout={(event) => {
+                const { width, height } = event.nativeEvent.layout;
+                SetChartSize({ width, height })
+            }}>
+                <Svg width={ChartSize.width} height={ChartSize.height}>
                     {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
                         const y = chartHeight * ratio;
                         return (
@@ -62,33 +65,33 @@ export default function BarChart(props: BarChartProps) {
                         </LinearGradient>
                     </Defs>
                     {props.data.map((value, index) => {
-                        const barHeight = (value / maxValue) * height
+                        const barHeight = (value / maxValue) * ChartSize.height
                         const x = index * (barWidth + spaceBetweenBars)
-                        const y = height - barHeight;
+                        const y = ChartSize.height - barHeight;
                         return (
                             <Rect
                                 key={index}
                                 x={x}
                                 y={y}
                                 width={barWidth + 15}
-                                height={height}
+                                height={ChartSize.height}
                                 fill="url(#BCGradient)"
                                 rx={15}
                             />
                         );
                     })}
                 </Svg>
-                <View style={{ borderWidth: 2, borderColor: 'pink' }}>
-                    <Svg width={chartWidth} height={height + 50}>
+                <View style={{ borderWidth: 2, borderColor: 'pink', width: '100%', height: sizeBottomBarOfMonths }}>
+                    <Svg width={ChartSize.width} height={sizeBottomBarOfMonths}>
                         {props.labels.map((label, index) => {
                             const x = index * (barWidth + spaceBetweenBars) + barWidth / 2;
-                            const labelY = height + 20;
+                            const labelY = ChartSize.height + 20;
                             return (
                                 <Text
                                     key={index}
                                     x={x + 22}
                                     y={labelY}
-                                    fontSize={Text_Sizes.h5}
+                                    fontSize={sizeOfTextMonths}
                                     fill="#333"
                                     textAnchor="middle"
                                     transform={`rotate(-45, ${x + 22}, ${labelY})`}
