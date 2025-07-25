@@ -24,23 +24,23 @@ const chartWidth = Screen_Size.width - 40;
 export default function BarChart(props: BarChartProps) {
     const [width, setWidth] = useState(Screen_Size.width);
     const height = width * Aspect_Ration;
-    const fontSize = 15;
+    const fontSize = Text_Sizes.body;
 
-    const valueToY = (value: number) => height - (value / maxValue) * height;
+    const valueToY = (value: number) => chartHeight - (value / maxValue) * chartHeight;
 
     const yTicks = [];
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
-        <View style={{ flexDirection: 'row', justifyContent: 'center', borderWidth: 1, borderColor: 'red', height: chartHeight + 5 }}>
-            <View style={{ borderWidth: 2, borderColor: 'red' }}>
-                <Svg width={fontSize * 2.5} height={height + 10}>
+        <View style={{ flexDirection: 'row', width: '100%', justifyContent: 'center', borderWidth: 1, borderColor: 'cyan', height: chartHeight + 5 }}>
+            <View style={{ borderWidth: 2, borderColor: 'purple', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Svg width={fontSize * 3.5} height={height + 10}>
                     {yTicks.map((tick, index) => {
                         const y = valueToY(tick)
                         return (
                             <Text
                                 key={index}
-                                x={28}
+                                x={30}
                                 y={y}
                                 fontSize={fontSize}
                                 fill="#1c1c1c"
@@ -55,7 +55,7 @@ export default function BarChart(props: BarChartProps) {
                 </Svg>
             </View>
 
-            <View style={{ borderWidth: 2, height: chartHeight + 5 }}>
+            <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'blue', width: '100%' }}>
                 {/* Main */}
                 <View style={{ display: 'flex', borderWidth: 2, borderColor: 'green' }}>
                     <Svg width={width - 40} height={chartHeight}>
