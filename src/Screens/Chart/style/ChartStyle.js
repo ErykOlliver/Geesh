@@ -40,7 +40,6 @@ const ChartStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.PoppinsLight
     },
     MainContent: {
-        borderWidth: 5,
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: Screen_Size.width,
@@ -54,7 +53,7 @@ const ChartStyle = StyleSheet.create({
         width: '90%',
         height: '81%',
         flexDirection: 'column',
-        borderWidth: 1
+        borderWidth: 1,
     }
 })
 
