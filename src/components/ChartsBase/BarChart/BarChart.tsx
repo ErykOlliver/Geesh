@@ -31,75 +31,53 @@ export default function BarChart(props: BarChartProps) {
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
-        <View style={{ flexDirection: 'row', width: '100%', justifyContent: 'center', borderWidth: 1, borderColor: 'cyan', height: chartHeight + 5 }}>
-            <View style={{ borderWidth: 2, borderColor: 'purple', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', borderWidth: 1, borderColor: 'cyan', height: chartHeight + 5 }}>
+            <View style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ValueInLeft data={yTicks.reverse()} />
             </View>
 
-            <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'blue', width: '100%' }}>
+            <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'red', width: '100%' }}>
                 {/* Main */}
-                <View style={{ display: 'flex', borderWidth: 2, borderColor: 'green' }}>
-                    <Svg width={width - 40} height={chartHeight}>
-                        {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
-                            const y = chartHeight * ratio;
-                            return (
-                                <Line
-                                    key={index}
-                                    x1={0}
-                                    y1={y}
-                                    x2={width}
-                                    y2={y}
-                                    stroke="#1c1c1c"
-                                    strokeOpacity={0.3}
-                                    strokeWidth="0.5"
-                                />
-                            );
-                        })};
-                        <Defs>
-                            <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Primmary_Colors.BluishWhite} stopOpacity={0.9} />
-                                <Stop offset="60%" stopColor={Primmary_Colors.Azure} stopOpacity={0.9} />
-                                <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
-                            </LinearGradient>
-                        </Defs>
-                        {props.data.map((value, index) => {
-                            const barHeight = (value / maxValue) * height
-                            const x = index * (barWidth + spaceBetweenBars)
-                            const y = height - barHeight;
-                            return (
-                                <Rect
-                                    key={index}
-                                    x={x}
-                                    y={y}
-                                    width={barWidth + 15}
-                                    height={height}
-                                    fill="url(#BCGradient)"
-                                    rx={15}
-                                />
-                            );
-                        })}
-                    </Svg>
-                    <Svg width={width - 50} height={height}>
-                        {props.data.map((value, index) => {
-                            const x = 20
-                            const y = height * value;
-
-                            return (
-                                <Text
-                                    key={index}
-                                    x={x}
-                                    y={y}
-                                    fontSize={Text_Sizes.h5 ?? 10}
-                                    fontWeight="bold"
-                                    fill="#333"
-                                    textAnchor="middle"
-                                >
-                                    {value}
-                                </Text>
-                            );
-                        })}
-                    </Svg>
-                </View>
+                <Svg width={chartWidth} height={chartHeight}>
+                    {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
+                        const y = chartHeight * ratio;
+                        return (
+                            <Line
+                                key={index}
+                                x1={0}
+                                y1={y}
+                                x2={chartWidth}
+                                y2={y}
+                                stroke="#1c1c1c"
+                                strokeOpacity={0.3}
+                                strokeWidth="0.5"
+                            />
+                        );
+                    })};
+                    <Defs>
+                        <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
+                            <Stop offset="0%" stopColor={Primmary_Colors.BluishWhite} stopOpacity={0.9} />
+                            <Stop offset="60%" stopColor={Primmary_Colors.Azure} stopOpacity={0.9} />
+                            <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
+                        </LinearGradient>
+                    </Defs>
+                    {props.data.map((value, index) => {
+                        const barHeight = (value / maxValue) * height
+                        const x = index * (barWidth + spaceBetweenBars)
+                        const y = height - barHeight;
+                        return (
+                            <Rect
+                                key={index}
+                                x={x}
+                                y={y}
+                                width={barWidth + 15}
+                                height={height}
+                                fill="url(#BCGradient)"
+                                rx={15}
+                            />
+                        );
+                    })}
+                </Svg>
                 <View style={{ borderWidth: 2, borderColor: 'pink' }}>
                     <Svg width={chartWidth} height={height + 50}>
                         {props.labels.map((label, index) => {
