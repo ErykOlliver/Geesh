@@ -33,7 +33,7 @@ export default function BarChart(props: BarChartProps) {
     return (
         <View style={{ flexDirection: 'row', width: '100%', justifyContent: 'center', borderWidth: 1, borderColor: 'cyan', height: chartHeight + 5 }}>
             <View style={{ borderWidth: 2, borderColor: 'purple', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <ValueInLeft data={yTicks} />
+                <ValueInLeft data={yTicks.reverse()} />
             </View>
 
             <View style={{ borderWidth: 1, height: chartHeight + 5, borderColor: 'blue', width: '100%' }}>

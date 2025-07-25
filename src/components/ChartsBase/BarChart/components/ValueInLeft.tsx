@@ -1,12 +1,14 @@
 import { Text, View } from "react-native";
+import { Geesh_Fonts } from "../../../DesigneTokens/fonts";
+import { Text_Sizes } from "../../../DesigneTokens/metrics";
 
 export default function ValueInLeft({ data }) {
     return (
-        <View style={{ borderWidth: 1, width: '100%', height: '100%', justifyContent: 'space-between' }}>
+        <View style={{ width: '100%', height: '100%', justifyContent: 'space-between' }}>
             {data.map((value, index) => (
                 <Text
                     key={index}
-                    style={{ textAlign: 'center' }}
+                    style={{ textAlign: 'center', fontFamily: Geesh_Fonts.InriaRegular, fontSize: Text_Sizes.h5 }}
                 >
                     {value}
                 </Text>
