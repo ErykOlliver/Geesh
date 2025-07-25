@@ -53,7 +53,6 @@ const ChartStyle = StyleSheet.create({
         width: '90%',
         height: '81%',
         flexDirection: 'column',
-        borderWidth: 1,
     }
 })
 
