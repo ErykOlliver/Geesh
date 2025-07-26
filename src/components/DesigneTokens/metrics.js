@@ -2,19 +2,6 @@ import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get('screen');
 
-const Generic_Sizes = {
-    widths: {
-        'w-1': 100 * (width / 1080),
-        'w-2': 200 * (width / 1080),
-        'w-3': 300 * (width / 1080),
-        'w-4': 400 * (width / 1080),
-    },
-
-    heights: {
-
-    }
-}
-
 const Text_Sizes = {
     h1: 100 * (width / 1080),
     h2: 48 * (width / 1080),
@@ -26,11 +13,16 @@ const Text_Sizes = {
     p: 12 * (width / 1080)
 }
 
-const Icon_Sizes = {
-    IconXL: 48,
-    IconL: 32,
-    IconM: 24,
-    IconS: 20
+const Geesh_Icon_Size = {
+    Icon5xl: 110 * (width / 1080),
+    Icon4xl: 94 * (width / 1080),
+    Icon3xl: 76 * (width / 1080),
+    Icon2xl: 68 * (width / 1080),
+    Icon1xl: 54 * (width / 1080),
+    IconXL: 48 * (width / 1080),
+    IconL: 32 * (width / 1080),
+    IconM: 24 * (width / 1080),
+    IconS: 20 * (width / 1080)
 }
 
 const Screen_Size = {
@@ -38,4 +30,4 @@ const Screen_Size = {
     height: height
 }
 
-export { Screen_Size, Icon_Sizes, Text_Sizes, Generic_Sizes }
+export { Screen_Size, Geesh_Icon_Size, Text_Sizes }

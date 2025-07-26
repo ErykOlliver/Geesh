@@ -11,6 +11,8 @@ export default function MainContent() {
         <View style={ChartStyle.MainContent}>
             <View style={ChartStyle.MainContentContainer}>
                 <BarChart title="General Energy Usage" data={data} labels={labels} />
+                <BarChart title="General Energy Usage" data={data} labels={labels} />
+                <BarChart title="General Energy Usage" data={data} labels={labels} />
             </View>
         </View>
     )

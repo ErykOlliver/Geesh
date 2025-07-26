@@ -50,6 +50,7 @@ const ChartStyle = StyleSheet.create({
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
+        gap: 100 * (Screen_Size.width / 1080),
         width: '90%',
         height: '81%',
         flexDirection: 'column',
