@@ -4,7 +4,7 @@ import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import { HugeiconsIcon } from "@hugeicons/react-native";
 import { FilterVerticalIcon } from "@hugeicons/core-free-icons";
-
+import BaseFilter from "../../Reuse/FilterBase/BaseFilter.tsx";
 
 
 type BarChartProps = {
@@ -26,7 +26,7 @@ export default function BarChart(props: BarChartProps) {
                     {props.title}
                 </Text>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
-                    <HugeiconsIcon icon={FilterVerticalIcon} />
+                    <BaseFilter title="Filter" />
                 </View>
             </View>
             <BarChartBase data={props.data} labels={props.labels} />
