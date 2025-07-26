@@ -48,12 +48,18 @@ const ChartStyle = StyleSheet.create({
 
     MainContentContainer: {
         display: 'flex',
-        justifyContent: 'flex-start',
         alignItems: 'center',
-        gap: 100 * (Screen_Size.width / 1080),
         width: '90%',
-        height: '81%',
+        height: '77%',
         flexDirection: 'column',
+    },
+    ChartsPlace: {
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+        paddingBottom: 100 * (Screen_Size.width / 1080),
+        flexDirection: 'column',
+        gap: 100 * (Screen_Size.width / 1080),
     }
 })
 

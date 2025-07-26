@@ -19,7 +19,7 @@ const chartHeight = 250;
 
 
 export default function BarChartBase(props: BarChartProps) {
-    const [ChartSize, SetChartSize] = useState({ width: 455, height: 0 })
+    const [ChartSize, SetChartSize] = useState({ width: 0, height: 0 })
     const monthsInBottom = 3;
     const sizeOfTextMonths = Text_Sizes.h5;
     const sizeBottomBarOfMonths = sizeOfTextMonths * monthsInBottom;

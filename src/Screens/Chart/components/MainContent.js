@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text } from "react-native"
+import { View, Text, ScrollView } from "react-native"
 import ChartStyle from "../style/ChartStyle.js";
 import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 
@@ -10,10 +10,14 @@ export default function MainContent() {
     return (
         <View style={ChartStyle.MainContent}>
             <View style={ChartStyle.MainContentContainer}>
-                <BarChart title="General Energy Usage" data={data} labels={labels} />
-                <BarChart title="General Energy Usage" data={data} labels={labels} />
-                <BarChart title="General Energy Usage" data={data} labels={labels} />
+                <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
+                    <View style={ChartStyle.ChartsPlace}>
+                        <BarChart title="General Energy Usage" data={data} labels={labels} />
+                        <BarChart title="General Energy Usage" data={data} labels={labels} />
+                        <BarChart title="General Energy Usage" data={data} labels={labels} />
+                    </View>
+                </ScrollView>
             </View>
-        </View>
+        </View >
     )
 }
