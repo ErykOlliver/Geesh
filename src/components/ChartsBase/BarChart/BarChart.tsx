@@ -3,7 +3,6 @@ import BarChartBase from "./BarChartBase.tsx";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import DropdownComponent from "../../Reuse/DropDownBase/DropDown.tsx";
 import { FilterVerticalIcon } from "@hugeicons/core-free-icons";
 
 
@@ -28,7 +27,6 @@ export default function BarChart(props: BarChartProps) {
                 </Text>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
                     <HugeiconsIcon icon={FilterVerticalIcon} />
-                    <DropdownComponent op={Options} />
                 </View>
             </View>
             <BarChartBase data={props.data} labels={props.labels} />
