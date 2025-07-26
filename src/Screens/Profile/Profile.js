@@ -1,6 +1,6 @@
 import React from "react"
 import { View, Text } from "react-native"
-import ProfileStyle from "./style/ProfileStyle"
+import ProfileStyle from "./style/ProfileStyle.js"
 
 export default function Profile() {
     return (

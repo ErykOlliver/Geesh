@@ -1,9 +1,0 @@
-import { View } from "react-native";
-
-export default function BarChart() {
-    return (
-        <View>
-            
-        </View>
-    )
-}

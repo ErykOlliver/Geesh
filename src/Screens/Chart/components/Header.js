@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
-import ChartStyle from "../style/ChartStyle";
+import ChartStyle from "../style/ChartStyle.js";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
-import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
 
 export default function Header() {
     return (

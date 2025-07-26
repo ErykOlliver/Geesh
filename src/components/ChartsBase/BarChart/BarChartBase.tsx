@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Dimensions, View, } from "react-native";
-import Svg, { Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
-import { Primmary_Colors } from "../../DesigneTokens/pallets";
-import { Geesh_Fonts } from "../../DesigneTokens/fonts";
-import { Screen_Size, Text_Sizes } from "../../DesigneTokens/metrics";
-import ValueInLeft from "./components/ValueInLeft";
+import { View, } from "react-native";
+import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
+import { Primmary_Colors } from "../../DesigneTokens/pallets.js";
+import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
+import { Text_Sizes } from "../../DesigneTokens/metrics.js";
+import ValueInLeft from "./components/ValueInLeft.tsx";
 
 
 type BarChartProps = {
@@ -29,7 +29,7 @@ export default function BarChartBase(props: BarChartProps) {
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
 
     return (
-        <View style={{borderWidth: 1}}>
+        <View style={{ borderWidth: 1 }}>
 
             <View style={{ width: '100%', height: chartHeight, display: 'flex', alignItems: 'flex-end' }} onLayout={(event) => {
                 const { width, height } = event.nativeEvent.layout;

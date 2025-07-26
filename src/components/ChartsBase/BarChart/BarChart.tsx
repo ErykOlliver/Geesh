@@ -1,10 +1,10 @@
 import { Text, View } from "react-native";
-import BarChartBase from "./BarChartBase";
-import { Geesh_Fonts } from "../../DesigneTokens/fonts";
-import { Text_Sizes } from "../../DesigneTokens/metrics";
+import BarChartBase from "./BarChartBase.tsx";
+import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
+import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import DropdownComponent from "../../Reuse/DropDownBase/DropDown";
-
+import DropdownComponent from "../../Reuse/DropDownBase/DropDown.tsx";
+import { FilterVerticalIcon } from "@hugeicons/core-free-icons";
 
 
 
@@ -21,12 +21,13 @@ const Options = [
 
 export default function BarChart(props: BarChartProps) {
     return (
-        <View style={{ width: '100%', display: 'flex', flexDirection: 'column', borderWidth: 1 }}>
-            <View style={{ display: 'flex', flexDirection: 'row', borderWidth: 1, width: '100%', justifyContent: 'space-between' }}>
-                <Text style={{ paddingVertical: 6, borderWidth: 1, fontFamily: Geesh_Fonts.InriaBold, fontSize: Text_Sizes.h3 }}>
+        <View style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+            <View style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
+                <Text style={{ paddingVertical: 6, fontFamily: Geesh_Fonts.InriaBold, fontSize: Text_Sizes.h3 }}>
                     {props.title}
                 </Text>
-                <View style={{ borderWidth: 1 }} >
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
+                    <HugeiconsIcon icon={FilterVerticalIcon} />
                     <DropdownComponent op={Options} />
                 </View>
             </View>

@@ -1,7 +1,7 @@
 import React from "react"
 import { View, Text } from "react-native"
-import ChartStyle from "../style/ChartStyle"
-import BarChart from "../../../components/ChartsBase/BarChart/BarChart"
+import ChartStyle from "../style/ChartStyle.js";
+import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 
 const data = [50, 20, 40, 80, 30, 150, 30, 70, 60, 77, 40, 20];
 const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

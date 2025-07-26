@@ -1,8 +1,8 @@
 import React from "react"
 import { View, Text } from "react-native"
-import ChartStyle from "./style/ChartStyle"
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
+import ChartStyle from "./style/ChartStyle.js"
+import Header from "./components/Header.js"
+import MainContent from "./components/MainContent.js"
 
 
 export default function Chart() {

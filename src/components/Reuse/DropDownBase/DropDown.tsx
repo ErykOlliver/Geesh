@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { Primmary_Colors, Secondary_Colors } from '../../DesigneTokens/pallets';
-import { Text_Sizes } from '../../DesigneTokens/metrics';
-import { Geesh_Fonts } from '../../DesigneTokens/fonts';
+import { Primmary_Colors, Secondary_Colors } from '../../DesigneTokens/pallets.js';
+import { Text_Sizes } from '../../DesigneTokens/metrics.js';
+import { Geesh_Fonts } from '../../DesigneTokens/fonts.js';
 
 type options = {
     op: any[]
