@@ -35,14 +35,12 @@ export default function LineChartBase(props: BarChartProps) {
         .line<number>()
         .y((d, i) => yScale(d))
         .x((d, i) => xScale(i))
-        .curve(d3.curveCardinal.tension(0.3))
 
     const areafn = d3
         .area<number>()
         .x((d, i) => xScale(i))
         .y0(ChartSize.height)
         .y1((d, i) => yScale(d))
-        .curve(d3.curveCardinal.tension(0.3))
 
     const SvgLine = linefn(props.data) ?? ""
     const SvgArea = areafn(props.data) ?? ""
@@ -83,13 +81,13 @@ export default function LineChartBase(props: BarChartProps) {
                             );
                         })};
                         <Defs>
-                            <LinearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <Stop offset="30%" stopColor={props.scolor} stopOpacity={0} />
-                                <Stop offset="5%" stopColor={props.scolor} stopOpacity={0.7} />
+                            <LinearGradient id="LCGradient" x1="0" y1="0" x2="0" y2="1">
+                                <Stop offset="0%" stopColor={Secondary_Colors.BabyBlue} stopOpacity={0.5} />
+                                <Stop offset="100%" stopColor={Secondary_Colors.BabyBlue} stopOpacity={0} />
                             </LinearGradient>
                         </Defs>
-                        <Path d={SvgLine} stroke={Primmary_Colors.Azure} fill='none' strokeWidth={2} />
-                        <Path d={SvgArea} stroke="none" fill={Secondary_Colors.Gray} />
+                        <Path d={SvgLine} stroke={Primmary_Colors.Azure} fill='none' strokeWidth={0.5} />
+                        <Path d={SvgArea} stroke="none" fill='url(#LCGradient)' />
                     </Svg>
                 </View>
             </View>
