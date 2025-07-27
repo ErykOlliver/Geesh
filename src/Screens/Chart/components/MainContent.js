@@ -37,7 +37,7 @@ export default function MainContent() {
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
                     <View style={ChartStyle.ChartsPlace}>
                         <BarChart title="General Energy Usage" data={BCData} labels={MouthsList} />
-                        <LineChart title="General Energy Usage" data={LCData} labels={MouthsList} />
+                        <LineChart title="Live Energy Input" data={LCData} labels={MouthsList} />
                         <BarChart title="General Energy Usage" data={BCData} labels={MouthsList} />
                     </View>
                 </ScrollView>
