@@ -4,16 +4,26 @@ import ChartStyle from "../style/ChartStyle.js";
 import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 import LineChart from "../../../components/ChartsBase/LineChart/LineChart";
 
-const Bardata = [50, 20, 40, 80, 30, 150, 30, 70, 60, 77, 40, 20];
 
-const Linedata = [50, 20, 40, 80, 30, 150, 30, 70, 60, 77, 40, 20];
+
+const RandomizeValuesInCharts = (min = 0, max = 200) => {
+
+    const ListOfValues = []
+
+
+    for (let i = 0; i <= 11; i++) {
+        const RandomValue = Math.floor(Math.random() * (max - min) + min)
+        ListOfValues.push(RandomValue)
+        if (ListOfValues.length >= 11) continue
+    }
+
+    return ListOfValues;
+}
+const Bardata = RandomizeValuesInCharts();
+
+const Linedata = RandomizeValuesInCharts();
 
 const MouthsList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-const RandomizeValuesInCharts = (min = 0, max = 250) => {
-    const RandomValue = Math.floor(Math.random() * (max - min) + min)
-    return
-}
 
 export default function MainContent() {
     return (
