@@ -57,7 +57,7 @@ const ChartStyle = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        paddingBottom: 150 * (Screen_Size.width / 1080),
+        paddingBottom: 100 * (Screen_Size.width / 1080),
         flexDirection: 'column',
         gap: 100 * (Screen_Size.width / 1080),
     }
