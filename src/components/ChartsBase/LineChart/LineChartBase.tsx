@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { View, } from "react-native";
-import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
-import { Primmary_Colors } from "../../DesigneTokens/pallets.js";
+import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
+import { Primmary_Colors, Secondary_Colors } from "../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import ValueInLeft from "./components/ValueInLeft.tsx";
+import * as d3 from 'd3'
 
 
 type BarChartProps = {
@@ -18,11 +19,33 @@ const step = 50;
 const chartHeight = 250;
 
 
-export default function BarChartBase(props: BarChartProps) {
+export default function LineChartBase(props: BarChartProps) {
     const [ChartSize, SetChartSize] = useState({ width: 0, height: 0 })
     const monthsInBottom = 3;
     const sizeOfTextMonths = Text_Sizes.h5;
     const sizeBottomBarOfMonths = sizeOfTextMonths * monthsInBottom;
+
+    const min = Math.min(...props.data)
+    const max = Math.max(...props.data)
+
+    const yScale = d3.scaleLinear().domain([min, max]).range([chartHeight, 0])
+    const xScale = d3.scaleLinear().domain([0, props.data.length - 1]).range([0, ChartSize.width])
+
+    const linefn = d3
+        .line<number>()
+        .y((d, i) => yScale(d))
+        .x((d, i) => xScale(i))
+        .curve(d3.curveCardinal.tension(0.3))
+
+    const areafn = d3
+        .area<number>()
+        .x((d, i) => xScale(i))
+        .y0(ChartSize.height)
+        .y1((d, i) => yScale(d))
+        .curve(d3.curveCardinal.tension(0.3))
+
+    const SvgLine = linefn(props.data) ?? ""
+    const SvgArea = areafn(props.data) ?? ""
 
 
     const yTicks = [];
@@ -60,33 +83,13 @@ export default function BarChartBase(props: BarChartProps) {
                             );
                         })};
                         <Defs>
-                            <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Primmary_Colors.BluishWhite} stopOpacity={0.9} />
-                                <Stop offset="60%" stopColor={Primmary_Colors.Azure} stopOpacity={0.9} />
-                                <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
+                            <LinearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <Stop offset="30%" stopColor={props.scolor} stopOpacity={0} />
+                                <Stop offset="5%" stopColor={props.scolor} stopOpacity={0.7} />
                             </LinearGradient>
                         </Defs>
-                        {props.data.map((value, index) => {
-                            const totalBars = props.data.length;
-                            const dynamicSpacing = 5;
-                            const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
-
-                            const barHeight = (value / maxValue) * ChartSize.height;
-                            const x = index * (dynamicBarWidth + dynamicSpacing);
-                            const y = ChartSize.height - barHeight;
-
-                            return (
-                                <Rect
-                                    key={index}
-                                    x={x}
-                                    y={y}
-                                    width={dynamicBarWidth}
-                                    height={ChartSize.height}
-                                    fill="url(#BCGradient)"
-                                    rx={8}
-                                />
-                            );
-                        })}
+                        <Path d={SvgLine} stroke={Primmary_Colors.Azure} fill='none' strokeWidth={2} />
+                        <Path d={SvgArea} stroke="none" fill={Secondary_Colors.Gray} />
                     </Svg>
                 </View>
             </View>

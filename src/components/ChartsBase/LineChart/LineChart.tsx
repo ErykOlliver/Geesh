@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
-import BarChartBase from "./BarChartBase.tsx";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import { HugeiconsIcon } from "@hugeicons/react-native";
 import { FilterVerticalIcon } from "@hugeicons/core-free-icons";
 import BaseFilter from "../../Reuse/FilterBase/BaseFilter.tsx";
 import style from "./style/style.tsx";
+import LineChartBase from "./LineChartBase.tsx";
 
 
 type BarChartProps = {
@@ -19,7 +19,7 @@ const Options = [
 ]
 
 
-export default function BarChart(props: BarChartProps) {
+export default function LineChart(props: BarChartProps) {
     return (
         <View style={style.body}>
             <View style={style.header}>
@@ -30,7 +30,7 @@ export default function BarChart(props: BarChartProps) {
                     <BaseFilter title="Filter" />
                 </View>
             </View>
-            <BarChartBase data={props.data} labels={props.labels} />
+            <LineChartBase data={props.data} labels={props.labels} />
         </View>
     )
 }
