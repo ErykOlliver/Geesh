@@ -31,31 +31,34 @@ const DropDownStyle = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center'
     },
-    Title: {
+    SelectedOption: {
         fontSize: Text_Sizes.h3,
         fontFamily: Geesh_Fonts.InriaRegular
     },
-    
+
+    Option: {
+        fontFamily: Geesh_Fonts.InriaLight,
+        fontSize: Text_Sizes.h4,
+        borderBottomWidth: 0.5,
+    },
+
     ListVisible: {
         display: 'flex',
         position: 'absolute',
-        backgroundColor: 'red',
         width: 400 * (Screen_Size.width / 1080),
         paddingTop: 100 * (Screen_Size.width / 1080),
         paddingHorizontal: 10 * (Screen_Size.width / 1080),
         zIndex: 1,
-        borderWidth: 1,
         maxHeight: 350 * (Screen_Size.width / 1080),
     },
-    ListHidden: {
-        display: 'none',
-    },
+
     ListContent: {
-        backgroundColor: Secondary_Colors.Gray,
         borderRadius: 15 * (Screen_Size.width / 1080),
-        padding: 10 * (Screen_Size.width / 1080),
-        borderWidth: 1,
-    }
+        backgroundColor: Secondary_Colors.White70,
+        padding: 15 * (Screen_Size.width / 1080),
+        gap: 3
+
+    },
 })
 
 export default DropDownStyle;
