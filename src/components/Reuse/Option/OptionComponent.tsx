@@ -16,6 +16,7 @@ type OptionProps = {
 const data = [
     { label: "English", value: 0 },
     { label: "Portugues", value: 1 },
+    { label: "Portugues", value: 1 },
 ]
 
 export default function OptionComponent(props: OptionProps) {

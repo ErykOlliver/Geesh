@@ -32,15 +32,11 @@ export default function DropDownComponent(props: DropDownProps) {
             <View style={toggle ? DropDownStyle.ListVisible : DropDownStyle.ListHidden}>
                 <ScrollView style={{ width: '100%' }} contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
                     <View style={DropDownStyle.ListContent}>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
-                        <Text>dsds</Text>
+                        {props.data.map((req, index) => (
+                            <Text key={index}>
+                                {req.label}
+                            </Text>
+                        ))}
                     </View>
                 </ScrollView>
             </View>

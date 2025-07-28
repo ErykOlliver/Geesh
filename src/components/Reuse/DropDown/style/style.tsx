@@ -37,6 +37,7 @@ const DropDownStyle = StyleSheet.create({
     },
     
     ListVisible: {
+        display: 'flex',
         position: 'absolute',
         backgroundColor: 'red',
         width: 400 * (Screen_Size.width / 1080),
@@ -44,8 +45,7 @@ const DropDownStyle = StyleSheet.create({
         paddingHorizontal: 10 * (Screen_Size.width / 1080),
         zIndex: 1,
         borderWidth: 1,
-        height: 150,
-        display: 'flex',
+        maxHeight: 350 * (Screen_Size.width / 1080),
     },
     ListHidden: {
         display: 'none',
