@@ -7,7 +7,7 @@ import ProfileStyle from "../style/ProfileStyle"
 import { version } from "react"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
-import OptionComponent from "../../../components/Reuse/Option/OptionComponent"
+import OptionComponent from "../../../components/Reuse/Option/OptionComponent.tsx"
 import DropDownComponent from "../../../components/Reuse/DropDown/DropDownComponent.tsx"
 
 export default function MainContent() {
@@ -23,19 +23,9 @@ export default function MainContent() {
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Settings</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" toggle />
-                            <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" toggle />
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={LanguageSkillIcon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Language</Text>
-                                        <DropDownComponent title="testando"/>
-                                    </View>
-                                </View>
-                            </View>
+                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" type='toggle' />
+                            <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" type="toggle" />
+                            <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" />
                         </View>
                     </View>
                     <View style={ProfileStyle.SettingsPlace}>
