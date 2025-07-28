@@ -1,13 +1,14 @@
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
+import ToggleStyle from "./style/style";
 
 type ToggleProps = {
-    function: () => void;
+    function?: () => void;
 }
 
 export default function ToggleBase(props: ToggleProps) {
     return (
-        <View>
-            
-        </View>
+        <TouchableOpacity style={ToggleStyle.toggle}>
+            <View style={ToggleStyle.Circle}></View>
+        </TouchableOpacity>
     )
 }

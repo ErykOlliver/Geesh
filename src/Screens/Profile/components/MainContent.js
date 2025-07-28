@@ -7,6 +7,7 @@ import ProfileStyle from "../style/ProfileStyle"
 import { version } from "react"
 import DropdownComponent from "../../../components/Reuse/DropDown/Dropdown"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
+import ToggleBase from "../../../components/Reuse/Toggle/ToggleBase"
 
 export default function MainContent() {
     const OpenInstagram = () => {
@@ -29,14 +30,7 @@ export default function MainContent() {
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Night Theme</Text>
                                     </View>
-                                    <Switch
-                                        trackColor={{ false: Secondary_Colors.White70, true: Secondary_Colors.White70 }}
-                                        thumbColor={isEnabled ? Primmary_Colors.BluishWhite : Primmary_Colors.Azure}
-                                        ios_backgroundColor="#3e3e3e"
-                                        onValueChange={toggleSwitch}
-                                        value={isEnabled}
-                                        style={{}}
-                                    />
+                                    <ToggleBase />
                                 </View>
                             </View>
                             <View style={ProfileStyle.Option}>
