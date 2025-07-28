@@ -23,7 +23,7 @@ export default function Header() {
                     </View>
                 </View>
             </View>
-            <View style={ProfileStyle.UserCredentialPlace}>
+{/*             <View style={ProfileStyle.UserCredentialPlace}>
                 <View style={ProfileStyle.UserCredentialContent}>
                     <View style={ProfileStyle.ENPlace}>
                         <HugeiconsIcon icon={Mail01Icon} />
@@ -34,7 +34,7 @@ export default function Header() {
                         <Text style={ProfileStyle.ENTxT}>+55 71 9922-1199</Text>
                     </View>
                 </View>
-            </View>
+            </View> */}
         </View>
     )
 }
