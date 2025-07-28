@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { startTransition, useState } from "react";
 import ToggleComponent from "../Toggle/ToggleComponent";
+import OptionStyle from "./style/style";
 
 type OptionProps = {
     icon: React.ReactNode;
@@ -14,14 +15,14 @@ export default function OptionComponent(props: OptionProps) {
         props.function?.();
     }
     return (
-        <View>
+        <View style={OptionStyle.body}>
             {props.toggle ? (
-                <View>
-                    <View>
+                <View style={OptionStyle.container}>
+                    <View style={OptionStyle.icon}>
                         {props.icon}
                     </View>
-                    <View>
-                        <Text>{props.title}</Text>
+                    <View style={OptionStyle.main}>
+                        <Text style={OptionStyle.title}>{props.title}</Text>
                         <ToggleComponent function={StartFunction} />
                     </View>
                 </View>

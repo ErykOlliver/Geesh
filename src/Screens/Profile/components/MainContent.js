@@ -23,7 +23,7 @@ export default function MainContent() {
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Settings</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <OptionComponent toggle />
+                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" toggle />
                             {/*                             <View style={ProfileStyle.Option}>
                                 <View style={ProfileStyle.IconPlace}>
                                     <HugeiconsIcon icon={Moon02Icon} size={30} />
