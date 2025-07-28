@@ -8,6 +8,7 @@ import { version } from "react"
 import DropdownComponent from "../../../components/Reuse/DropDown/Dropdown"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
+import OptionComponent from "../../../components/Reuse/Option/OptionComponent"
 
 export default function MainContent() {
     const OpenInstagram = () => {
@@ -22,7 +23,8 @@ export default function MainContent() {
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Settings</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <View style={ProfileStyle.Option}>
+                            <OptionComponent toggle />
+                            {/*                             <View style={ProfileStyle.Option}>
                                 <View style={ProfileStyle.IconPlace}>
                                     <HugeiconsIcon icon={Moon02Icon} size={30} />
                                 </View>
@@ -32,7 +34,7 @@ export default function MainContent() {
                                     </View>
                                     <ToggleComponent />
                                 </View>
-                            </View>
+                            </View> */}
                             <View style={ProfileStyle.Option}>
                                 <View style={ProfileStyle.IconPlace}>
                                     <HugeiconsIcon icon={Notification01Icon} size={30} />
