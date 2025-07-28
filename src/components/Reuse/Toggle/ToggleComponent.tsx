@@ -6,7 +6,7 @@ type ToggleProps = {
     function?: () => void;
 }
 
-export default function ToggleBase(props: ToggleProps) {
+export default function ToggleComponent(props: ToggleProps) {
     const [toggle, setToggle] = useState(false)
 
     const onToggle = () => {
