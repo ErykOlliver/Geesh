@@ -27,12 +27,12 @@ export default function OptionComponent(props: OptionProps) {
                     </View>
                 </View>
             ) : (
-                <TouchableOpacity onPress={StartFunction}>
-                    <View>
+                <TouchableOpacity onPress={StartFunction} style={OptionStyle.container} >
+                    <View style={OptionStyle.icon}>
                         {props.icon}
                     </View>
-                    <View>
-                        <Text>{props.title}</Text>
+                    <View style={OptionStyle.main}>
+                        <Text style={OptionStyle.title}>{props.title}</Text>
                     </View>
                 </TouchableOpacity>
             )}
