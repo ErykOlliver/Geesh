@@ -19,7 +19,7 @@ const ProfileStyle = StyleSheet.create({
     Header: {
         backgroundColor: Secondary_Colors.White90,
         width: Screen_Size.width,
-        height: "28%"
+        height: 587 * (Screen_Size.width / 1080)
     },
     UserPAndUserNPlace: {
         backgroundColor: Secondary_Colors.White,

@@ -8,6 +8,7 @@ const Text_Sizes = {
     h3: 40 * (width / 1080),
     h4: 36 * (width / 1080),
     h5: 32 * (width / 1080),
+    h6: 24 * (width / 1080),
     body: 16 * (width / 1080),
     small: 14 * (width / 1080),
     p: 12 * (width / 1080)
