@@ -7,6 +7,7 @@ export default function App() {
     'InriaSans-Regular': require('./src/components/fonts/Inria_Sans/InriaSans-Regular.ttf'),
     'InriaSans-Bold': require('./src/components/fonts/Inria_Sans/InriaSans-Bold.ttf'),
     'InriaSans-Light': require('./src/components/fonts/Inria_Sans/InriaSans-Light.ttf'),
+    'Inter-SemiBold': require('./src/components/fonts/Inter/Inter_28pt-SemiBold.ttf'),
   })
 
   if (!fontsLoaded) {

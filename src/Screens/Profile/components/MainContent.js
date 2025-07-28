@@ -9,6 +9,7 @@ import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTo
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
 import OptionComponent from "../../../components/Reuse/Option/OptionComponent.tsx"
 import DropDownComponent from "../../../components/Reuse/DropDown/DropDownComponent.tsx"
+import SectionSettinsComponent from "./SectionSettings/SectionSettings.tsx"
 
 const data = [
     { label: 'English', value: 0 },
@@ -26,38 +27,25 @@ export default function MainContent() {
         <View style={ProfileStyle.MainContent}>
             <View style={ProfileStyle.MCContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
-                    <View style={ProfileStyle.SettingsPlace}>
-                        <Text style={ProfileStyle.STTxT}>Settings</Text>
-                        <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" type='toggle' />
-                            <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" type="toggle" />
-                            <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" data={data} />
-                        </View>
-                    </View>
-                    <View style={ProfileStyle.SettingsPlace}>
-                        <Text style={ProfileStyle.STTxT}>Security and privacy</Text>
-                        <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title="Change email" type='default' />
-                            <OptionComponent icon={<HugeiconsIcon icon={SmartPhone01Icon} size={30} />} title="Change phone number" type='default' />
-                            <OptionComponent icon={<HugeiconsIcon icon={ResetPasswordIcon} size={30} />} title="Change password" type='default' />
-                        </View>
-                    </View>
-                    <View style={ProfileStyle.SettingsPlace}>
-                        <Text style={ProfileStyle.STTxT}>Social</Text>
-                        <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={InstagramIcon} size={30} />} title="Instagram" type='default' />
-                            <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Website" type='default' />
-
-                        </View>
-                    </View>
-                    <View style={ProfileStyle.SettingsPlace}>
-                        <Text style={ProfileStyle.STTxT}>About</Text>
-                        <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Version" info="1.0.0" type='information' />
-                        </View>
-                    </View>
-                </ScrollView>
-            </View>
-        </View>
+                    <SectionSettinsComponent title="Settings">
+                        <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" type='toggle' />
+                        <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" type="toggle" />
+                        <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" data={data} />
+                    </SectionSettinsComponent>
+                    <SectionSettinsComponent title="Security and privacy">
+                        <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title="Change email" type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={SmartPhone01Icon} size={30} />} title="Change phone number" type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={ResetPasswordIcon} size={30} />} title="Change password" type='default' />
+                    </SectionSettinsComponent>
+                    <SectionSettinsComponent title="Social">
+                        <OptionComponent icon={<HugeiconsIcon icon={InstagramIcon} size={30} />} title="Instagram" type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Website" type='default' />
+                    </SectionSettinsComponent>
+                    <SectionSettinsComponent title="About">
+                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Version" info="1.0.0" type='information' />
+                    </SectionSettinsComponent>
+                </ScrollView >
+            </View >
+        </View >
     )
 }

@@ -111,29 +111,19 @@ const ProfileStyle = StyleSheet.create({
         gap: 8,
         marginTop: 15
     },
-    
-    SettingsPlace: {
-    },
+
     STTxT: {
         fontSize: Text_Sizes.h3,
         fontFamily: Geesh_Fonts.InriaBold
     },
-    Option: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        gap: 10,
-        alignItems: 'center',
-        paddingVertical: 5,
-    },
 
 
-    OptionList:{
+    OptionList: {
         display: 'flex',
         flexDirection: 'column',
-        gap: 15
-    },
-
+        gap: 45 * (Screen_Size.width / 1080),
+        paddingBottom: 10 * (Screen_Size.width / 1080)
+    }
 
 
 
