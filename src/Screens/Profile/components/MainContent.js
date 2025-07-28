@@ -23,36 +23,8 @@ export default function MainContent() {
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Settings</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" toggle/>
-                            {/*                             <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={Moon02Icon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Night Theme</Text>
-                                    </View>
-                                    <ToggleComponent />
-                                </View>
-                            </View> */}
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={Notification01Icon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Notifications</Text>
-                                    </View>
-                                    <Switch
-                                        trackColor={{ false: Secondary_Colors.White70, true: Secondary_Colors.White70 }}
-                                        thumbColor={isEnabled ? Primmary_Colors.BluishWhite : Primmary_Colors.Azure}
-                                        ios_backgroundColor="#3e3e3e"
-                                        onValueChange={toggleSwitch}
-                                        value={isEnabled}
-                                        style={{}}
-                                    />
-                                </View>
-                            </View>
+                            <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" toggle />
+                            <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" toggle />
                             <View style={ProfileStyle.Option}>
                                 <View style={ProfileStyle.IconPlace}>
                                     <HugeiconsIcon icon={LanguageSkillIcon} size={30} />

@@ -17,7 +17,8 @@ const OptionStyle = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        alignItems: 'center'
+        alignItems: 'center',
+        gap: 10
     },
     icon: {
         display: 'flex',
@@ -31,7 +32,7 @@ const OptionStyle = StyleSheet.create({
         flexDirection: 'row',
         width: 865 * (Screen_Size.width / 1080),
         height: '100%',
-        paddingRight: 10 * (Screen_Size.width / 1080),
+        paddingRight: 35 * (Screen_Size.width / 1080),
         justifyContent: 'space-between',
         alignItems: 'center',
         borderBottomWidth: 0.5
@@ -39,7 +40,7 @@ const OptionStyle = StyleSheet.create({
     },
     title: {
         fontFamily: Geesh_Fonts.InriaRegular,
-        fontSize: Text_Sizes.h3
+        fontSize: Text_Sizes.h3,
     }
 })
 
