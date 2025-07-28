@@ -38,6 +38,17 @@ const OptionStyle = StyleSheet.create({
         borderBottomWidth: 0.5
 
     },
+    mainInfo: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        height: '100%',
+        paddingRight: 35 * (Screen_Size.width / 1080),
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderBottomWidth: 0.5
+
+    },
     title: {
         fontFamily: Geesh_Fonts.InriaLight,
         fontSize: Text_Sizes.h3,

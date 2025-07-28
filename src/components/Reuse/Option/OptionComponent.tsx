@@ -4,11 +4,12 @@ import ToggleComponent from "../Toggle/ToggleComponent.tsx";
 import OptionStyle from "./style/style.tsx";
 import DropDownComponent, { dataPrefab, DropDownProps } from "../DropDown/DropDownComponent.tsx";
 
-type OptionType = 'default' | 'toggle' | 'dropdown'
+type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
 
 type OptionProps = {
     icon: React.ReactNode;
     title: string;
+    info: string;
     type: OptionType;
     data: dataPrefab[];
     function?: () => void;
@@ -55,6 +56,16 @@ export default function OptionComponent(props: OptionProps) {
                         <View style={OptionStyle.main}>
                             <Text style={OptionStyle.title}>{props.title}</Text>
                             <DropDownComponent data={props.data} />
+                        </View>
+                    </View>
+                )
+            case 'information':
+                return (
+                    <View style={OptionStyle.container}>
+                        
+                        <View style={OptionStyle.mainInfo}>
+                            <Text style={OptionStyle.title}>{props.title}</Text>
+                            <Text style={OptionStyle.title}>{props.info}</Text>
                         </View>
                     </View>
                 )

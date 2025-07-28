@@ -37,75 +37,23 @@ export default function MainContent() {
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Security and privacy</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={RecoveryMailIcon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Change email</Text>
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={SmartPhone01Icon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Change phone number</Text>
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={ResetPasswordIcon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Change password</Text>
-                                    </View>
-                                </View>
-                            </View>
+                            <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title="Change email" type='default' />
+                            <OptionComponent icon={<HugeiconsIcon icon={SmartPhone01Icon} size={30} />} title="Change phone number" type='default' />
+                            <OptionComponent icon={<HugeiconsIcon icon={ResetPasswordIcon} size={30} />} title="Change password" type='default' />
                         </View>
                     </View>
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>Social</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={InstagramIcon} size={30} />
-                                </View>
-                                <TouchableOpacity style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Instagram</Text>
-                                    </View>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={ProfileStyle.Option}>
-                                <View style={ProfileStyle.IconPlace}>
-                                    <HugeiconsIcon icon={WebDesignIcon} size={30} />
-                                </View>
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Website</Text>
-                                    </View>
-                                </View>
-                            </View>
+                            <OptionComponent icon={<HugeiconsIcon icon={InstagramIcon} size={30} />} title="Instagram" type='default' />
+                            <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Website" type='default' />
+
                         </View>
                     </View>
                     <View style={ProfileStyle.SettingsPlace}>
                         <Text style={ProfileStyle.STTxT}>About</Text>
                         <View style={ProfileStyle.OptionList}>
-                            <View style={ProfileStyle.Option}>
-
-                                <View style={ProfileStyle.GBAndOPTxT}>
-                                    <View style={ProfileStyle.OpTLabel}>
-                                        <Text style={ProfileStyle.OptionTxT}>Version</Text>
-                                    </View>
-                                    <Text>1.0.0</Text>
-                                </View>
-                            </View>
+                            <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Version" info="1.0.0" type='information' />
                         </View>
                     </View>
                 </ScrollView>

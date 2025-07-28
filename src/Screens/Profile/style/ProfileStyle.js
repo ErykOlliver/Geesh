@@ -126,51 +126,16 @@ const ProfileStyle = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 5,
     },
-    IconPlace: {
-        display: 'flex',
-        height: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        
-    },
-    GBAndOPTxT: {
-        flex: 1,
-        flexDirection: 'row',
-        borderBottomWidth: 0.5,
-        justifyContent: 'center',
-        paddingVertical: 8,
-        alignItems: 'center'
-    },
-    OpTLabel: {
-        paddingVertical: 8,
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'flex-start'
-    },
+
+
     OptionList:{
         display: 'flex',
         flexDirection: 'column',
-        gap: 10
+        gap: 15
     },
-    OptionTxT: {
-        fontSize: Text_Sizes.h4,
-        fontFamily: Geesh_Fonts.InriaRegular
-    },
-    GenericButton: {
-        display: 'flex',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        backgroundColor: Secondary_Colors.White70,
-        width: 100,
-        height: 40,
-        borderRadius: 100,
-    },
-    Ball: {
-        width: 40,
-        height: 40,
-        borderRadius: '100%',
-        backgroundColor: Primmary_Colors.Azure
-    }
+
+
+
 
 })
 
