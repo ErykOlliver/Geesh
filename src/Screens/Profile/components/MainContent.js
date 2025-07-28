@@ -5,7 +5,6 @@ import { AiPhone01Icon, FlashIcon, Home01Icon, HugeiconsFreeIcons, InfantIcon, I
 import { Screen_Size } from "../../../components/DesigneTokens/metrics"
 import ProfileStyle from "../style/ProfileStyle"
 import { version } from "react"
-import DropdownComponent from "../../../components/Reuse/DropDown/Dropdown"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
 import OptionComponent from "../../../components/Reuse/Option/OptionComponent"
@@ -33,7 +32,6 @@ export default function MainContent() {
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Language</Text>
                                     </View>
-                                    <DropdownComponent />
                                 </View>
                             </View>
                         </View>
