@@ -2,7 +2,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import ToggleComponent from "../Toggle/ToggleComponent.tsx";
 import OptionStyle from "./style/style.tsx";
-import DropDownComponent from "../DropDown/DropDownComponent.tsx";
+import DropDownComponent, { dataPrefab, DropDownProps } from "../DropDown/DropDownComponent.tsx";
 
 type OptionType = 'default' | 'toggle' | 'dropdown'
 
@@ -10,14 +10,11 @@ type OptionProps = {
     icon: React.ReactNode;
     title: string;
     type: OptionType;
+    data: dataPrefab[];
     function?: () => void;
 }
 
-const data = [
-    { label: "English", value: 0 },
-    { label: "Portugues", value: 1 },
-    { label: "Portugues", value: 1 },
-]
+
 
 export default function OptionComponent(props: OptionProps) {
     const StartFunction = () => {
@@ -57,7 +54,7 @@ export default function OptionComponent(props: OptionProps) {
                         </View>
                         <View style={OptionStyle.main}>
                             <Text style={OptionStyle.title}>{props.title}</Text>
-                            <DropDownComponent data={data} />
+                            <DropDownComponent data={props.data} />
                         </View>
                     </View>
                 )

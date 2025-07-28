@@ -1,14 +1,13 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
-import { Secondary_Colors } from "../../../DesigneTokens/pallets.js";
+import { Primmary_Colors, Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
 
 const DropDownStyle = StyleSheet.create({
     body: {
         display: 'flex',
-        position: 'relative',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     },
     main: {
@@ -29,7 +28,7 @@ const DropDownStyle = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     SelectedOption: {
         fontSize: Text_Sizes.h3,
@@ -39,7 +38,7 @@ const DropDownStyle = StyleSheet.create({
     Option: {
         fontFamily: Geesh_Fonts.InriaLight,
         fontSize: Text_Sizes.h4,
-        borderBottomWidth: 0.5,
+
     },
 
     ListVisible: {
@@ -51,13 +50,14 @@ const DropDownStyle = StyleSheet.create({
         zIndex: 1,
         maxHeight: 350 * (Screen_Size.width / 1080),
     },
-
+    
     ListContent: {
         borderRadius: 15 * (Screen_Size.width / 1080),
         backgroundColor: Secondary_Colors.White70,
         padding: 15 * (Screen_Size.width / 1080),
-        gap: 3
-
+        gap: 3,
+        borderColor: Primmary_Colors.Azure,
+        borderWidth: 0.5/*  */
     },
 })
 

@@ -39,7 +39,7 @@ const OptionStyle = StyleSheet.create({
 
     },
     title: {
-        fontFamily: Geesh_Fonts.InriaRegular,
+        fontFamily: Geesh_Fonts.InriaLight,
         fontSize: Text_Sizes.h3,
     }
 })

@@ -10,6 +10,12 @@ import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
 import OptionComponent from "../../../components/Reuse/Option/OptionComponent.tsx"
 import DropDownComponent from "../../../components/Reuse/DropDown/DropDownComponent.tsx"
 
+const data = [
+    { label: 'English', value: 0 },
+    { label: 'Português', value: 0 }
+]
+
+
 export default function MainContent() {
     const OpenInstagram = () => {
         Linking.openURL('https://www.google.com');
@@ -25,7 +31,7 @@ export default function MainContent() {
                         <View style={ProfileStyle.OptionList}>
                             <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" type='toggle' />
                             <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" type="toggle" />
-                            <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" />
+                            <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" data={data} />
                         </View>
                     </View>
                     <View style={ProfileStyle.SettingsPlace}>
