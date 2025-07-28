@@ -147,6 +147,11 @@ const ProfileStyle = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'flex-start'
     },
+    OptionList:{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 10
+    },
     OptionTxT: {
         fontSize: Text_Sizes.h4,
         fontFamily: Geesh_Fonts.InriaRegular
