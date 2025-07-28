@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { startTransition, useState } from "react";
-import ToggleComponent from "../Toggle/ToggleComponent";
-import OptionStyle from "./style/style";
+import { useState } from "react";
+import ToggleComponent from "../Toggle/ToggleComponent.tsx";
+import OptionStyle from "./style/style.tsx";
 
 type OptionProps = {
     icon: React.ReactNode;

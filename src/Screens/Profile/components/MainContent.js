@@ -8,6 +8,7 @@ import { version } from "react"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
 import OptionComponent from "../../../components/Reuse/Option/OptionComponent"
+import DropDownComponent from "../../../components/Reuse/DropDown/DropDownComponent.tsx"
 
 export default function MainContent() {
     const OpenInstagram = () => {
@@ -31,6 +32,7 @@ export default function MainContent() {
                                 <View style={ProfileStyle.GBAndOPTxT}>
                                     <View style={ProfileStyle.OpTLabel}>
                                         <Text style={ProfileStyle.OptionTxT}>Language</Text>
+                                        <DropDownComponent title="testando"/>
                                     </View>
                                 </View>
                             </View>
