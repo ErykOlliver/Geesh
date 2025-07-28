@@ -17,6 +17,7 @@ export default function Header() {
                     }}>
                         <View style={ProfileStyle.NamePlace}>
                             <Text style={ProfileStyle.NameTxT}>User Name</Text>
+                            
                             <HugeiconsIcon icon={PencilEdit01Icon} />
                         </View>
                         <Text style={ProfileStyle.IDTxT}>User Id</Text>
