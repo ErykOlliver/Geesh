@@ -13,6 +13,11 @@ type OptionProps = {
     function?: () => void;
 }
 
+const data = [
+    { label: "English", value: 0 },
+    { label: "Portugues", value: 1 },
+]
+
 export default function OptionComponent(props: OptionProps) {
     const StartFunction = () => {
         props.function?.();
@@ -51,7 +56,7 @@ export default function OptionComponent(props: OptionProps) {
                         </View>
                         <View style={OptionStyle.main}>
                             <Text style={OptionStyle.title}>{props.title}</Text>
-                            <DropDownComponent title="English" />
+                            <DropDownComponent data={data} />
                         </View>
                     </View>
                 )
