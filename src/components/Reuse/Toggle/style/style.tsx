@@ -13,7 +13,7 @@ const ToggleStyle = StyleSheet.create({
     },
     offToggle: {
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: 'flex-end',
         width: 150 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
         backgroundColor: Secondary_Colors.White70,

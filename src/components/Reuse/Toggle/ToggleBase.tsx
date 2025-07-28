@@ -9,7 +9,10 @@ type ToggleProps = {
 export default function ToggleBase(props: ToggleProps) {
     const [toggle, setToggle] = useState(false)
 
-    const onToggle = () => setToggle(!toggle);
+    const onToggle = () => {
+        setToggle(!toggle);
+        props.function?.();
+    }
     return (
         <TouchableOpacity style={!toggle ? ToggleStyle.onToggle : ToggleStyle.offToggle} onPress={onToggle}>
             <View style={ToggleStyle.Circle}></View>
