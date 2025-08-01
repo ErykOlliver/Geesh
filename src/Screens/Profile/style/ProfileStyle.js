@@ -129,4 +129,5 @@ const ProfileStyle = StyleSheet.create({
 
 })
 
+
 export default ProfileStyle;

@@ -1,3 +1,4 @@
+
 import { View, Text, TouchableOpacity } from "react-native"
 import ProfileStyle from "./style/ProfileStyle"
 import { LinearGradient } from "expo-linear-gradient"
