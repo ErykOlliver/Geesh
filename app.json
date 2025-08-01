@@ -4,7 +4,7 @@
     "slug": "Geesh",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/img/icons/GeeshAppIcon.png",
+    "icon": "./assets/icons/GeeshAppIcon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
