@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import TabRoutesStyle from "./style/TabRoutesStyle";
+import TabRoutesStyle from "./style/TabRoutesStyle.js";
 
 //#region Modules/Screens
-import Home from "../Screens/Home/Home";
-import Chart from "../Screens/Chart/Chart";
-import Profile from "../Screens/Profile/Profile";
+import Home from "../Screens/Home/Home.js";
+import Chart from "../Screens/Chart/Chart.js";
+import Profile from "../Screens/Profile/Profile.js";
 import { Analytics03Icon, Home11Icon, User03Icon, } from "@hugeicons/core-free-icons";
 //#endregion
 

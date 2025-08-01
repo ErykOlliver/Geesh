@@ -8,7 +8,6 @@ import MainContent from "./components/MainContent";
 import { Geesh_Primmary_Colors } from "../../components/DesigneTokens/pallets";
 
 
-
 export default function Home() {
   return (
     <View style={HomeStyle.Body}>
