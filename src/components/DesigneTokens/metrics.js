@@ -13,7 +13,7 @@ const Text_Sizes = {
     p: 12 * (width / 1080)
 }
 
-const Geesh_Icon_Size = {
+const Icon_Size = {
     Icon5xl: 110 * (width / 1080),
     Icon4xl: 94 * (width / 1080),
     Icon3xl: 76 * (width / 1080),
@@ -30,5 +30,5 @@ const Screen_Size = {
     height: height
 }
 
-export { Screen_Size, Geesh_Icon_Size, Text_Sizes }
+export { Screen_Size, Icon_Size, Text_Sizes }
 

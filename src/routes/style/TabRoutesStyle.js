@@ -7,7 +7,7 @@ import { Geesh_Fonts } from "../../components/DesigneTokens/fonts.js";
 
 const TabRoutesStyle = StyleSheet.create({
     Tab: {
-        backgroundColor: Geesh_Secondary_Colors.White,
+        backgroundColor: Secondary_Colors.White,
         elevation: 10,
         height: 64,
         paddingTop: 5,

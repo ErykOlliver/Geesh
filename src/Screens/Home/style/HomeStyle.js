@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
-import { Geesh_Secondary_Colors, Geesh_Primmary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Secondary_Colors, Primmary_Colors } from "../../../components/DesigneTokens/pallets";
 import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 import MainContent from "../components/MainContent";
 
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: Screen_Size.width,
     height: Screen_Size.height,
-    backgroundColor: Geesh_Secondary_Colors.White80
+    backgroundColor: Secondary_Colors.White80
   },
   //#endregion
 
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     height: 270 * (Screen_Size.width / 1080),
     width: Screen_Size.width,
-    backgroundColor: Geesh_Secondary_Colors.White,
+    backgroundColor: Secondary_Colors.White,
   },
 
   H_Content: {
@@ -67,7 +67,7 @@ export default StyleSheet.create({
   Panel: {
     display: 'flex',
     width: 920 * (Screen_Size.width / 1080),
-    backgroundColor: Geesh_Secondary_Colors.White,
+    backgroundColor: Secondary_Colors.White,
     paddingVertical: 15,
     paddingHorizontal: 20 * (Screen_Size.width / 1080),
     borderRadius: 25 * (Screen_Size.width / 1080),
@@ -175,7 +175,7 @@ export default StyleSheet.create({
   },
 
   ActiveButtonText: {
-    color: Geesh_Secondary_Colors.White,
+    color: Secondary_Colors.White,
     fontSize: Text_Sizes.h4,
     fontFamily: Geesh_Fonts.InriaBold
   },
@@ -186,7 +186,7 @@ export default StyleSheet.create({
   },
 
   devicesMark: {
-    color: Geesh_Primmary_Colors.Azure,
+    color: Primmary_Colors.Azure,
   },
 
   //#endregion

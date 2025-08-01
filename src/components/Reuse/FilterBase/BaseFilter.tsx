@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 import style from "./style/style.tsx";
 import { HugeiconsIcon } from "@hugeicons/react-native";
 import { ArrowDown01Icon, FilterVerticalIcon } from "@hugeicons/core-free-icons";
-import { Geesh_Icon_Size, Screen_Size } from "../../DesigneTokens/metrics.js";
+import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics.js";
 
 type FilterProps = {
     title: string
@@ -17,7 +17,7 @@ export default function BaseFilter(props: FilterProps) {
 
             <View style={style.container}>
                 <Text style={style.Title}>{props.title}</Text>
-                <HugeiconsIcon icon={ArrowDown01Icon} size={Geesh_Icon_Size.IconXL} />
+                <HugeiconsIcon icon={ArrowDown01Icon} size={Icon_Size.IconXL} />
             </View>
         </View>
     )
