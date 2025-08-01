@@ -1,13 +1,19 @@
 import React from "react"
-import { View, Text } from "react-native"
+import { View } from "react-native";
 import HomeStyle from "./style/HomeStyle"
-import { StatusBar } from "expo-status-bar"
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"
+import Header from "./components/Header";
+import Painel from "./components/Panel";
+import Active from "./components/Active";
+import MainContent from "./components/MainContent";
+import { Geesh_Primmary_Colors } from "../../components/DesigneTokens/pallets";
+
+
 
 export default function Home() {
-    return (
-        <View style={HomeStyle.body}>
-
-        </View>
-    )
+  return (
+    <View style={HomeStyle.Body}>
+      <Header />
+      <MainContent />
+    </View>
+  );
 }

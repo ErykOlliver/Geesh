@@ -1,3 +1,6 @@
 export const Geesh_Fonts = {
-    InriaBold: 'InriaSans-Bold'
+    InriaBold: 'InriaSans-Bold',
+    InriaRegular: 'InriaSans-Regular',
+    InriaLight: 'InriaSans-Light',
+    PoppinsRegular: 'Poppins-Regular'
 }
