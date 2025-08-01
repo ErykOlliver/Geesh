@@ -12,4 +12,5 @@ export const Secondary_Colors = {
     AuroraGreen: '#8AF37C',
     VitalGreen: '#08CC0E',
     BabyBlue: '#3CC3DF'
+
 }

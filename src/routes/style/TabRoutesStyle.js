@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-
 import { Text_Sizes } from "../../components/DesigneTokens/metrics.js";
 import { Secondary_Colors } from "../../components/DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../components/DesigneTokens/fonts.js";

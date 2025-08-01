@@ -1,0 +1,79 @@
+import { Text, TouchableOpacity, View } from "react-native";
+import { useState } from "react";
+import ToggleComponent from "../Toggle/ToggleComponent.tsx";
+import OptionStyle from "./style/style.tsx";
+import DropDownComponent, { dataPrefab, DropDownProps } from "../DropDown/DropDownComponent.tsx";
+
+type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
+
+type OptionProps = {
+    icon: React.ReactNode;
+    title: string;
+    info: string;
+    type: OptionType;
+    data: dataPrefab[];
+    function?: () => void;
+}
+
+
+
+export default function OptionComponent(props: OptionProps) {
+    const StartFunction = () => {
+        props.function?.();
+    }
+
+    const renderOptions = () => {
+        switch (props.type) {
+            case 'default':
+                return (
+                    <TouchableOpacity onPress={StartFunction} style={OptionStyle.container} >
+                        <View style={OptionStyle.icon}>
+                            {props.icon}
+                        </View>
+                        <View style={OptionStyle.main}>
+                            <Text style={OptionStyle.title}>{props.title}</Text>
+                        </View>
+                    </TouchableOpacity>
+                )
+            case 'toggle':
+                return (
+                    <View style={OptionStyle.container}>
+                        <View style={OptionStyle.icon}>
+                            {props.icon}
+                        </View>
+                        <View style={OptionStyle.main}>
+                            <Text style={OptionStyle.title}>{props.title}</Text>
+                            <ToggleComponent function={StartFunction} />
+                        </View>
+                    </View>
+                )
+            case 'dropdown':
+                return (
+                    <View style={OptionStyle.container}>
+                        <View style={OptionStyle.icon}>
+                            {props.icon}
+                        </View>
+                        <View style={OptionStyle.main}>
+                            <Text style={OptionStyle.title}>{props.title}</Text>
+                            <DropDownComponent data={props.data} />
+                        </View>
+                    </View>
+                )
+            case 'information':
+                return (
+                    <View style={OptionStyle.container}>
+                        
+                        <View style={OptionStyle.mainInfo}>
+                            <Text style={OptionStyle.title}>{props.title}</Text>
+                            <Text style={OptionStyle.title}>{props.info}</Text>
+                        </View>
+                    </View>
+                )
+        }
+    }
+    return (
+        <View style={OptionStyle.body}>
+            {renderOptions()}
+        </View>
+    )
+}
