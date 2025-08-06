@@ -23,7 +23,7 @@ export default function Panel() {
         <View style={{ position: 'absolute', width: '100%', height: '100%', alignItems: 'flex-start' }}>
           <LinearGradient colors={BatteryGradient} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} style={HomeStyle.BatteryEnergy} />
         </View>
-        <Image source={require('../../../img/icons/EnergyIcon.png')} style={{ width: Icon_Size.Icon5xl, height: Icon_Size.Icon5xl }} />
+        <Image source={require('../../../../assets/icons/EnergyIcon.png')} style={{ width: Icon_Size.Icon5xl, height: Icon_Size.Icon5xl }} />
       </View>
 
       <View style={HomeStyle.BatteryInfoPlace}>

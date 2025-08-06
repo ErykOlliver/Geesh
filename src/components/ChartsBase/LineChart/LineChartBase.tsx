@@ -98,7 +98,7 @@ export default function LineChartBase(props: BarChartProps) {
                         const dynamicSpacing = 5;
                         const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
 
-                        const x = index * (dynamicBarWidth + dynamicSpacing);
+                        const x = xScale(index);
                         const labelY = sizeBottomBarOfMonths;
                         return (
                             <Text
