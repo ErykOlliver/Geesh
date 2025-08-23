@@ -1,9 +1,10 @@
 import React from 'react';
-import { TextInput, Text, View} from 'react-native';
+import { TextInput, Text, View } from 'react-native';
+import { Secondary_Colors } from '../../../components/DesigneTokens/pallets';
 import styles from '../style/LoginStyle';
-import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { HugeiconsIcon } from '@hugeicons/react-native';
-import { User03Icon,LockPasswordIcon } from '@hugeicons/core-free-icons';
+import { User03Icon, LockPasswordIcon } from '@hugeicons/core-free-icons';
 
 export default function Mid() {
   return (
@@ -12,7 +13,7 @@ export default function Mid() {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>CPF</Text>
           <View style={styles.inputWithIcon}>
-            <HugeiconsIcon icon={User03Icon} style={styles.icon} />
+            <HugeiconsIcon icon={User03Icon} width='30' height='30' color='gray'/>
             <TextInput
               style={styles.input}
               placeholder='Ex: 123.456.789-10'
@@ -22,7 +23,7 @@ export default function Mid() {
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Password</Text>
           <View style={styles.inputWithIcon}>
-            <HugeiconsIcon icon={LockPasswordIcon} style={styles.icon} />
+            <HugeiconsIcon icon={LockPasswordIcon} width='30' height='30' color='gray'/>
             <TextInput
               style={styles.input}
               placeholder="Geesh access code"
