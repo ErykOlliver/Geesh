@@ -10,6 +10,8 @@ export default function App() {
     'InriaSans-Bold': require('./src/components/fonts/Inria_Sans/InriaSans-Bold.ttf'),
     'Poppins-Regular': require('./src/components/fonts/Poppins/Poppins-Regular.ttf'),
     'Poppins-Light': require('./src/components/fonts/Poppins/Poppins-Light.ttf'),
+    'InriaSans-Light': require('./src/components/fonts/Inria_Sans/InriaSans-Light.ttf'),
+
   })
 
   if (!fontsLoaded) {
