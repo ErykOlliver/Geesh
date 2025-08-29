@@ -1,7 +1,9 @@
 import { StyleSheet } from "react-native";
 import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Dimensions } from "react-native";
 
+const { width, height } = Dimensions.get('screen');
 
 const LoginStyle = StyleSheet.create({
   Body: {
@@ -13,13 +15,12 @@ const LoginStyle = StyleSheet.create({
     display: 'flex',
     height: '25%',
     width: '100%',
-    marginTop: 40,
+    marginTop: 80 * (height / 1920),
   },
   Meio: {
     display: 'flex',
-    height: '50%',
+    height: '25%',
     width: '100%',
-    marginTop: 20,
   },
   Inferior: {
     flex: 1,
@@ -60,29 +61,33 @@ const LoginStyle = StyleSheet.create({
     fontWeight: "bold",
   },
   Titulo: {
-    fontSize: 50,
+    fontSize: 150 * (width / 1080),
     marginLeft: 20,
   },
   SubTitulo: {
     fontSize: Text_Sizes.h3,
     marginLeft: 25,
     marginRight: 60,
-    marginTop: 10,
+  },
+  Subsubtitulo: {
+    fontSize: Text_Sizes.h3,
+    marginLeft: 25,
+    marginRight: 60,
   },
   Linha: {
     width: '100%',
     height: 2,
     backgroundColor: Primmary_Colors.BluishWhite,
-    marginTop: 20,
+    marginTop: 25,
   },
   inputGroup: {
-    height: '45%',
+    height: '25%',
   },
   label: {
     marginLeft: '5%',
-    marginBottom: 4,
     fontWeight: 'bold',
-    fontSize: 14,
+    paddingBottom: 10,
+    fontSize: Text_Sizes.h4,
   },
   inputWithIcon: {
     display: 'flex',
@@ -94,6 +99,7 @@ const LoginStyle = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: Secondary_Colors.White80,
     paddingLeft: 10,
+    marginBottom: 20,
   },
   Title:{
     fontSize: 20,
@@ -112,6 +118,67 @@ const LoginStyle = StyleSheet.create({
     padding: 10,
     borderColor: "white",
     color: 'gray',
+  },
+    centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+  },
+  AlertView: {
+    backgroundColor: '#BD1E1E',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '40%',
+    borderTopStartRadius: 15,
+    borderTopEndRadius: 15,
+  },
+  modalView: {
+    display: 'flex',
+    backgroundColor: 'white',
+    borderRadius: 15,
+    height: '38%',
+    width: '85%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#BD1E1E',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '13%',
+    width: '80%',
+    borderRadius: 5,
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  CloseButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 
 })

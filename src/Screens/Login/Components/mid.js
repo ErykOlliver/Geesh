@@ -30,8 +30,7 @@ export default function Mid() {
     }
   }
   return (
-    <SafeAreaProvider>
-      <SafeAreaView>
+        <View style={LoginStyle.Meio}>
         <View style={styles.inputGroup}>
           <Text style={styles.label}>CPF</Text>
           <View style={styles.inputWithIcon}>
@@ -40,11 +39,9 @@ export default function Mid() {
               style={styles.input}
               placeholder='Ex: 123.456.789-10'
               value={email}
-              onChangeText={setMail}
-            />
+              onChangeText={setMail} 
+            />       
           </View>
-        </View>
-        <View style={styles.inputGroup}>
           <Text style={styles.label}>Password</Text>
           <View style={styles.inputWithIcon}>
             <HugeiconsIcon icon={LockPasswordIcon} width='30' height='30' color='gray' />
@@ -57,18 +54,7 @@ export default function Mid() {
             />
           </View>
         </View>
-        <TouchableOpacity onPress={signUp} style={LoginStyle.btn}>
-          <LinearGradient
-            colors={[Primmary_Colors.Azure, Primmary_Colors.BluishWhite]}
-            start={{ x: 0.5, y: -0.5 }}
-            end={{ x: 0.5, y: 1 }}
-            style={LoginStyle.btnGradient}
-          >
-            <Text style={LoginStyle.btnText}>Enter Geesh</Text>
-          </LinearGradient>
-        </TouchableOpacity>
-      </SafeAreaView>
-    </SafeAreaProvider>
+      </View>
   );
 };
 

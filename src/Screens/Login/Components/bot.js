@@ -11,6 +11,7 @@ export default function Bot() {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
+    
     <View style={LoginStyle.Inferior}>
       <TouchableOpacity onPress={() => setModalVisible(true)} style={LoginStyle.btn}>
         <LinearGradient
@@ -34,24 +35,24 @@ export default function Bot() {
         }}
       >
 
-        <View style={styles.centeredView}>
+        <View style={LoginStyle.centeredView}>
           <BlurView intensity={4} tint="light" experimentalBlurMethod={Platform.OS === 'android' ? 'dimezisBlurView' : undefined} style={StyleSheet.absoluteFill} />
-          <View style={styles.modalView}>
-            <View style={styles.AlertView}>
+          <View style={LoginStyle.modalView}>
+            <View style={LoginStyle.AlertView}>
               <HugeiconsIcon icon={Alert02Icon} color="#fff" height="50%" width="50%" />
             </View>
             <View style={LoginStyle.TextView}>
               <Text style={LoginStyle.Title}>Account not found</Text>
-              <Text style={styles.modalText}>
+              <Text style={LoginStyle.modalText}>
                 We couldn't find an account with the Provided CPF.
                 Please check your information. If the issue persists, contact our support team.
               </Text>
             </View>
             <TouchableOpacity
               onPress={() => setModalVisible(false)}
-              style={styles.buttonClose}
+              style={LoginStyle.buttonClose}
             >
-              <Text style={styles.CloseButtonText}>Close</Text>
+              <Text style={LoginStyle.CloseButtonText}>Close</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -64,66 +65,3 @@ export default function Bot() {
   );
 }
 
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-  },
-  AlertView: {
-    backgroundColor: '#BD1E1E',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '40%',
-    borderTopStartRadius: 15,
-    borderTopEndRadius: 15,
-  },
-  modalView: {
-    display: 'flex',
-    backgroundColor: 'white',
-    borderRadius: 15,
-    height: '38%',
-    width: '85%',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#BD1E1E',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '13%',
-    width: '80%',
-    borderRadius: 5,
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
-  CloseButtonText: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-});
