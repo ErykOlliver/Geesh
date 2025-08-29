@@ -2,6 +2,7 @@ import { useFonts } from 'expo-font';
 import NavContainer from './src/routes';
 import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import './i18nify.js'
 
 
 export default function App() {
