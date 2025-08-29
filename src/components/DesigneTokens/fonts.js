@@ -3,4 +3,7 @@ export const Geesh_Fonts = {
     InriaRegular: 'InriaSans-Regular',
     InriaLight: 'InriaSans-Light',
     InterSemiBold: 'Inter-SemiBold',
+    PoppinsRegular: 'Poppins-Regular',
+    PoppinsLight: 'Poppins-Light',
+
 }
