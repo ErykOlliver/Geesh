@@ -17,7 +17,7 @@ export default function BaseFilter(props: FilterProps) {
 
             <View style={style.container}>
                 <Text style={style.Title}>{props.title}</Text>
-                <HugeiconsIcon icon={ArrowDown01Icon} size={Geesh_Icon_Size.IconXL} />
+                <HugeiconsIcon icon={ArrowDown01Icon} size={Icon_Size.IconXL} />
             </View>
         </View>
     )

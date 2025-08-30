@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-
 import { Text_Sizes } from "../../components/DesigneTokens/metrics.js";
 import { Secondary_Colors } from "../../components/DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../components/DesigneTokens/fonts.js";
@@ -7,7 +6,7 @@ import { Geesh_Fonts } from "../../components/DesigneTokens/fonts.js";
 
 const TabRoutesStyle = StyleSheet.create({
     Tab: {
-        backgroundColor: Geesh_Secondary_Colors.White,
+        backgroundColor: Secondary_Colors.White,
         elevation: 10,
         height: 64,
         paddingTop: 5,
