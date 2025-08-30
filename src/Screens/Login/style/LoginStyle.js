@@ -7,24 +7,22 @@ const { width, height } = Dimensions.get('screen');
 
 const LoginStyle = StyleSheet.create({
   Body: {
-    flex: 1,
+    display: 'flex',
+    justifyContent: 'space-between',
     height: Screen_Size.height,
     width: Screen_Size.width,
   },
   Superior: {
-    display: 'flex',
-    height: 520 * (height / 1920),
     width: '100%',
     marginTop: 80 * (height / 1920),
   },
   Meio: {
-    display: 'flex',
-    height: 520 * (height / 1920),
+    flex: 1,
+    justifyContent: 'flex-start',
+    marginTop: 50 * (height / 1920),
     width: '100%',
-    marginTop: 10 * (height / 1080),
   },
   Inferior: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 230 * (height / 1920),
