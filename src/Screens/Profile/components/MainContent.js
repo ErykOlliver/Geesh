@@ -10,39 +10,44 @@ import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"
 import OptionComponent from "../../../components/Reuse/Option/OptionComponent.tsx"
 import DropDownComponent from "../../../components/Reuse/DropDown/DropDownComponent.tsx"
 import SectionSettinsComponent from "./SectionSettings/SectionSettings.tsx"
+import { useTranslation } from "react-i18next"
+
 
 const data = [
-    { label: 'English', value: 0 },
-    { label: 'Português', value: 0 }
+    { label: 'English', value: 'en' },
+    { label: 'Português', value: 'pt' }
 ]
 
 
 export default function MainContent() {
+    const { t, i18n } = useTranslation();
+
     const OpenInstagram = () => {
         Linking.openURL('https://www.google.com');
     }
+
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <View style={ProfileStyle.MainContent}>
             <View style={ProfileStyle.MCContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
-                    <SectionSettinsComponent title="Settings">
-                        <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title="Night Mode" type='toggle' />
-                        <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title="Notifications" type="toggle" />
-                        <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title="Language" type="dropdown" data={data} />
+                    <SectionSettinsComponent title={t("Configs")}>
+                        <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title={t("Modo Escuro")} type='toggle' />
+                        <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title={t("Notificações")} type="toggle" />
+                        <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title={t("Idioma")} type="dropdown" data={data} function={(selected) => i18n.changeLanguage(selected.value)}  />
                     </SectionSettinsComponent>
-                    <SectionSettinsComponent title="Security and privacy">
-                        <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title="Change email" type='default' />
-                        <OptionComponent icon={<HugeiconsIcon icon={SmartPhone01Icon} size={30} />} title="Change phone number" type='default' />
-                        <OptionComponent icon={<HugeiconsIcon icon={ResetPasswordIcon} size={30} />} title="Change password" type='default' />
+                    <SectionSettinsComponent title={t("Segurança e privacidade")}>
+                        <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title={t("Trocar Email")} type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={SmartPhone01Icon} size={30} />} title={t("Trocar numero de telefone")} type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={ResetPasswordIcon} size={30} />} title={t("Trocar senha")} type='default' />
                     </SectionSettinsComponent>
-                    <SectionSettinsComponent title="Social">
+                    <SectionSettinsComponent title={t("Redes sociais")}>
                         <OptionComponent icon={<HugeiconsIcon icon={InstagramIcon} size={30} />} title="Instagram" type='default' />
-                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Website" type='default' />
+                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title={t("Site")} type='default' />
                     </SectionSettinsComponent>
-                    <SectionSettinsComponent title="About">
-                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title="Version" info="1.0.0" type='information' />
+                    <SectionSettinsComponent title={t("Sobre")}>
+                        <OptionComponent icon={<HugeiconsIcon icon={WebDesignIcon} size={30} />} title={t("Versão")} info="1.0.0" type='information' />
                     </SectionSettinsComponent>
                 </ScrollView >
             </View >

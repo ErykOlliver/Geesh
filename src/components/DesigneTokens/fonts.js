@@ -5,5 +5,6 @@ export const Geesh_Fonts = {
     InterSemiBold: 'Inter-SemiBold',
     PoppinsRegular: 'Poppins-Regular',
     PoppinsLight: 'Poppins-Light',
+    PoppinsMedium: 'Poppins-Medium',
 
 }

@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics";
-import { Primmary_Colors, Secondary_Colors } from "../../../DesigneTokens/pallets";
-import { Geesh_Fonts } from "../../../DesigneTokens/fonts";
+import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
+import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
 
 const OptionStyle = StyleSheet.create({
     body: {
@@ -50,8 +49,8 @@ const OptionStyle = StyleSheet.create({
 
     },
     title: {
-        fontFamily: Geesh_Fonts.InriaLight,
         fontSize: Text_Sizes.h3,
+        fontFamily: Geesh_Fonts.PoppinsLight,
     }
 })
 

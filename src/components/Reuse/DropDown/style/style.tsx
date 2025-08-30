@@ -31,12 +31,12 @@ const DropDownStyle = StyleSheet.create({
         alignItems: 'center',
     },
     SelectedOption: {
-        fontSize: Text_Sizes.h3,
-        fontFamily: Geesh_Fonts.InriaRegular
+        fontSize: Text_Sizes.h4,
+        fontFamily: Geesh_Fonts.PoppinsLight
     },
 
     Option: {
-        fontFamily: Geesh_Fonts.InriaLight,
+        fontFamily: Geesh_Fonts.PoppinsLight,
         fontSize: Text_Sizes.h4,
 
     },

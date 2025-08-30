@@ -1,6 +1,6 @@
 import { TouchableOpacity, View } from "react-native";
-import ToggleStyle from "./style/style";
 import { useState } from "react";
+import ToggleStyle from "./style/style.tsx";
 
 type ToggleProps = {
     function?: () => void;
