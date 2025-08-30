@@ -45,6 +45,8 @@ export default function Bot() {
               <Text style={LoginStyle.Title}>Account not found</Text>
               <Text style={LoginStyle.modalText}>
                 We couldn't find an account with the Provided CPF.
+              </Text>
+              <Text style={LoginStyle.modalText}>
                 Please check your information. If the issue persists, contact our support team.
               </Text>
             </View>

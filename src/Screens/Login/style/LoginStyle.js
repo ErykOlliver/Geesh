@@ -103,13 +103,11 @@ const LoginStyle = StyleSheet.create({
   Title:{
     fontSize: 65 * (width / 1080),
     fontWeight: 'bold',
-    padding: 10,
+    marginBottom: 10 * (height / 1080),
   },
   TextView:{
-    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
   },
   input: {
     flex: 1,
@@ -139,9 +137,10 @@ const LoginStyle = StyleSheet.create({
     display: 'flex',
     backgroundColor: 'white',
     borderRadius: 15,
-    height: 450 * (height / 1080),
+    height: 380 * (height / 1080),
     width:  1600 * (width / 1920),
     alignItems: 'center',
+    justifyContent: 'space-between',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -161,7 +160,7 @@ const LoginStyle = StyleSheet.create({
     height: '13%',
     width: '80%',
     borderRadius: 5,
-    margin: 5,
+    marginBottom: 20 * (height / 1080),
   },
   textStyle: {
     color: 'white',
@@ -169,7 +168,6 @@ const LoginStyle = StyleSheet.create({
     textAlign: 'center',
   },
   modalText: {
-    marginBottom: 15,
     textAlign: 'center',
     fontSize: Text_Sizes.h4,
   },
