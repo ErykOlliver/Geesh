@@ -1,8 +1,8 @@
 import { Text, View } from "react-native";
-import style from "./style/style.tsx";
 import { HugeiconsIcon } from "@hugeicons/react-native";
 import { ArrowDown01Icon, FilterVerticalIcon } from "@hugeicons/core-free-icons";
-import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics.js";
+import { Geesh_Icon_Size, Screen_Size } from "../../DesigneTokens/metrics.js";
+import style from "./style/style.tsx";
 
 type FilterProps = {
     title: string

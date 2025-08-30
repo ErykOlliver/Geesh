@@ -1,9 +1,9 @@
-export const Primmary_Colors = {
+const Geesh_Primmary_Colors = {
     Azure: '#029FFC',
     BluishWhite: '#89D3FF'
 }
 
-export const Secondary_Colors = {
+const Geesh_Secondary_Colors = {
     White: '#FFFFFF',
     White90: '#F9F9F9',
     White80: '#F3F3F3',
@@ -12,5 +12,6 @@ export const Secondary_Colors = {
     AuroraGreen: '#8AF37C',
     VitalGreen: '#08CC0E',
     BabyBlue: '#3CC3DF'
-
 }
+
+export { Geesh_Primmary_Colors, Geesh_Secondary_Colors }

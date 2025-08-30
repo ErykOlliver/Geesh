@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { View, } from "react-native";
-import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop } from "react-native-svg";
+import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
 import { Primmary_Colors } from "../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
@@ -27,6 +27,36 @@ export default function BarChartBase(props: BarChartProps) {
 
     const yTicks = [];
     for (let v = 0; v <= maxValue; v += step) yTicks.push(v);
+
+    const bars = useMemo(() => {
+        if (!ChartSize.width) return [];
+        const totalBars = props.data.length;
+        const dynamicSpacing = 5;
+        const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
+
+        return props.data.map((value, index) => {
+            const barHeight = (value / maxValue) * ChartSize.height;
+            const x = index * (dynamicBarWidth + dynamicSpacing);
+            const y = ChartSize.height - barHeight;
+            const radius = 10;
+
+            const d = `
+      M ${x},${ChartSize.height}   
+      L ${x},${y + radius}
+      Q ${x},${y} ${x + radius},${y}
+      L ${x + dynamicBarWidth - radius},${y}
+      Q ${x + dynamicBarWidth},${y} ${x + dynamicBarWidth},${y + radius}
+      L ${x + dynamicBarWidth},${ChartSize.height}`;
+            return (
+                <Path
+                    key={index}
+                    d={d}
+                    fill="url(#BCGradient)"
+                />
+            );
+        });
+
+    }, [props.data, ChartSize])
 
     return (
 
@@ -66,27 +96,9 @@ export default function BarChartBase(props: BarChartProps) {
                                 <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
                             </LinearGradient>
                         </Defs>
-                        {props.data.map((value, index) => {
-                            const totalBars = props.data.length;
-                            const dynamicSpacing = 5;
-                            const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
+                        {bars}
 
-                            const barHeight = (value / maxValue) * ChartSize.height;
-                            const x = index * (dynamicBarWidth + dynamicSpacing);
-                            const y = ChartSize.height - barHeight;
 
-                            return (
-                                <Rect
-                                    key={index}
-                                    x={x}
-                                    y={y}
-                                    width={dynamicBarWidth}
-                                    height={ChartSize.height}
-                                    fill="url(#BCGradient)"
-                                    rx={8}
-                                />
-                            );
-                        })}
                     </Svg>
                 </View>
             </View>
