@@ -13,20 +13,21 @@ const LoginStyle = StyleSheet.create({
   },
   Superior: {
     display: 'flex',
-    height: '25%',
+    height: 520 * (height / 1920),
     width: '100%',
     marginTop: 80 * (height / 1920),
   },
   Meio: {
     display: 'flex',
-    height: '25%',
+    height: 520 * (height / 1920),
     width: '100%',
+    marginTop: 10 * (height / 1080),
   },
   Inferior: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 130,
+    marginTop: 230 * (height / 1920),
   },
   btn: {
     width: '90%',
@@ -53,7 +54,7 @@ const LoginStyle = StyleSheet.create({
     borderRadius: 10,
   },
   texto: {
-    fontSize: 12,
+    fontSize: Text_Sizes.h5,
     paddingTop: 15,
   },
   cor: {
@@ -78,7 +79,7 @@ const LoginStyle = StyleSheet.create({
     width: '100%',
     height: 2,
     backgroundColor: Primmary_Colors.BluishWhite,
-    marginTop: 25,
+    marginTop: 75 * (height / 1920),
   },
   inputGroup: {
     height: '25%',
@@ -102,7 +103,7 @@ const LoginStyle = StyleSheet.create({
     marginBottom: 20,
   },
   Title:{
-    fontSize: 20,
+    fontSize: 65 * (width / 1080),
     fontWeight: 'bold',
     padding: 10,
   },
@@ -140,22 +141,19 @@ const LoginStyle = StyleSheet.create({
     display: 'flex',
     backgroundColor: 'white',
     borderRadius: 15,
-    height: '38%',
-    width: '85%',
+    height: 450 * (height / 1080),
+    width:  1600 * (width / 1920),
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-  },
+},
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
   },
   buttonClose: {
     backgroundColor: '#BD1E1E',
@@ -165,6 +163,7 @@ const LoginStyle = StyleSheet.create({
     height: '13%',
     width: '80%',
     borderRadius: 5,
+    margin: 5,
   },
   textStyle: {
     color: 'white',
@@ -174,6 +173,7 @@ const LoginStyle = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
+    fontSize: Text_Sizes.h4,
   },
   CloseButtonText: {
     color: 'white',
