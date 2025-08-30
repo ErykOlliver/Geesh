@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
-import { Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
+import { Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 
 const style = StyleSheet.create({
     body: {
@@ -23,7 +23,7 @@ const style = StyleSheet.create({
         width: 400 * (Screen_Size.width / 1080),
         padding: 20 * (Screen_Size.width / 1080),
         height: 94 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
