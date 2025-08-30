@@ -27,7 +27,7 @@ const SectionSettingsStyle = StyleSheet.create({
     },
     title: {
         fontSize: Text_Sizes.h3,
-        fontFamily: Geesh_Fonts.PoppinsBold,
+        fontFamily: Geesh_Fonts.PoppinsMedium,
     }
 
 })

@@ -52,6 +52,11 @@ const UserPanelStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.InriaBold,
         fontSize: Text_Sizes.h2
     },
+    userNamePlace: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
     UID: {
         fontFamily: Geesh_Fonts.InriaLight,
         fontSize: Text_Sizes.h4
