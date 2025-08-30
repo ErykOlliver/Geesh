@@ -23,7 +23,10 @@ export default function UserPanel(props: UserProps) {
                         )}
                     </View>
                     <View style={UserPanelStyle.userInfos}>
-                        <Text style={UserPanelStyle.userName}>{props.userName} <HugeiconsIcon icon={PencilEdit01Icon} /></Text>
+                        <View style={UserPanelStyle.userNamePlace}>
+                            <Text style={UserPanelStyle.userName}>{props.userName}</Text>
+                            <HugeiconsIcon icon={PencilEdit01Icon} />
+                        </View>
                         <Text style={UserPanelStyle.UID}>ID: {props.UID}</Text>
                     </View>
                 </View>

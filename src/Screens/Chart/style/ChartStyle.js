@@ -33,11 +33,12 @@ const ChartStyle = StyleSheet.create({
     },
     ChartTitle: {
         fontSize: 100 * (Screen_Size.width / 1080),
-        fontFamily: Geesh_Fonts.PoppinsRegular
+        fontFamily: Geesh_Fonts.PoppinsRegular,
     },
     ChartIndicator: {
-        fontSize: 36 * (Screen_Size.width / 1080),
-        fontFamily: Geesh_Fonts.PoppinsLight
+        fontSize: 30 * (Screen_Size.width / 1080),
+        fontFamily: Geesh_Fonts.PoppinsLight,
+        textTransform: 'uppercase',
     },
     MainContent: {
         alignItems: 'center',

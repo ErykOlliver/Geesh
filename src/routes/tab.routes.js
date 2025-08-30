@@ -7,6 +7,8 @@ import Home from "../Screens/Home/Home.js";
 import Chart from "../Screens/Chart/Chart.js";
 import Profile from "../Screens/Profile/Profile.js";
 import { Analytics03Icon, Home11Icon, User03Icon, } from "@hugeicons/core-free-icons";
+import { useTranslation } from "react-i18next";
+
 //#endregion
 
 //#region TabRoutes
@@ -14,6 +16,7 @@ import { Analytics03Icon, Home11Icon, User03Icon, } from "@hugeicons/core-free-i
 const TAB = createBottomTabNavigator();
 
 export default function TabRoutes() {
+    const { t, i18n } = useTranslation();
     return (
         <TAB.Navigator
             screenOptions={{
@@ -24,7 +27,7 @@ export default function TabRoutes() {
                 tabBarInactiveTintColor: '#000'
             }}>
 
-            <TAB.Screen name="Home" component={Home}
+            <TAB.Screen name={t("Inicio")} component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <HugeiconsIcon icon={Home11Icon} size={size + 5} strokeWidth={1.5} color={color} />
@@ -32,7 +35,7 @@ export default function TabRoutes() {
                 }}
             />
 
-            <TAB.Screen name="Chart" component={Chart}
+            <TAB.Screen name={t("Gráfico")} component={Chart}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <HugeiconsIcon icon={Analytics03Icon} size={size + 5} strokeWidth={1.5} color={color} />
@@ -40,7 +43,7 @@ export default function TabRoutes() {
                 }}
             />
 
-            <TAB.Screen name="Profile" component={Profile} options={{
+            <TAB.Screen name={t("Perfil")} component={Profile} options={{
                 tabBarIcon: ({ color, size }) => (
                     <HugeiconsIcon icon={User03Icon} size={size + 5} strokeWidth={1.5} color={color} />
                 )
