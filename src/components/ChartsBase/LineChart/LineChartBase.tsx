@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { View, } from "react-native";
 import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
-import { Primmary_Colors, Secondary_Colors } from "../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import ValueInLeft from "./components/ValueInLeft.tsx";
 import * as d3 from 'd3'
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../DesigneTokens/pallets.js";
 
 
 type BarChartProps = {
@@ -82,11 +82,11 @@ export default function LineChartBase(props: BarChartProps) {
                         })};
                         <Defs>
                             <LinearGradient id="LCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Secondary_Colors.BabyBlue} stopOpacity={0.5} />
-                                <Stop offset="100%" stopColor={Secondary_Colors.BabyBlue} stopOpacity={0} />
+                                <Stop offset="0%" stopColor={Geesh_Secondary_Colors.BabyBlue} stopOpacity={0.5} />
+                                <Stop offset="100%" stopColor={Geesh_Secondary_Colors.BabyBlue} stopOpacity={0} />
                             </LinearGradient>
                         </Defs>
-                        <Path d={SvgLine} stroke={Primmary_Colors.Azure} fill='none' strokeWidth={0.5} />
+                        <Path d={SvgLine} stroke={Geesh_Primmary_Colors.Azure} fill='none' strokeWidth={0.5} />
                         <Path d={SvgArea} stroke="none" fill='url(#LCGradient)' />
                     </Svg>
                 </View>
@@ -98,7 +98,7 @@ export default function LineChartBase(props: BarChartProps) {
                         const dynamicSpacing = 5;
                         const dynamicBarWidth = (ChartSize.width - 38 - (totalBars - 1) * dynamicSpacing) / totalBars;
 
-                        const x = xScale(index);
+                        const x = index * (dynamicBarWidth + dynamicSpacing);
                         const labelY = sizeBottomBarOfMonths;
                         return (
                             <Text

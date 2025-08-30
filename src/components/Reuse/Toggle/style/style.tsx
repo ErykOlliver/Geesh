@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size } from "../../../DesigneTokens/metrics";
-import { Primmary_Colors, Secondary_Colors } from "../../../DesigneTokens/pallets";
+import { Screen_Size } from "../../../DesigneTokens/metrics.js";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 
 const ToggleStyle = StyleSheet.create({
     onToggle: {
@@ -8,7 +8,7 @@ const ToggleStyle = StyleSheet.create({
         alignItems: 'flex-start',
         width: 150 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 100 * (Screen_Size.width / 1080),
     },
     offToggle: {
@@ -16,13 +16,13 @@ const ToggleStyle = StyleSheet.create({
         alignItems: 'flex-end',
         width: 150 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 100 * (Screen_Size.width / 1080),
     },
     Circle: {
         width: 70 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Primmary_Colors.Azure,
+        backgroundColor: Geesh_Primmary_Colors.Azure,
         borderRadius: 100 * (Screen_Size.width / 1080),
 
     }

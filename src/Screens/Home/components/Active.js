@@ -1,19 +1,19 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Primmary_Colors, Secondary_Colors } from '../../../components/DesigneTokens/pallets';
 import { LinearGradient } from 'expo-linear-gradient';
 import HomeStyle from '../style/HomeStyle';
 import { useTranslation } from 'react-i18next';
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets.js';
 
 
 const ActiveBatteryGradient = [
-  Primmary_Colors.BluishWhite,
-  Primmary_Colors.Azure
+  Geesh_Primmary_Colors.BluishWhite,
+  Geesh_Primmary_Colors.Azure
 ]
 
 const IndicatorGradient = [
-  Secondary_Colors.AuroraGreen,
-  Secondary_Colors.VitalGreen
+  Geesh_Secondary_Colors.AuroraGreen,
+  Geesh_Secondary_Colors.VitalGreen
 ]
 
 export default function Active() {

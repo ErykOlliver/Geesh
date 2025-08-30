@@ -1,11 +1,7 @@
 import { Text, View } from "react-native";
-import BarChartBase from "./BarChartBase.tsx";
-import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
-import { Text_Sizes } from "../../DesigneTokens/metrics.js";
-import { HugeiconsIcon } from "@hugeicons/react-native";
-import { FilterVerticalIcon } from "@hugeicons/core-free-icons";
-import BaseFilter from "../../Reuse/FilterBase/BaseFilter.tsx";
 import style from "./style/style.tsx";
+import BaseFilter from "../../Reuse/FilterBase/BaseFilter.tsx";
+import BarChartBase from "./BarChartBase.tsx";
 
 
 type BarChartProps = {

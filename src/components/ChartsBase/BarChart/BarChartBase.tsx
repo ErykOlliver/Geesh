@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { View, } from "react-native";
 import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
-import { Primmary_Colors } from "../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
 import { Text_Sizes } from "../../DesigneTokens/metrics.js";
 import ValueInLeft from "./components/ValueInLeft.tsx";
+import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets.js";
 
 
 type BarChartProps = {
@@ -91,9 +91,9 @@ export default function BarChartBase(props: BarChartProps) {
                         })};
                         <Defs>
                             <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Primmary_Colors.BluishWhite} stopOpacity={0.9} />
-                                <Stop offset="60%" stopColor={Primmary_Colors.Azure} stopOpacity={0.9} />
-                                <Stop offset="100%" stopColor={Primmary_Colors.Azure} stopOpacity={1} />
+                                <Stop offset="0%" stopColor={Geesh_Primmary_Colors.BluishWhite} stopOpacity={0.9} />
+                                <Stop offset="60%" stopColor={Geesh_Primmary_Colors.Azure} stopOpacity={0.9} />
+                                <Stop offset="100%" stopColor={Geesh_Primmary_Colors.Azure} stopOpacity={1} />
                             </LinearGradient>
                         </Defs>
                         {bars}

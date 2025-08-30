@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
-import { Primmary_Colors, Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 
 const DropDownStyle = StyleSheet.create({
     body: {
@@ -14,7 +14,7 @@ const DropDownStyle = StyleSheet.create({
         width: 400 * (Screen_Size.width / 1080),
         height: 94 * (Screen_Size.width / 1080),
         borderRadius: 15 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         display: 'flex',
         zIndex: 2,
         flexDirection: 'row',
@@ -53,10 +53,10 @@ const DropDownStyle = StyleSheet.create({
     
     ListContent: {
         borderRadius: 15 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         padding: 15 * (Screen_Size.width / 1080),
         gap: 3,
-        borderColor: Primmary_Colors.Azure,
+        borderColor: Geesh_Primmary_Colors.Azure,
         borderWidth: 0.5/*  */
     },
 })

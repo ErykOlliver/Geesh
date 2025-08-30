@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../../../../components/DesigneTokens/metrics.js";
-import { Secondary_Colors } from "../../../../../../components/DesigneTokens/pallets.js";
+import { Geesh_Secondary_Colors } from "../../../../../../components/DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../../../../components/DesigneTokens/fonts.js";
 
 const UserPanelStyle = StyleSheet.create({
@@ -9,7 +9,7 @@ const UserPanelStyle = StyleSheet.create({
         flex: 1,
         width: Screen_Size.width,
         height: 322 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White,
+        backgroundColor: Geesh_Secondary_Colors.White,
         justifyContent: 'center',
         borderEndEndRadius: 50 * (Screen_Size.width / 1080),
         alignItems: 'center'
@@ -34,7 +34,7 @@ const UserPanelStyle = StyleSheet.create({
     avatarPlace: {
         width: 230 * (Screen_Size.width / 1080),
         height: 230 * (Screen_Size.width / 1080),
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 200 * (Screen_Size.width / 1080),
         justifyContent: 'center',
         alignItems: 'center'

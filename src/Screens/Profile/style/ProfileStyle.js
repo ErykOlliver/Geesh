@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
-import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
 
 const ProfileStyle = StyleSheet.create({
     body: {
@@ -17,12 +17,12 @@ const ProfileStyle = StyleSheet.create({
         height: Screen_Size.height
     },
     Header: {
-        backgroundColor: Secondary_Colors.White90,
+        backgroundColor: Geesh_Secondary_Colors.White90,
         width: Screen_Size.width,
         height: 587 * (Screen_Size.width / 1080)
     },
     UserPAndUserNPlace: {
-        backgroundColor: Secondary_Colors.White,
+        backgroundColor: Geesh_Secondary_Colors.White,
         height: "70%",
         justifyContent: 'center',
         alignItems: 'center',
@@ -41,7 +41,7 @@ const ProfileStyle = StyleSheet.create({
     },
 
     PhotoPlace: {
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         width: 100,
         height: 100,
         borderRadius: '100%',
@@ -81,7 +81,7 @@ const ProfileStyle = StyleSheet.create({
     },
 
     ENPlace: {
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         display: 'flex',
         flexDirection: 'row',
         width: 190,
@@ -98,7 +98,7 @@ const ProfileStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.InriaRegular
     },
     MainContent: {
-        backgroundColor: Secondary_Colors.White90,
+        backgroundColor: Geesh_Secondary_Colors.White90,
         width: Screen_Size.width,
         height: "100%",
         justifyContent: 'flex-start',

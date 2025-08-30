@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../../../../components/DesigneTokens/metrics.js";
-import { Secondary_Colors } from "../../../../../../components/DesigneTokens/pallets.js";
+import { Geesh_Secondary_Colors } from "../../../../../../components/DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../../../../components/DesigneTokens/fonts.js";
 
 const UserCredentialStyle = StyleSheet.create({
@@ -25,7 +25,7 @@ const UserCredentialStyle = StyleSheet.create({
     },
     Pop: {
         flex: 1,
-        backgroundColor: Secondary_Colors.White70,
+        backgroundColor: Geesh_Secondary_Colors.White70,
         justifyContent: 'flex-start',
         alignItems: 'center',
         width: 460 * (Screen_Size.width / 1080),
