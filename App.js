@@ -13,6 +13,7 @@ export default function App() {
     'Inter-SemiBold': require('./src/components/fonts/Inter/Inter_28pt-SemiBold.ttf'),
     'Poppins-Regular': require('./src/components/fonts/Poppins/Poppins-Regular.ttf'),
     'Poppins-Light': require('./src/components/fonts/Poppins/Poppins-Light.ttf'),
+    'Poppins-Bold': require('./src/components/fonts/Poppins/Poppins-Black.ttf'),
   })
 
   if (!fontsLoaded) {

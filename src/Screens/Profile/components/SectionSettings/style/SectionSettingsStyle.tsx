@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { Primmary_Colors, Secondary_Colors } from "../../../DesigneTokens/pallets.js";
 import { Geesh_Fonts } from "../../../../../components/DesigneTokens/fonts.js";
 import { Screen_Size, Text_Sizes } from "../../../../../components/DesigneTokens/metrics.js";
 
@@ -28,7 +27,7 @@ const SectionSettingsStyle = StyleSheet.create({
     },
     title: {
         fontSize: Text_Sizes.h3,
-        fontFamily: Geesh_Fonts.InterSemiBold,
+        fontFamily: Geesh_Fonts.PoppinsBold,
     }
 
 })

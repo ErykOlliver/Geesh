@@ -6,7 +6,7 @@ import pt from "./locales/pt.json"
 
 i18n.use(initReactI18next).init({
     compatibilityJSON: 'v4',
-    lng: 'pt',
+    lng: 'en',
     resources: {
         pt: pt,
         en: en,

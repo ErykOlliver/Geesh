@@ -112,7 +112,7 @@ export default StyleSheet.create({
     display: 'flex',
     width: 880 * (Screen_Size.width / 1080),
     paddingVertical: 15 * (Screen_Size.width / 1080),
-    gap: 4 * (Screen_Size.width / 1080),
+    gap: 10 * (Screen_Size.width / 1080),
   },
 
   BatteryInfo: {

@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from "react-native"
 import ChartStyle from "../style/ChartStyle.js";
 import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 import LineChart from "../../../components/ChartsBase/LineChart/LineChart";
+import { useTranslation } from "react-i18next";
 
 const RandomizeValuesInCharts = (min = 0, max = 200) => {
 
@@ -16,9 +17,10 @@ const RandomizeValuesInCharts = (min = 0, max = 200) => {
     return ListOfValues;
 }
 
-const MouthsList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 export default function MainContent() {
+    const { t, i18n } = useTranslation();
+
     const [BCData, SetBCData] = useState([])
     const [LCData, SetLCData] = useState([])
 
@@ -31,14 +33,15 @@ export default function MainContent() {
         return () => clearInterval(Interval)
     })
 
+    const MouthsList = [t("Jan"), t("Feb"), t("Mar"), t("Apr"), t("May"), t("Jun"), t("Jul"), t("Aug"), t("Sep"), t("Oct"), t("Nov"), t("Dec")];
     return (
         <View style={ChartStyle.MainContent}>
             <View style={ChartStyle.MainContentContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
                     <View style={ChartStyle.ChartsPlace}>
-                        <BarChart title="General Energy Usage" data={BCData} labels={MouthsList} />
-                        <LineChart title="Live Energy Input" data={LCData} labels={MouthsList} />
-                        <BarChart title="General Energy Usage" data={BCData} labels={MouthsList} />
+                        <BarChart title={t("Consumo geral de energia")} data={BCData} labels={MouthsList} />
+                        <LineChart title={t("Entrada de energia em tempo real")} data={LCData} labels={MouthsList} />
+                        <BarChart title={t("Consumo geral de energia")} data={BCData} labels={MouthsList} />
                     </View>
                 </ScrollView>
             </View>

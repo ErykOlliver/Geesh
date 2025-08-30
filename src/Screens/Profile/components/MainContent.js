@@ -25,6 +25,7 @@ export default function MainContent() {
     const OpenInstagram = () => {
         Linking.openURL('https://www.google.com');
     }
+
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
@@ -34,7 +35,7 @@ export default function MainContent() {
                     <SectionSettinsComponent title={t("Configs")}>
                         <OptionComponent icon={<HugeiconsIcon icon={Moon02Icon} size={30} />} title={t("Modo Escuro")} type='toggle' />
                         <OptionComponent icon={<HugeiconsIcon icon={Notification01Icon} size={30} />} title={t("Notificações")} type="toggle" />
-                        <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title={t("Idioma")} type="dropdown" data={data} />
+                        <OptionComponent icon={<HugeiconsIcon icon={LanguageSkillIcon} size={30} />} title={t("Idioma")} type="dropdown" data={data} function={(selected) => i18n.changeLanguage(selected.value)}  />
                     </SectionSettinsComponent>
                     <SectionSettinsComponent title={t("Segurança e privacidade")}>
                         <OptionComponent icon={<HugeiconsIcon icon={RecoveryMailIcon} size={30} />} title={t("Trocar Email")} type='default' />
