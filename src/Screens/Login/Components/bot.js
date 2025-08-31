@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { View, Text, TouchableOpacity, Modal, Alert, StyleSheet,Platform } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, Alert, StyleSheet,Platform, Button } from 'react-native';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { Alert02Icon } from '@hugeicons/core-free-icons';
 import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 import { BlurView } from 'expo-blur';
+import { signUp } from '../Components/mid';
 
 export default function Bot() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -13,19 +14,8 @@ export default function Bot() {
   return (
     
     <View style={LoginStyle.Inferior}>
-      <TouchableOpacity onPress={() => setModalVisible(true)} style={LoginStyle.btn}>
-        <LinearGradient
-          colors={[Primmary_Colors.Azure, Primmary_Colors.BluishWhite]}
-          start={{ x: 0.5, y: -0.5 }}
-          end={{ x: 0.5, y: 1 }}
-          style={LoginStyle.btnGradient}
-        >
-          <Text style={LoginStyle.btnText}>Enter Geesh</Text>
-        </LinearGradient>
-      </TouchableOpacity>
 
-
-      <Modal
+      {/* <Modal
         animationType="slide"
         transparent={true}
         visible={modalVisible}
@@ -58,11 +48,9 @@ export default function Bot() {
             </TouchableOpacity>
           </View>
         </View>
-      </Modal>
+      </Modal> */}
 
-      <Text style={LoginStyle.texto}>
-        Forgot your Password? <Text style={LoginStyle.cor}>Recover it here</Text>
-      </Text>
+
     </View>
   );
 }

@@ -9,7 +9,6 @@ export default function Login() {
         <View style={LoginStyle.Body}>
             <Sup />
             <Mid />
-            <Bot/>
         </View>
     )
 }

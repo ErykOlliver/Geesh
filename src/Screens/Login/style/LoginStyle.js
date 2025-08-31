@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 import { Dimensions } from "react-native";
+import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 
 const { width, height } = Dimensions.get('screen');
 
@@ -14,31 +15,32 @@ const LoginStyle = StyleSheet.create({
   },
   Superior: {
     width: '100%',
-    marginTop: 80 * (height / 1920),
+    marginTop: 80 * (width/1080),
   },
   Meio: {
     flex: 1,
-    justifyContent: 'flex-start',
-    marginTop: 50 * (height / 1920),
+    marginTop: 50 * (width / 1080),
     width: '100%',
   },
   Inferior: {
-    alignItems: 'center',
+    flex: 1,
+    width: '100%',
+    height: '40%',
     justifyContent: 'center',
-    marginTop: 230 * (height / 1920),
+    alignItems: 'center',
+    marginBottom: 325 * (width/1080),
   },
   btn: {
     width: '90%',
-    height: '30%',
+    height: 250 * (width/1080),
     backgroundColor: Primmary_Colors.Azure,
     borderRadius: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 2, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 10,
+    marginTop: 400 * (width/1080),
   },
   btnText: {
     color: "#fff",
@@ -77,7 +79,7 @@ const LoginStyle = StyleSheet.create({
     width: '100%',
     height: 2,
     backgroundColor: Primmary_Colors.BluishWhite,
-    marginTop: 75 * (height / 1920),
+    marginTop: 75 * (width/1080),
   },
   inputGroup: {
     height: '25%',
@@ -103,7 +105,7 @@ const LoginStyle = StyleSheet.create({
   Title:{
     fontSize: 65 * (width / 1080),
     fontWeight: 'bold',
-    marginBottom: 10 * (height / 1080),
+    marginBottom: 10 * (width / 1080),
   },
   TextView:{
     alignItems: 'center',
@@ -116,67 +118,12 @@ const LoginStyle = StyleSheet.create({
     borderColor: "white",
     color: 'gray',
   },
-    centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-  },
-  AlertView: {
-    backgroundColor: '#BD1E1E',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '40%',
-    borderTopStartRadius: 15,
-    borderTopEndRadius: 15,
-  },
-  modalView: {
-    display: 'flex',
-    backgroundColor: 'white',
-    borderRadius: 15,
-    height: 380 * (height / 1080),
-    width:  1600 * (width / 1920),
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+  errorMsg: {
+  color: 'red',
+  fontWeight: Geesh_Fonts.InriaBold,
+  fontSize: 16,
+  marginLeft: '5%',
 },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonClose: {
-    backgroundColor: '#BD1E1E',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '13%',
-    width: '80%',
-    borderRadius: 5,
-    marginBottom: 20 * (height / 1080),
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    textAlign: 'center',
-    fontSize: Text_Sizes.h4,
-  },
-  CloseButtonText: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-
 })
 
 export default LoginStyle;
