@@ -21,6 +21,7 @@ const Screen_Size = {
 
 
 const Icon_Size = {
+    Icon6xl: 64 * (width / 1080),
     Icon5xl: 110 * (width / 1080),
     Icon4xl: 94 * (width / 1080),
     Icon3xl: 76 * (width / 1080),
