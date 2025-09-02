@@ -7,123 +7,114 @@ import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 const { width, height } = Dimensions.get('screen');
 
 const LoginStyle = StyleSheet.create({
-  Body: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    height: Screen_Size.height,
+  body: {
+    flex: 1,
+    gap: 1,
+    backgroundColor: Primmary_Colors.Azure
+  },
+  header: {
     width: Screen_Size.width,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: Secondary_Colors.White80,
+    height: 587 * (Screen_Size.width / 1080),
   },
-  Superior: {
-    width: '100%',
-    marginTop: 80 * (width/1080),
+  header_container: {
+    width: '90%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'start'
+    
   },
-  Meio: {
+  main_content: {
     flex: 1,
-    marginTop: 50 * (width / 1080),
-    width: '100%',
+    justifyContent: 'center',
+    backgroundColor: Secondary_Colors.White80,
+    alignItems: 'center',
   },
-  Inferior: {
+  main_content_container: {
     flex: 1,
+    paddingTop: 10 * (Screen_Size.width / 1080),
+    justifyContent: 'space-between',
+    alignItems: 'start',
+    width: '90%'
+  },
+  form:{
     width: '100%',
-    height: '40%',
+    display: 'flex',
+    gap: 15 * (Screen_Size.width / 1080)
+  },
+  form_button_place: {
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 325 * (width/1080),
+    marginBottom: 90 * (Screen_Size.width / 1080)
   },
-  btn: {
-    width: '90%',
-    height: 250 * (width/1080),
-    backgroundColor: Primmary_Colors.Azure,
-    borderRadius: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 10,
-    marginTop: 400 * (width/1080),
+  form_button: {
+    width: '100%',
+    height: 157 * (Screen_Size.width / 1080),
+    borderRadius: 20 * (Screen_Size.width / 1080),
+    borderWidth: 1,
+    borderColor: Secondary_Colors.White
   },
-  btnText: {
-    color: "#fff",
-    fontSize: 28,
+  button_text: {
+    color: Secondary_Colors.White80,
+    fontWeight: 'bold',
+    fontSize: 64 * (Screen_Size.width / 1080)
   },
-  btnGradient: {
+  gradient_button: {
+    position: 'absolute',
     width: '100%',
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 20 * (Screen_Size.width / 1080)
   },
-  texto: {
-    fontSize: Text_Sizes.h5,
-    paddingTop: 15,
+  forgot_your_pass: {
+    fontSize: Text_Sizes.h4,
+    padding: 10 * (Screen_Size.width / 1080)
   },
-  cor: {
+  recover_it_here: {
     color: Primmary_Colors.Azure,
     fontWeight: "bold",
   },
-  Titulo: {
-    fontSize: 150 * (width / 1080),
-    marginLeft: 20,
+  title: {
+    fontSize: 120 * (width / 1080),
   },
-  SubTitulo: {
+  sub_title: {
     fontSize: Text_Sizes.h3,
-    marginLeft: 25,
-    marginRight: 60,
   },
-  Subsubtitulo: {
+  input_label: {
     fontSize: Text_Sizes.h3,
-    marginLeft: 25,
-    marginRight: 60,
+    paddingVertical: 10 * (Screen_Size.width / 1080)
   },
-  Linha: {
-    width: '100%',
-    height: 2,
-    backgroundColor: Primmary_Colors.BluishWhite,
-    marginTop: 75 * (width/1080),
-  },
-  inputGroup: {
-    height: '25%',
-  },
-  label: {
-    marginLeft: '5%',
-    fontWeight: 'bold',
-    paddingBottom: 10,
-    fontSize: Text_Sizes.h4,
-  },
-  inputWithIcon: {
+  input_with_icon: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    width: '90%',
-    height: 60,
-    marginLeft: '5%',
-    borderRadius: 4,
+    borderRadius: 15 * (Screen_Size.width / 1080),
     backgroundColor: Secondary_Colors.White80,
-    paddingLeft: 10,
-    marginBottom: 20,
   },
-  Title:{
-    fontSize: 65 * (width / 1080),
-    fontWeight: 'bold',
-    marginBottom: 10 * (width / 1080),
-  },
-  TextView:{
-    alignItems: 'center',
+  input_icon:{
+    display: 'flex',
+    width: 100 * (Screen_Size.width / 1080),
+    height: 100 * (Screen_Size.width / 1080),
     justifyContent: 'center',
+    alignItems: 'center'
   },
   input: {
     flex: 1,
-    height: 40,
-    padding: 10,
-    borderColor: "white",
+    height: 135 * (Screen_Size.width / 1080),
     color: 'gray',
+    fontSize: Text_Sizes.h3
   },
   errorMsg: {
-  color: 'red',
-  fontWeight: Geesh_Fonts.InriaBold,
-  fontSize: 16,
-  marginLeft: '5%',
-},
+    color: 'red',
+    fontWeight: Geesh_Fonts.InriaBold,
+    fontSize: 16,
+    marginLeft: '5%',
+  },
 })
 
 export default LoginStyle;

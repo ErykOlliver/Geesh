@@ -1,14 +1,13 @@
 import { View } from "react-native"
 import LoginStyle from "./style/LoginStyle"
-import Sup from "./Components/sup"
-import Mid from "./Components/mid"
-import Bot from "./Components/bot"
+import Header from "./Components/Header"
+import MainContent from "./Components/MainContent"
 
 export default function Login() {
     return (
-        <View style={LoginStyle.Body}>
-            <Sup />
-            <Mid />
+        <View style={LoginStyle.body}>
+            <Header />
+            <MainContent />
         </View>
     )
 }
