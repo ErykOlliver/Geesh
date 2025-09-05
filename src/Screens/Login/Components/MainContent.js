@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { TextInput, Text, View, TouchableOpacity } from 'react-native';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { LockKeyFreeIcons, Mail01Icon } from '@hugeicons/core-free-icons';
-import { auth } from '../../../../firebase'
+import { auth } from '../../../../firebase.js'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import LoginStyle from '../style/LoginStyle';
+import LoginStyle from '../style/LoginStyle.js';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Icon_Size } from '../../../components/DesigneTokens/metrics';
+import { Icon_Size } from '../../../components/DesigneTokens/metrics.js';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets.js';
 
-export default function MainContent() {
+export default function MainContent({ navigation }) {
     const [email, setMail] = useState('')
     const [password, setPass] = useState('')
     const [errorMsg, setErrorMsg] = useState('')
@@ -22,7 +22,8 @@ export default function MainContent() {
         try {
             const user = await signInWithEmailAndPassword(auth, email, password)
             if (user) {
-                setErrorMsg('');
+                setErrorMsg('usuario logado');
+                navigation.replace('Tabs');
             }
         } catch (error) {
             if (error.code === 'auth/invalid-email') {
@@ -72,7 +73,7 @@ export default function MainContent() {
                         <View style={LoginStyle.input_icon}>
                             <HugeiconsIcon icon={LockKeyFreeIcons} size={Icon_Size.Icon6xl} color='gray' />
                         </View>
-                        <TextInput style={LoginStyle.input} placeholder="Geesh access code" secureTextEntry={true} value={password} onChangeText={setPass}/>
+                        <TextInput style={LoginStyle.input} placeholder="Geesh access code" secureTextEntry={true} value={password} onChangeText={setPass} />
                     </View>
                     {errorMsg !== '' && (
                         <Text style={LoginStyle.errorMsg}>{errorMsg}</Text>
