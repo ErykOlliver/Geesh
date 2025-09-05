@@ -1,9 +1,12 @@
 import { useFonts } from 'expo-font';
-import Login from './src/Screens/Login/Login';
+import Login from './src/Screens/Login/Login.js';
 import NavContainer from './src/routes';
-import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView } from 'react-native';
+import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import './i18nify.js'
+import Home from './src/Screens/Home/Home.js';
+import Chart from './src/Screens/Chart/Chart.js';
+import Profile from './src/Screens/Profile/Profile.js';
 
 
 

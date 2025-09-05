@@ -1,6 +1,5 @@
-import { Image, Text, View } from "react-native";
+import { View } from "react-native";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import { Screen_Size } from "../../../../../components/DesigneTokens/metrics.js";
 import { Mail01Icon, PencilEdit01Icon, SmartPhone01Icon, User03Icon } from "@hugeicons/core-free-icons";
 import UserCredentialStyle from "./style/UserCredentialStyle.tsx";
 import PopCredential from "./PopCredential.tsx";

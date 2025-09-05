@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { TextInput, Text, View, TouchableOpacity } from 'react-native';
-import { Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { LockKeyFreeIcons, Mail01Icon } from '@hugeicons/core-free-icons';
 import { auth } from '../../../../firebase'
@@ -8,6 +7,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'fire
 import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon_Size } from '../../../components/DesigneTokens/metrics';
+import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets.js';
 
 export default function MainContent() {
     const [email, setMail] = useState('')
@@ -80,7 +80,7 @@ export default function MainContent() {
                 </View>
                 <View style={LoginStyle.form_button_place}>
                     <TouchableOpacity onPress={signIn} style={LoginStyle.form_button}>
-                        <LinearGradient colors={[Primmary_Colors.Azure, Primmary_Colors.BluishWhite]} start={{ x: 0.5, y: -0.5 }} end={{ x: 0.5, y: 1 }} style={LoginStyle.gradient_button}>
+                        <LinearGradient colors={[Geesh_Primmary_Colors.Azure, Geesh_Primmary_Colors.BluishWhite]} start={{ x: 0.5, y: -0.5 }} end={{ x: 0.5, y: 1 }} style={LoginStyle.gradient_button}>
                             <Text style={LoginStyle.button_text}>Enter Geesh</Text>
                         </LinearGradient>
                     </TouchableOpacity>

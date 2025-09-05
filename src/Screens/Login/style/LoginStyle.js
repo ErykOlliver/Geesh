@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
 import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
-import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 import { Dimensions } from "react-native";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
 
 const { width, height } = Dimensions.get('screen');
 
@@ -10,14 +10,14 @@ const LoginStyle = StyleSheet.create({
   body: {
     flex: 1,
     gap: 1,
-    backgroundColor: Primmary_Colors.Azure
+    backgroundColor: Geesh_Primmary_Colors.Azure
   },
   header: {
     width: Screen_Size.width,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Secondary_Colors.White80,
+    backgroundColor: Geesh_Secondary_Colors.White80,
     height: 587 * (Screen_Size.width / 1080),
   },
   header_container: {
@@ -30,7 +30,7 @@ const LoginStyle = StyleSheet.create({
   main_content: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: Secondary_Colors.White80,
+    backgroundColor: Geesh_Secondary_Colors.White80,
     alignItems: 'center',
   },
   main_content_container: {
@@ -56,10 +56,10 @@ const LoginStyle = StyleSheet.create({
     height: 157 * (Screen_Size.width / 1080),
     borderRadius: 20 * (Screen_Size.width / 1080),
     borderWidth: 1,
-    borderColor: Secondary_Colors.White
+    borderColor: Geesh_Secondary_Colors.White
   },
   button_text: {
-    color: Secondary_Colors.White80,
+    color: Geesh_Secondary_Colors.White80,
     fontWeight: 'bold',
     fontSize: 64 * (Screen_Size.width / 1080)
   },
@@ -76,7 +76,7 @@ const LoginStyle = StyleSheet.create({
     padding: 10 * (Screen_Size.width / 1080)
   },
   recover_it_here: {
-    color: Primmary_Colors.Azure,
+    color: Geesh_Primmary_Colors.Azure,
     fontWeight: "bold",
   },
   title: {
@@ -94,7 +94,7 @@ const LoginStyle = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 15 * (Screen_Size.width / 1080),
-    backgroundColor: Secondary_Colors.White80,
+    backgroundColor: Geesh_Secondary_Colors.White80,
   },
   input_icon:{
     display: 'flex',
