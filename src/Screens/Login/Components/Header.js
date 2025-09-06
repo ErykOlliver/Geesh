@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import LoginStyle from "../style/LoginStyle";
+import LoginStyle from "../style/LoginStyle.js";
 
 export default function Header() {
     return (
@@ -9,7 +9,7 @@ export default function Header() {
                     Welcome to Geesh
                 </Text>
                 <Text style={LoginStyle.sub_title}>
-                    Log in using your CPF and password to start
+                    Log in using your email and password to start
                     Managing your energy in a smarter way
                 </Text>
             </View>

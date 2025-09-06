@@ -22,7 +22,8 @@ export default function MainContent({ navigation }) {
         try {
             const user = await signInWithEmailAndPassword(auth, email, password)
             if (user) {
-                setErrorMsg('usuario logado');
+                setErrorMsg(`usuario ${user.user.uid} logado`);
+                console.log(`usuario ${user.user.uid} logado`)
                 navigation.replace('Tabs');
             }
         } catch (error) {
@@ -62,14 +63,14 @@ export default function MainContent({ navigation }) {
             <View style={LoginStyle.main_content_container}>
                 <View style={LoginStyle.form}>
                     <Text style={LoginStyle.input_label}>Email</Text>
-                    <View style={[LoginStyle.input_with_icon, emailError && { borderColor: 'red', borderWidth: 2 }]}>
+                    <View style={[LoginStyle.input_with_icon, emailError && { borderColor: 'red', borderWidth: 1 }]}>
                         <View style={LoginStyle.input_icon}>
-                            <HugeiconsIcon icon={Mail01Icon} size={Icon_Size.Icon6xl} color='gray' />
+                            <HugeiconsIcon icon={Mail01Icon} size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} />
                         </View>
-                        <TextInput style={LoginStyle.input} placeholder='user@example.com' value={email} onChangeText={setMail} />
+                        <TextInput style={LoginStyle.input} placeholder='user@example.com' placeholderTextColor={emailError ? 'red' : 'gray'} value={email} onChangeText={setMail} />
                     </View>
                     <Text style={LoginStyle.input_label}>Password</Text>
-                    <View style={[LoginStyle.input_with_icon, passwordError && { borderColor: 'red', borderWidth: 2 }]}>
+                    <View style={[LoginStyle.input_with_icon, passwordError && { borderColor: 'red', borderWidth: 1 }]}>
                         <View style={LoginStyle.input_icon}>
                             <HugeiconsIcon icon={LockKeyFreeIcons} size={Icon_Size.Icon6xl} color='gray' />
                         </View>

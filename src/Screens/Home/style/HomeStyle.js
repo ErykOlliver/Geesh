@@ -51,9 +51,10 @@ export default StyleSheet.create({
     width: Screen_Size.width,
     height: Screen_Size.height,
   },
-
+  
   M_Content: {
     display: 'flex',
+    paddingBottom: 30 * (Screen_Size.width / 1080),
     width: "90%",
     height: '80%',
     alignItems: 'center',

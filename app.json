@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "gerenciamento de energias renováveis",
+    "name": "Geesh",
     "slug": "Geesh",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/icons/GIconWhite.png",
+      "image": "./assets/icons/GeeshName.svg",
       "resizeMode": "contain",
       "backgroundColor": "#029FFC"
     },

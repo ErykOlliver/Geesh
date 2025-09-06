@@ -13,7 +13,7 @@ import { Geesh_Primmary_Colors } from "../../components/DesigneTokens/pallets.js
 export default function Profile() {
     return (
         <View style={ProfileStyle.body}>
-            {/* <LinearGradient colors={[Geesh_Primmary_Colors.BluishWhite, Geesh_Primmary_Colors.Azure]} style={ProfileStyle.background} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} /> */}
+            <LinearGradient colors={[Geesh_Primmary_Colors.BluishWhite, Geesh_Primmary_Colors.Azure]} style={ProfileStyle.background} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} />
             <Header />
             <MainContent/>
         </View>

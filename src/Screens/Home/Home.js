@@ -1,10 +1,10 @@
 import React from "react"
 import { View } from "react-native";
-import HomeStyle from "./style/HomeStyle"
-import Header from "./components/Header";
-import Painel from "./components/Panel";
-import Active from "./components/Active";
-import MainContent from "./components/MainContent";
+import HomeStyle from "./style/HomeStyle.js"
+import Header from "./components/Header.js";
+import Painel from "./components/Panel.js";
+import Active from "./components/Active.js";
+import MainContent from "./components/MainContent.js";
 
 
 
