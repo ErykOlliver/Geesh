@@ -22,8 +22,6 @@ export default function MainContent({ navigation }) {
         try {
             const user = await signInWithEmailAndPassword(auth, email, password)
             if (user) {
-                setErrorMsg(`usuario ${user.user.uid} logado`);
-                console.log(`usuario ${user.user.uid} logado`)
                 navigation.replace('Tabs');
             }
         } catch (error) {
