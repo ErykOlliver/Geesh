@@ -23,7 +23,8 @@ const LoginStyle = StyleSheet.create({
     width: '90%',
     display: 'flex',
     justifyContent: 'center',
-    paddingVertical: 100 * (Screen_Size.width / 1080),
+    paddingTop: 100 * (Screen_Size.width / 1080),
+    paddingBottom: 20 * (Screen_Size.width / 1080),
     alignItems: 'start'
     
   },

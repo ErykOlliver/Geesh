@@ -8,6 +8,7 @@ import Home from './src/Screens/Home/Home.js';
 import Chart from './src/Screens/Chart/Chart.js';
 import Profile from './src/Screens/Profile/Profile.js';
 import { Screen_Size } from './src/components/DesigneTokens/metrics.js';
+import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets.js';
 
 
 
@@ -26,7 +27,7 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Geesh_Secondary_Colors.White }}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1, paddingBottom: 100 * (Screen_Size.width / 1080)}}>
         <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
           <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
