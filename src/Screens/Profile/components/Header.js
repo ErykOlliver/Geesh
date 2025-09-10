@@ -8,9 +8,13 @@ import UserCredential from "./Header/UserCredential/UserCredential.tsx"
 import { useEffect, useState } from "react"
 import { auth, db } from "../../../../firebase.js"
 import { doc, getDoc } from "firebase/firestore"
+import * as ImagePicker from 'expo-image-picker'
+
 
 export default function Header() {
+    const [selectedImage, setSelectedImage] = useState (undefined)
     const [userData, setUserData] = useState(null);
+
     async function getUserData() {
         const user = auth.currentUser;
         if (!user) return;
@@ -29,9 +33,23 @@ export default function Header() {
     useEffect(() => {
         getUserData();
     }, []);
+
+    const pickImage = async () => {
+        let result = await ImagePicker.launchImageLibraryAsync({
+            allowsEditing: true,
+            quality: 1
+        })
+
+        if (!result.canceled) {
+            setSelectedImage(result.assets[0].uri)
+            console.log(result)
+        } else {
+            alert("voce não selecionou uma imagem")
+        }
+    }
     return (
         <View style={ProfileStyle.Header}>
-            <UserPanel userName={userData?.name || ''} UID={645623} />
+            <UserPanel Avatar={selectedImage} userName={userData?.name || ''} UID={645623} OnPress={pickImage} />
             <UserCredential userPhone={userData?.tel || ''} userEmail={userData?.email || ''} />
         </View>
     )
