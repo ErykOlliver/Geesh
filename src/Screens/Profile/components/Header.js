@@ -5,24 +5,52 @@ import { Screen_Size } from "../../../components/DesigneTokens/metrics.js"
 import ProfileStyle from "../style/ProfileStyle.js"
 import UserPanel from "./Header/UserPanel/UserPanel.tsx"
 import UserCredential from "./Header/UserCredential/UserCredential.tsx"
+import { useEffect, useState } from "react"
+import { auth, db } from "../../../../firebase.js"
+import { doc, getDoc } from "firebase/firestore"
+import * as ImagePicker from 'expo-image-picker'
+
 
 export default function Header() {
+    const [selectedImage, setSelectedImage] = useState (undefined)
+    const [userData, setUserData] = useState(null);
+
+    async function getUserData() {
+        const user = auth.currentUser;
+        if (!user) return;
+
+        const uid = user.uid;
+        const docRef = doc(db, "accounts", uid);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            setUserData(docSnap.data());
+        } else {
+            console.log("Nenhum dado extra encontrado!");
+        }
+    }
+
+    useEffect(() => {
+        getUserData();
+    }, []);
+
+    const pickImage = async () => {
+        let result = await ImagePicker.launchImageLibraryAsync({
+            allowsEditing: true,
+            quality: 1
+        })
+
+        if (!result.canceled) {
+            setSelectedImage(result.assets[0].uri)
+            console.log(result)
+        } else {
+            alert("voce não selecionou uma imagem")
+        }
+    }
     return (
         <View style={ProfileStyle.Header}>
-            <UserPanel userName="William Nascimento" UID={645623} />
-            <UserCredential userPhone={55122334455} userEmail="WilliamChefao@gmail.com" />
-            {/*             <View style={ProfileStyle.UserCredentialPlace}>
-                <View style={ProfileStyle.UserCredentialContent}>
-                    <View style={ProfileStyle.ENPlace}>
-                        <HugeiconsIcon icon={Mail01Icon} />
-                        <Text style={ProfileStyle.ENTxT}>example@gmail.com</Text>
-                    </View>
-                    <View style={ProfileStyle.ENPlace}>
-                        <HugeiconsIcon icon={SmartPhone01Icon} />
-                        <Text style={ProfileStyle.ENTxT}>+55 71 9922-1199</Text>
-                    </View>
-                </View>
-            </View> */}
+            <UserPanel Avatar={selectedImage} userName={userData?.name || ''} UID={645623} OnPress={pickImage} />
+            <UserCredential userPhone={userData?.tel || ''} userEmail={userData?.email || ''} />
         </View>
     )
 }

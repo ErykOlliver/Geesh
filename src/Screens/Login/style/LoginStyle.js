@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
+import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics.js";
 import { Dimensions } from "react-native";
-import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts.js";
 import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
 
 const { width, height } = Dimensions.get('screen');
@@ -9,7 +9,7 @@ const { width, height } = Dimensions.get('screen');
 const LoginStyle = StyleSheet.create({
   body: {
     flex: 1,
-    gap: 1,
+    gap: 3,
     backgroundColor: Geesh_Primmary_Colors.Azure
   },
   header: {
@@ -18,12 +18,13 @@ const LoginStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Geesh_Secondary_Colors.White80,
-    height: 587 * (Screen_Size.width / 1080),
   },
   header_container: {
     width: '90%',
     display: 'flex',
     justifyContent: 'center',
+    paddingTop: 100 * (Screen_Size.width / 1080),
+    paddingBottom: 20 * (Screen_Size.width / 1080),
     alignItems: 'start'
     
   },
@@ -60,8 +61,8 @@ const LoginStyle = StyleSheet.create({
   },
   button_text: {
     color: Geesh_Secondary_Colors.White80,
-    fontWeight: 'bold',
-    fontSize: 64 * (Screen_Size.width / 1080)
+    fontSize: 64 * (Screen_Size.width / 1080),
+    fontFamily: Geesh_Fonts.InriaBold,
   },
   gradient_button: {
     position: 'absolute',
@@ -73,28 +74,33 @@ const LoginStyle = StyleSheet.create({
   },
   forgot_your_pass: {
     fontSize: Text_Sizes.h4,
-    padding: 10 * (Screen_Size.width / 1080)
+    padding: 10 * (Screen_Size.width / 1080),
+    fontFamily: Geesh_Fonts.InriaRegular,
   },
   recover_it_here: {
     color: Geesh_Primmary_Colors.Azure,
-    fontWeight: "bold",
+    fontFamily: Geesh_Fonts.InriaRegular,
   },
   title: {
     fontSize: 120 * (width / 1080),
+    fontFamily: Geesh_Fonts.PoppinsRegular
   },
   sub_title: {
-    fontSize: Text_Sizes.h3,
+    fontSize: Text_Sizes.h4,
+    fontFamily: Geesh_Fonts.PoppinsLight
   },
   input_label: {
     fontSize: Text_Sizes.h3,
-    paddingVertical: 10 * (Screen_Size.width / 1080)
+    paddingVertical: 10 * (Screen_Size.width / 1080),
+    fontFamily: Geesh_Fonts.PoppinsLight
+    
   },
   input_with_icon: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 15 * (Screen_Size.width / 1080),
-    backgroundColor: Geesh_Secondary_Colors.White80,
+    backgroundColor: Geesh_Secondary_Colors.White70,
   },
   input_icon:{
     display: 'flex',
@@ -107,7 +113,8 @@ const LoginStyle = StyleSheet.create({
     flex: 1,
     height: 135 * (Screen_Size.width / 1080),
     color: 'gray',
-    fontSize: Text_Sizes.h3
+    fontSize: Text_Sizes.h3,
+    fontFamily: Geesh_Fonts.PoppinsLight
   },
   errorMsg: {
     color: 'red',

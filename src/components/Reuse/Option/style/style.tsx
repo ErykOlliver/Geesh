@@ -17,7 +17,7 @@ const OptionStyle = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        gap: 10
+        gap: 5 * (Screen_Size.width / 1080)
     },
     icon: {
         display: 'flex',

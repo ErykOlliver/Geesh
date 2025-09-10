@@ -1,7 +1,7 @@
 import { View } from "react-native";
-import HomeStyle from "../style/HomeStyle";
-import Panel from "./Panel";
-import Active from "./Active";
+import HomeStyle from "../style/HomeStyle.js";
+import Panel from "./Panel.js";
+import Active from "./Active.js";
 
 
 export default function MainContent() {

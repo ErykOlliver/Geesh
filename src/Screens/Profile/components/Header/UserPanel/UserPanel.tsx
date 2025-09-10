@@ -1,13 +1,14 @@
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import UserPanelStyle from "./style/UserPanelStyle.tsx";
 import { HugeiconsIcon } from "@hugeicons/react-native";
 import { Screen_Size } from "../../../../../components/DesigneTokens/metrics.js";
 import { PencilEdit01Icon, User03Icon } from "@hugeicons/core-free-icons";
 
 type UserProps = {
-    userName?: string;
-    UID: number;
-    Avatar?: any;
+    userName?: String
+    UID: String
+    Avatar?: String,
+    OnPress: () => void
 }
 
 export default function UserPanel(props: UserProps) {
@@ -15,13 +16,13 @@ export default function UserPanel(props: UserProps) {
         <View style={UserPanelStyle.body}>
             <View style={UserPanelStyle.container}>
                 <View style={UserPanelStyle.main}>
-                    <View style={UserPanelStyle.avatarPlace}>
+                    <TouchableOpacity style={UserPanelStyle.avatarPlace} onPress={props.OnPress}>
                         {props.Avatar ? (
-                            <Image source={props.Avatar} style={UserPanelStyle.avatar} />
+                            <Image source={{ uri: props.Avatar}} style={UserPanelStyle.avatar} />
                         ) : (
                             <HugeiconsIcon icon={User03Icon} size={100 * (Screen_Size.width / 1080)} />
                         )}
-                    </View>
+                    </TouchableOpacity>
                     <View style={UserPanelStyle.userInfos}>
                         <View style={UserPanelStyle.userNamePlace}>
                             <Text style={UserPanelStyle.userName}>{props.userName}</Text>

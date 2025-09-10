@@ -8,6 +8,7 @@ import Chart from "../Screens/Chart/Chart.js";
 import Profile from "../Screens/Profile/Profile.js";
 import { Analytics03Icon, Home11Icon, User03Icon, } from "@hugeicons/core-free-icons";
 import { useTranslation } from "react-i18next";
+import { Screen_Size } from "../components/DesigneTokens/metrics.js";
 
 //#endregion
 
@@ -30,7 +31,7 @@ export default function TabRoutes() {
             <TAB.Screen name={t("Inicio")} component={Home}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <HugeiconsIcon icon={Home11Icon} size={size + 5} strokeWidth={1.5} color={color} />
+                        <HugeiconsIcon icon={Home11Icon} size={size + 10 * (Screen_Size.width / 1080)} strokeWidth={1.5} color={color} />
                     ),
                 }}
             />
@@ -38,14 +39,14 @@ export default function TabRoutes() {
             <TAB.Screen name={t("Gráfico")} component={Chart}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <HugeiconsIcon icon={Analytics03Icon} size={size + 5} strokeWidth={1.5} color={color} />
+                        <HugeiconsIcon icon={Analytics03Icon} size={size + 10 * (Screen_Size.width / 1080)} strokeWidth={1.5} color={color} />
                     ),
                 }}
             />
 
             <TAB.Screen name={t("Perfil")} component={Profile} options={{
                 tabBarIcon: ({ color, size }) => (
-                    <HugeiconsIcon icon={User03Icon} size={size + 5} strokeWidth={1.5} color={color} />
+                    <HugeiconsIcon icon={User03Icon} size={size + 10 * (Screen_Size.width / 1080)} strokeWidth={1.5} color={color} />
                 )
             }} />
         </TAB.Navigator >

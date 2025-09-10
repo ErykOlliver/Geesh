@@ -1,12 +1,14 @@
 import { useFonts } from 'expo-font';
 import Login from './src/Screens/Login/Login.js';
 import NavContainer from './src/routes';
-import { KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import './i18nify.js'
 import Home from './src/Screens/Home/Home.js';
 import Chart from './src/Screens/Chart/Chart.js';
 import Profile from './src/Screens/Profile/Profile.js';
+import { Screen_Size } from './src/components/DesigneTokens/metrics.js';
+import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets.js';
 
 
 
@@ -25,11 +27,13 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaView style={{ flex: 1, paddingBottom: 30 }}>
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <NavContainer />
-        </ScrollView>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Geesh_Secondary_Colors.White }}>
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1, paddingBottom: 100 * (Screen_Size.width / 1080)}}>
+        <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
+          <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+            <NavContainer />
+          </ScrollView>
+        </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
