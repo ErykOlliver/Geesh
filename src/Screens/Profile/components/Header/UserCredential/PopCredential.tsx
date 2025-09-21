@@ -1,8 +1,8 @@
 import { Image, Text, View } from "react-native";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import { Screen_Size } from "../../../../../components/DesigneTokens/metrics.js";
+import { Screen_Size } from "../../../../../components/DesigneTokens/metrics";
 import { PencilEdit01Icon, User03Icon } from "@hugeicons/core-free-icons";
-import UserCredentialStyle from "./style/UserCredentialStyle.tsx";
+import UserCredentialStyle from "./style/UserCredentialStyle";
 
 type PopProps = {
     icon: React.ReactNode;

@@ -6,8 +6,8 @@ import { auth } from '../../../../firebase.js'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import LoginStyle from '../style/LoginStyle.js';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Icon_Size } from '../../../components/DesigneTokens/metrics.js';
-import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets.js';
+import { Icon_Size } from '../../../components/DesigneTokens/metrics';
+import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 
 export default function MainContent({ navigation }) {
     const [email, setMail] = useState('')

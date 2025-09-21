@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
-import DropDownComponent, { dataPrefab } from "../DropDown/DropDownComponent.tsx";
-import OptionStyle from "./style/style.tsx";
-import ToggleComponent from "../Toggle/ToggleComponent.tsx";
+import DropDownComponent, { dataPrefab } from "../DropDown/DropDownComponent";
+import OptionStyle from "./style/style";
+import ToggleComponent from "../Toggle/ToggleComponent";
 
 type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
 

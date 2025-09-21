@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
-import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets.js";
+import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics";
+import { Geesh_Fonts } from "../../../DesigneTokens/fonts";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets";
 
 const DropDownStyle = StyleSheet.create({
     body: {

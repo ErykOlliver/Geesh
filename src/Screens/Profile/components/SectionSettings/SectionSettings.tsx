@@ -1,6 +1,6 @@
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { ArrowDown01Icon, ArrowUp01Icon, FilterVerticalIcon } from "@hugeicons/core-free-icons";
-import SectionSettingsStyle from "./style/SectionSettingsStyle.tsx";
+import SectionSettingsStyle from "./style/SectionSettingsStyle";
 
 
 

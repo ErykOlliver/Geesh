@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { View, } from "react-native";
 import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
-import { Geesh_Fonts } from "../../DesigneTokens/fonts.js";
-import { Text_Sizes } from "../../DesigneTokens/metrics.js";
-import ValueInLeft from "./components/ValueInLeft.tsx";
-import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets.js";
+import { Geesh_Fonts } from "../../DesigneTokens/fonts";
+import { Text_Sizes } from "../../DesigneTokens/metrics";
+import ValueInLeft from "./components/ValueInLeft";
+import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets";
 
 
 type BarChartProps = {

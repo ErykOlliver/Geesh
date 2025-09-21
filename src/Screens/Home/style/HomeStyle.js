@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 import MainContent from "../components/MainContent";
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 export default StyleSheet.create({
   //#region Body

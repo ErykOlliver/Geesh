@@ -7,8 +7,8 @@
     "noEmit": true,
     "strict": false,
     "isolatedModules": true,
-    "module": "node16",
-    "moduleResolution": "node16",
+    "module": "esnext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true
   },

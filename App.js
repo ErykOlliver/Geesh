@@ -8,7 +8,7 @@ import Chart from './src/Screens/Chart/Chart.js';
 import Profile from './src/Screens/Profile/Profile.js';
 import { Screen_Size } from './src/components/DesigneTokens/metrics.js';
 import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets.js';
-import NavContainer from './src/routes/index.js';
+import NavContainer from './src/routes/index.tsx';
 
 
 

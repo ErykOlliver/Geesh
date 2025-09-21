@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import HomeStyle from '../style/HomeStyle';
 import { LinearGradient } from "expo-linear-gradient";
-import { Icon_Size } from "../../../components/DesigneTokens/metrics.js";
+import { Icon_Size } from "../../../components/DesigneTokens/metrics";
 import { EnergyIcon, ZapIcon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { Shadow } from 'react-native-shadow-2';
 import { useTranslation } from 'react-i18next';
-import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets.js';
+import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 
 export default function Panel() {
   const BatteryGradient = [

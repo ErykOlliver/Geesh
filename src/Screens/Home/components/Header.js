@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import HomeStyle from '../style/HomeStyle.js';
 import { Notification01FreeIcons } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react-native';
-import { Icon_Size } from "../../../components/DesigneTokens/metrics.js";
+import { Icon_Size } from "../../../components/DesigneTokens/metrics";
 import { Shadow } from 'react-native-shadow-2';
 import { useTranslation } from 'react-i18next';
 

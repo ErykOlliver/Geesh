@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics.js";
+import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Dimensions } from "react-native";
-import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts.js";
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
+import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 const { width, height } = Dimensions.get('screen');
 
@@ -82,7 +82,7 @@ const LoginStyle = StyleSheet.create({
     fontFamily: Geesh_Fonts.InriaRegular,
   },
   title: {
-    fontSize: 120 * (width / 1080),
+    fontSize: 170 * (width / 1080),
     fontFamily: Geesh_Fonts.PoppinsRegular
   },
   sub_title: {

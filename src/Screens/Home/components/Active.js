@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import HomeStyle from '../style/HomeStyle';
 import { useTranslation } from 'react-i18next';
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets.js';
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets';
 
 
 const ActiveBatteryGradient = [
