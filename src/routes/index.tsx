@@ -1,5 +1,5 @@
 import TabRoutes from "./tab.routes";
-import Login from "../Screens/Login/Login.js";
+import Login from "../Screens/Login/Login";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 

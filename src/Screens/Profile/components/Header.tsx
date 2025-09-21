@@ -2,11 +2,11 @@ import { View, Text } from "react-native"
 import { HugeiconsIcon } from "@hugeicons/react-native"
 import { AiPhone01Icon, FlashIcon, Home01Icon, HugeiconsFreeIcons, LibrariesIcon, Mail01Icon, Moon02Icon, PencilEdit01Icon, PlayListAddFreeIcons, SmartPhone01Icon, User02Icon, User03Icon, ViewFreeIcons } from "@hugeicons/core-free-icons"
 import { Screen_Size } from "../../../components/DesigneTokens/metrics"
-import ProfileStyle from "../style/ProfileStyle.js"
+import ProfileStyle from "../style/ProfileStyle"
 import UserPanel from "./Header/UserPanel/UserPanel"
 import UserCredential from "./Header/UserCredential/UserCredential"
 import { useEffect, useState } from "react"
-import { auth, db } from "../../../../firebase.js"
+import { auth, db } from "../../../../firebase"
 import { doc, getDoc } from "firebase/firestore"
 import * as ImagePicker from 'expo-image-picker'
 

@@ -3,7 +3,7 @@ import { StyleSheet, ScrollView, View, Text, TouchableOpacity, Linking, Switch, 
 import { HugeiconsIcon } from "@hugeicons/react-native"
 import { AiPhone01Icon, FlashIcon, Home01Icon, HugeiconsFreeIcons, InfantIcon, InformationCircleIcon, InformationSquareIcon, InstagramIcon, LanguageSkillIcon, LibrariesIcon, Mail01Icon, Moon02Icon, Notification01Icon, PencilEdit01Icon, PlayListAddFreeIcons, RecoveryMailIcon, ResetPasswordIcon, SmartPhone01Icon, SmartPhone02Icon, User02Icon, User03Icon, VersusIcon, ViewFreeIcons, WebDesignIcon } from "@hugeicons/core-free-icons"
 import { Screen_Size } from "../../../components/DesigneTokens/metrics"
-import ProfileStyle from "../style/ProfileStyle.js"
+import ProfileStyle from "../style/ProfileStyle"
 import { version } from "react"
 import { Primmary_Colors, Secondary_Colors } from "../../../components/DesigneTokens/pallets"
 import ToggleComponent from "../../../components/Reuse/Toggle/ToggleComponent"

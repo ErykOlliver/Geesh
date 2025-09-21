@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { TextInput, Text, View, TouchableOpacity } from 'react-native';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { LockKeyFreeIcons, Mail01Icon } from '@hugeicons/core-free-icons';
-import { auth } from '../../../../firebase.js'
+import { auth } from '../../../../firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import LoginStyle from '../style/LoginStyle.js';
+import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon_Size } from '../../../components/DesigneTokens/metrics';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';

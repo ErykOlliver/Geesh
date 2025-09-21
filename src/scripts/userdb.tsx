@@ -1,6 +1,6 @@
-import { auth } from "../../firebase.js"
+import { auth } from "../../firebase"
 import { doc, getDoc } from 'firebase/firestore'
-import { db } from "../../firebase.js";
+import { db } from "../../firebase";
 
 
 export const getUserData = async () => {

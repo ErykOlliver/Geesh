@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import TabRoutesStyle from "./style/TabRoutesStyle.js";
+import TabRoutesStyle from "./style/TabRoutesStyle";
 
 //#region Modules/Screens
-import Home from "../Screens/Home/Home.js";
-import Chart from "../Screens/Chart/Chart.js";
-import Profile from "../Screens/Profile/Profile.js";
+import Home from "../Screens/Home/Home";
+import Chart from "../Screens/Chart/Chart";
+import Profile from "../Screens/Profile/Profile";
 import { Analytics03Icon, Home11Icon, User03Icon, } from "@hugeicons/core-free-icons";
 import { useTranslation } from "react-i18next";
 import { Screen_Size } from "../components/DesigneTokens/metrics";
