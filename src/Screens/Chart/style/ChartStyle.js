@@ -14,14 +14,14 @@ const ChartStyle = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: Screen_Size.width,
+        height: 270 * (Screen_Size.width / 1080),
     },
     HeaderContainer: {
-        width: "90%",
-        paddingTop: 70 * (Screen_Size.width / 1080),
-        paddingBottom: 15 * (Screen_Size.width / 1080),
-        alignItems: 'center',
         display: 'flex',
+        width: '90%',
+        paddingTop: 90 * (Screen_Size.width / 1080),
         flexDirection: 'row',
+        alignItems: 'center',
         justifyContent: 'space-between',
     },
     HeaderBG: {

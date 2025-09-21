@@ -1,6 +1,5 @@
 import { useFonts } from 'expo-font';
 import Login from './src/Screens/Login/Login.js';
-import NavContainer from './src/routes';
 import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import './i18nify.js'
@@ -9,6 +8,7 @@ import Chart from './src/Screens/Chart/Chart.js';
 import Profile from './src/Screens/Profile/Profile.js';
 import { Screen_Size } from './src/components/DesigneTokens/metrics.js';
 import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets.js';
+import NavContainer from './src/routes/index.js';
 
 
 

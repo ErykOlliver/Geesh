@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import HomeStyle from '../style/HomeStyle';
+import HomeStyle from '../style/HomeStyle.js';
 import { Notification01FreeIcons } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { Icon_Size } from "../../../components/DesigneTokens/metrics.js";
