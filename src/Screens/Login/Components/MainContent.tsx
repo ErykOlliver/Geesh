@@ -57,9 +57,9 @@ export default function MainContent({ navigation }) {
                     <Text style={LoginStyle.input_label}>Password</Text>
                     <View style={[LoginStyle.input_with_icon, passwordError && { borderColor: 'red', borderWidth: 1 }]}>
                         <View style={LoginStyle.input_icon}>
-                            <HugeiconsIcon icon={LockKeyFreeIcons} size={Icon_Size.Icon6xl} color='gray' />
+                            <HugeiconsIcon icon={LockKeyFreeIcons} size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} />
                         </View>
-                        <TextInput style={LoginStyle.input} placeholder="Geesh access code" secureTextEntry={true} value={password} onChangeText={setPass} />
+                        <TextInput style={LoginStyle.input} placeholder="Geesh access code" placeholderTextColor={emailError ? 'red' : 'gray'} secureTextEntry={true} value={password} onChangeText={setPass} />
                     </View>
                     {errorMsg !== '' && (
                         <Text style={LoginStyle.errorMsg}>{errorMsg}</Text>

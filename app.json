@@ -2,13 +2,13 @@
   "expo": {
     "name": "Geesh",
     "slug": "Geesh",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icons/GeeshAppIcon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/icons/GeeshName.svg",
+      "image": "./assets/icons/GeeshName.png",
       "resizeMode": "contain",
       "backgroundColor": "#029FFC"
     },
@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "icon": "./assets/icons/GeeshLogoNameBlack.png",
+        "foregroundImage": "./assets/icons/GeeshAppIcon.png",
         "backgroundColor": "#029FFC"
       },
       "edgeToEdgeEnabled": true,
