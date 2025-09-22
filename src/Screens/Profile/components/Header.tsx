@@ -46,8 +46,7 @@ export default function Header() {
     }
     return (
         <View style={ProfileStyle.Header}>
-            <UserPanel Avatar={selectedImage} userName={userData?.name || ''} UID={645623} OnPress={pickImage} />
-            <UserCredential userPhone={userData?.tel || ''} userEmail={userData?.email || ''} />
+            <UserPanel Avatar={selectedImage} userName={userData?.name || ''} userEmail={userData?.email || ''} UID={645623} OnPress={pickImage} />
         </View>
     )
 }

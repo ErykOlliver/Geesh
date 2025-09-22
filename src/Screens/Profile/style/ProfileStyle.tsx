@@ -6,7 +6,6 @@ import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallet
 const ProfileStyle = StyleSheet.create({
     body: {
         flex: 1,
-        gap: 10
     },
     background: {
         position: 'absolute',
@@ -17,18 +16,12 @@ const ProfileStyle = StyleSheet.create({
         height: Screen_Size.height
     },
     Header: {
-        backgroundColor: Geesh_Secondary_Colors.White90,
         width: Screen_Size.width,
-        height: 587 * (Screen_Size.width / 1080)
+        height: 587 * (Screen_Size.width / 1080),
+        borderBottomWidth: 0.5,
+
     },
-    UserPAndUserNPlace: {
-        backgroundColor: Geesh_Secondary_Colors.White,
-        height: "70%",
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
-    },
+    
 
     UserPAndUserNContent: {
         width: "90%",
