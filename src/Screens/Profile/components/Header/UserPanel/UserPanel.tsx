@@ -1,8 +1,7 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import UserPanelStyle from "./style/UserPanelStyle";
-import { HugeiconsIcon } from "@hugeicons/react-native";
-import { Screen_Size } from "../../../../../components/DesigneTokens/metrics";
-import { PencilEdit01Icon, User03Icon } from "@hugeicons/core-free-icons";
+import { Icon_Size, Screen_Size } from "../../../../../components/DesigneTokens/metrics";
+import { SquarePen, User } from "lucide-react-native";
 
 type UserProps = {
     userName?: string
@@ -18,15 +17,15 @@ export default function UserPanel(props: UserProps) {
                 <View style={UserPanelStyle.main}>
                     <TouchableOpacity style={UserPanelStyle.avatarPlace} onPress={props.OnPress}>
                         {props.Avatar ? (
-                            <Image source={{ uri: props.Avatar}} style={UserPanelStyle.avatar} />
+                            <Image source={{ uri: props.Avatar }} style={UserPanelStyle.avatar} />
                         ) : (
-                            <HugeiconsIcon icon={User03Icon} size={100 * (Screen_Size.width / 1080)} />
+                            <User size={100 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         )}
                     </TouchableOpacity>
                     <View style={UserPanelStyle.userInfos}>
                         <View style={UserPanelStyle.userNamePlace}>
                             <Text style={UserPanelStyle.userName}>{props.userName}</Text>
-                            <HugeiconsIcon icon={PencilEdit01Icon} />
+                            <SquarePen size={Icon_Size.Icon1xl} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
                         <Text style={UserPanelStyle.UID}>ID: {props.UID}</Text>
                     </View>

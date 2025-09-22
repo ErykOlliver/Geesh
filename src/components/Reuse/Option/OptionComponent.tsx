@@ -6,7 +6,7 @@ import ToggleComponent from "../Toggle/ToggleComponent";
 type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
 
 type OptionProps = {
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     title: string;
     info?: string;
     type: OptionType;

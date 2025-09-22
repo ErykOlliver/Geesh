@@ -53,6 +53,7 @@ const UserPanelStyle = StyleSheet.create({
         fontSize: Text_Sizes.h2
     },
     userNamePlace: {
+        gap: 6 * (Screen_Size.width / 1080),
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
