@@ -2,7 +2,7 @@
   "name": "geesh",
   "license": "0BSD",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.tsx",
   "type": "module",
   "scripts": {
     "start": "expo start",

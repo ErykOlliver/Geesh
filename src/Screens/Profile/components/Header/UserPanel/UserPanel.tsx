@@ -5,9 +5,9 @@ import { Screen_Size } from "../../../../../components/DesigneTokens/metrics";
 import { PencilEdit01Icon, User03Icon } from "@hugeicons/core-free-icons";
 
 type UserProps = {
-    userName?: String
-    UID: String
-    Avatar?: String,
+    userName?: string
+    UID?: number
+    Avatar?: string,
     OnPress: () => void
 }
 

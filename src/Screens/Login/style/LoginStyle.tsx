@@ -1,10 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Text_Sizes, Screen_Size } from "../../../components/DesigneTokens/metrics";
-import { Dimensions } from "react-native";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
-
-const { width, height } = Dimensions.get('screen');
 
 const LoginStyle = StyleSheet.create({
   body: {
@@ -25,7 +22,7 @@ const LoginStyle = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 100 * (Screen_Size.width / 1080),
     paddingBottom: 20 * (Screen_Size.width / 1080),
-    alignItems: 'start'
+    alignItems: 'flex-start'
     
   },
   main_content: {
@@ -38,8 +35,7 @@ const LoginStyle = StyleSheet.create({
     flex: 1,
     paddingTop: 10 * (Screen_Size.width / 1080),
     justifyContent: 'space-between',
-    alignItems: 'start',
-    width: '90%'
+    width: '90%',
   },
   form:{
     width: '100%',
@@ -82,7 +78,7 @@ const LoginStyle = StyleSheet.create({
     fontFamily: Geesh_Fonts.InriaRegular,
   },
   title: {
-    fontSize: 170 * (width / 1080),
+    fontSize: 170 * (Screen_Size.width / 1080),
     fontFamily: Geesh_Fonts.PoppinsRegular
   },
   sub_title: {
@@ -118,7 +114,6 @@ const LoginStyle = StyleSheet.create({
   },
   errorMsg: {
     color: 'red',
-    fontWeight: Geesh_Fonts.InriaBold,
     fontSize: 16,
     marginLeft: '5%',
   },

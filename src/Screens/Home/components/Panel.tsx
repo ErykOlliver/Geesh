@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 
 export default function Panel() {
-  const BatteryGradient = [
+  const BatteryGradient: [string, string] = [
     Geesh_Primmary_Colors.BluishWhite,
     Geesh_Primmary_Colors.Azure
   ]

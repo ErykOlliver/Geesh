@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import { Mail01Icon, PencilEdit01Icon, SmartPhone01Icon, User03Icon } from "@hugeicons/core-free-icons";
+import { Mail01Icon, SmartPhone01Icon } from "@hugeicons/core-free-icons";
 import UserCredentialStyle from "./style/UserCredentialStyle";
 import PopCredential from "./PopCredential";
 

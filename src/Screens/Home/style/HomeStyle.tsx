@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
-import InriaBold, { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
-import MainContent from "../components/MainContent";
+import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
 import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 export default StyleSheet.create({
@@ -49,7 +48,6 @@ export default StyleSheet.create({
     height: Screen_Size.height,
     justifyContent: 'flex-start',
     width: Screen_Size.width,
-    height: Screen_Size.height,
   },
   
   M_Content: {

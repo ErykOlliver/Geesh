@@ -1,5 +1,4 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { useState } from "react";
 import DropDownComponent, { dataPrefab } from "../DropDown/DropDownComponent";
 import OptionStyle from "./style/style";
 import ToggleComponent from "../Toggle/ToggleComponent";
@@ -9,17 +8,17 @@ type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
 type OptionProps = {
     icon: React.ReactNode;
     title: string;
-    info: string;
+    info?: string;
     type: OptionType;
-    data: dataPrefab[];
-    function?: () => void;
+    data?: dataPrefab[];
+    function?: (selected?: any) => void | Promise<void>;
 }
 
 
 
 export default function OptionComponent(props: OptionProps) {
-    const StartFunction = () => {
-        props.function?.();
+    const StartFunction = async () => {
+        await props.function?.();
     }
 
     const renderOptions = () => {

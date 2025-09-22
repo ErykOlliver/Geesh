@@ -1,7 +1,7 @@
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import style from "./style/style";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import { ArrowDown01Icon, ArrowUp01Icon, FilterVerticalIcon } from "@hugeicons/core-free-icons";
+import { ArrowDown01Icon, ArrowUp01Icon } from "@hugeicons/core-free-icons";
 import { useState } from "react";
 import DropDownStyle from "./style/style";
 

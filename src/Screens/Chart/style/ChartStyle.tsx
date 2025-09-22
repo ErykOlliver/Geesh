@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
-import MainContent from "../components/MainContent";
 
 const ChartStyle = StyleSheet.create({
     Body: {

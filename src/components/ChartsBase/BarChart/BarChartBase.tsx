@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { View, } from "react-native";
-import { Svg, Line, Rect, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
+import { Svg, Line, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts";
 import { Text_Sizes } from "../../DesigneTokens/metrics";
 import ValueInLeft from "./components/ValueInLeft";

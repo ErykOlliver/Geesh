@@ -8,7 +8,7 @@ const Stack = createStackNavigator()
 export default function NavContainer() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }} >
+            <Stack.Navigator id={undefined} initialRouteName="Login" screenOptions={{ headerShown: false }} >
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Tabs" component={TabRoutes} />
             </Stack.Navigator >
