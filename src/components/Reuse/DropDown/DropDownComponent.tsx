@@ -1,9 +1,9 @@
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import style from "./style/style";
-import { HugeiconsIcon } from "@hugeicons/react-native";
-import { ArrowDown01Icon, ArrowUp01Icon } from "@hugeicons/core-free-icons";
 import { useState } from "react";
 import DropDownStyle from "./style/style";
+import { ChevronDown, ChevronUp } from "lucide-react-native";
+import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics";
 
 export type dataPrefab = {
     label: string;
@@ -33,7 +33,7 @@ export default function DropDownComponent(props: DropDownProps) {
             <TouchableOpacity style={DropDownStyle.main} onPress={() => setToggle(!toggle)}>
                 <View style={style.container}>
                     <Text style={style.SelectedOption}>{selected.label}</Text>
-                    <HugeiconsIcon icon={!toggle ? ArrowDown01Icon : ArrowUp01Icon} size={30} />
+                    {!toggle ? <ChevronDown size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} /> : <ChevronUp size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />}
                 </View>
             </TouchableOpacity>
             {toggle && (

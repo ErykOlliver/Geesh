@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { TextInput, Text, View, TouchableOpacity } from 'react-native';
-import { HugeiconsIcon } from '@hugeicons/react-native';
-import { LockKeyFreeIcons, Mail01Icon } from '@hugeicons/core-free-icons';
 import { auth } from '../../../../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Icon_Size } from '../../../components/DesigneTokens/metrics';
+import { Icon_Size, Screen_Size } from '../../../components/DesigneTokens/metrics';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
+import { Lock, Mail } from 'lucide-react-native';
 
 export default function MainContent({ navigation }) {
     const [email, setMail] = useState('')
@@ -50,14 +49,14 @@ export default function MainContent({ navigation }) {
                     <Text style={LoginStyle.input_label}>Email</Text>
                     <View style={[LoginStyle.input_with_icon, emailError && { borderColor: 'red', borderWidth: 1 }]}>
                         <View style={LoginStyle.input_icon}>
-                            <HugeiconsIcon icon={Mail01Icon} size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} />
+                            <Mail size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
                         <TextInput style={LoginStyle.input} placeholder='user@example.com' placeholderTextColor={emailError ? 'red' : 'gray'} value={email} onChangeText={setMail} />
                     </View>
                     <Text style={LoginStyle.input_label}>Password</Text>
                     <View style={[LoginStyle.input_with_icon, passwordError && { borderColor: 'red', borderWidth: 1 }]}>
                         <View style={LoginStyle.input_icon}>
-                            <HugeiconsIcon icon={LockKeyFreeIcons} size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} />
+                            <Lock size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
                         <TextInput style={LoginStyle.input} placeholder="Geesh access code" placeholderTextColor={emailError ? 'red' : 'gray'} secureTextEntry={true} value={password} onChangeText={setPass} />
                     </View>

@@ -12,7 +12,7 @@ const TabRoutesStyle = StyleSheet.create({
         paddingTop: 10 * (Screen_Size.width / 1080),
     },
     TabLabel: {
-        fontSize: Text_Sizes.h6,
+        fontSize: Text_Sizes.h5,
         marginTop: 1 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.InriaBold
     }
