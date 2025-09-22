@@ -11,8 +11,7 @@ const UserPanelStyle = StyleSheet.create({
         height: 322 * (Screen_Size.width / 1080),
         backgroundColor: Geesh_Secondary_Colors.White,
         justifyContent: 'center',
-        borderEndEndRadius: 50 * (Screen_Size.width / 1080),
-        alignItems: 'center'
+        alignItems: 'center',
 
     },
     container: {
@@ -26,8 +25,8 @@ const UserPanelStyle = StyleSheet.create({
         flex: 1,
         width: '100%',
         gap: 10,
-        justifyContent: 'flex-start',
-        flexDirection: 'row',
+        justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
 
     },
@@ -37,7 +36,24 @@ const UserPanelStyle = StyleSheet.create({
         backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 200 * (Screen_Size.width / 1080),
         justifyContent: 'center',
+        borderWidth: 3 * (Screen_Size.width / 1080),
+        borderColor: Geesh_Secondary_Colors.BlueSky,
         alignItems: 'center'
+    },
+
+    PopupPicture: {
+        position: 'absolute',
+        width: 70 * (Screen_Size.width / 1080),
+        height: 70 * (Screen_Size.width / 1080),
+        borderRadius: 100,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 3 * (Screen_Size.width / 1080),
+        borderColor: Geesh_Secondary_Colors.BlueSky,
+        bottom: 5,
+        right: -5,
+        backgroundColor: Geesh_Secondary_Colors.White
     },
     avatar: {
         width: '100%',
@@ -45,21 +61,22 @@ const UserPanelStyle = StyleSheet.create({
         borderRadius: 200 * (Screen_Size.width / 1080)
     },
     userInfos: {
-        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
         gap: 10 * (Screen_Size.width / 1080)
     },
     userName: {
-        fontFamily: Geesh_Fonts.InriaBold,
+        fontFamily: Geesh_Fonts.PoppinsMedium,
         fontSize: Text_Sizes.h2
     },
     userNamePlace: {
         gap: 6 * (Screen_Size.width / 1080),
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'flex-start',
     },
-    UID: {
-        fontFamily: Geesh_Fonts.InriaLight,
+    email: {
+        fontFamily: Geesh_Fonts.PoppinsLight,
         fontSize: Text_Sizes.h4
 
     }

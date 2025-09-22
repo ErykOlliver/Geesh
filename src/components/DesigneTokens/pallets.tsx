@@ -11,7 +11,8 @@ const Geesh_Secondary_Colors = {
     Gray: '#5E5E5E',
     AuroraGreen: '#8AF37C',
     VitalGreen: '#08CC0E',
-    BabyBlue: '#3CC3DF'
+    BabyBlue: '#3CC3DF',
+    BlueSky: '#89D3FF'
 }
 
 export { Geesh_Primmary_Colors, Geesh_Secondary_Colors }

@@ -21,7 +21,7 @@ export default function MainContent() {
         Linking.openURL('https://www.instagram.com/teamgeesh/');
     }
     const OpenWebsite = () => {
-        Linking.openURL('https://erykolliver.github.io/GeeshWebsite/');
+        Linking.openURL('https://teamgeesh.github.io/geesh-website/');
     }
 
     const [isEnabled, setIsEnabled] = useState(false);
