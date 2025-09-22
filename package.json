@@ -1,7 +1,7 @@
 {
   "name": "geesh",
   "license": "0BSD",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.tsx",
   "type": "module",
   "scripts": {
