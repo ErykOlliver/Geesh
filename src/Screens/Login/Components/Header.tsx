@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import LoginStyle from "../style/LoginStyle.js";
+import LoginStyle from "../style/LoginStyle";
 
 export default function Header() {
     return (

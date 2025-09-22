@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { TextInput, Text, View, TouchableOpacity } from 'react-native';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { LockKeyFreeIcons, Mail01Icon } from '@hugeicons/core-free-icons';
-import { auth } from '../../../../firebase.js'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import LoginStyle from '../style/LoginStyle.js';
+import { auth } from '../../../../firebase'
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Icon_Size } from '../../../components/DesigneTokens/metrics.js';
-import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets.js';
+import { Icon_Size } from '../../../components/DesigneTokens/metrics';
+import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 
 export default function MainContent({ navigation }) {
     const [email, setMail] = useState('')
     const [password, setPass] = useState('')
-    const [errorMsg, setErrorMsg] = useState('')
+    const [errorMsg, setErrorMsg] = useState<string | any>('')
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
@@ -41,19 +41,6 @@ export default function MainContent({ navigation }) {
                 setPasswordError(true);
             }
             console.log(error);
-        }
-    }
-    const signUp = async () => {
-        try {
-            const user = await createUserWithEmailAndPassword(auth, "teste@teste.com", "123456")
-            if (user) {
-                console.log('usuario criado')
-                setErrorMsg('')
-            } else {
-                setErrorMsg(errors?.password?.message || 'Erro ao criar usuário')
-            }
-        } catch (error) {
-            console.log(error)
         }
     }
     return (

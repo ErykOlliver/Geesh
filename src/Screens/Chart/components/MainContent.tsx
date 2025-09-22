@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { View, Text, ScrollView } from "react-native"
-import ChartStyle from "../style/ChartStyle.js";
+import { View, ScrollView } from "react-native"
+import ChartStyle from "../style/ChartStyle";
 import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 import LineChart from "../../../components/ChartsBase/LineChart/LineChart";
 import { useTranslation } from "react-i18next";

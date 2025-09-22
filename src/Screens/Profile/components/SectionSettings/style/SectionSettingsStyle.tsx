@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Geesh_Fonts } from "../../../../../components/DesigneTokens/fonts.js";
-import { Screen_Size, Text_Sizes } from "../../../../../components/DesigneTokens/metrics.js";
+import { Geesh_Fonts } from "../../../../../components/DesigneTokens/fonts";
+import { Screen_Size, Text_Sizes } from "../../../../../components/DesigneTokens/metrics";
 
 const SectionSettingsStyle = StyleSheet.create({
     body: {

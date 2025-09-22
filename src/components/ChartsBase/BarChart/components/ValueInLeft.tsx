@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
-import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
-import { Text_Sizes } from "../../../DesigneTokens/metrics.js";
+import { Geesh_Fonts } from "../../../DesigneTokens/fonts";
+import { Text_Sizes } from "../../../DesigneTokens/metrics";
 
 export default function ValueInLeft({ data }) {
     return (

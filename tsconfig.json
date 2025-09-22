@@ -2,13 +2,14 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "react-native",
+    "allowImportingTsExtensions": false,
     "allowJs": true,
     "checkJs": false,
     "noEmit": true,
     "strict": false,
     "isolatedModules": true,
-    "module": "node16",
-    "moduleResolution": "node16",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "skipLibCheck": true
   },

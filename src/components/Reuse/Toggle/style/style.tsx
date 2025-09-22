@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Screen_Size } from "../../../DesigneTokens/metrics.js";
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets.js";
+import { Screen_Size } from "../../../DesigneTokens/metrics";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../DesigneTokens/pallets";
 
 const ToggleStyle = StyleSheet.create({
     onToggle: {

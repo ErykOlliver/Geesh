@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
-import style from "./style/style.tsx";
-import BaseFilter from "../../Reuse/FilterBase/BaseFilter.tsx";
-import BarChartBase from "./BarChartBase.tsx";
+import style from "./style/style";
+import BaseFilter from "../../Reuse/FilterBase/BaseFilter";
+import BarChartBase from "./BarChartBase";
 
 
 type BarChartProps = {

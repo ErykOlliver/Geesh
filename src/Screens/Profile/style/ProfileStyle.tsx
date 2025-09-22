@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
-import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
+import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 const ProfileStyle = StyleSheet.create({
     body: {

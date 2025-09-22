@@ -1,9 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
-import ChartStyle from "../style/ChartStyle.js";
-import { StatusBar } from "expo-status-bar";
+import ChartStyle from "../style/ChartStyle";
 import { LinearGradient } from "expo-linear-gradient";
-import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets.js";
+import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 import { useTranslation } from "react-i18next";
 
 

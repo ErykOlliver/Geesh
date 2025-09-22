@@ -3,15 +3,15 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import HomeStyle from '../style/HomeStyle';
 import { useTranslation } from 'react-i18next';
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets.js';
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets';
 
 
-const ActiveBatteryGradient = [
+const ActiveBatteryGradient: [string, string] = [
   Geesh_Primmary_Colors.BluishWhite,
   Geesh_Primmary_Colors.Azure
 ]
 
-const IndicatorGradient = [
+const IndicatorGradient: [string, string] = [
   Geesh_Secondary_Colors.AuroraGreen,
   Geesh_Secondary_Colors.VitalGreen
 ]

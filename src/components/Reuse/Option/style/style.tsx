@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Geesh_Fonts } from "../../../DesigneTokens/fonts.js";
-import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics.js";
+import { Geesh_Fonts } from "../../../DesigneTokens/fonts";
+import { Screen_Size, Text_Sizes } from "../../../DesigneTokens/metrics";
 
 const OptionStyle = StyleSheet.create({
     body: {

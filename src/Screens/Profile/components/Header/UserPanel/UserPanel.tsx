@@ -1,13 +1,13 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import UserPanelStyle from "./style/UserPanelStyle.tsx";
+import UserPanelStyle from "./style/UserPanelStyle";
 import { HugeiconsIcon } from "@hugeicons/react-native";
-import { Screen_Size } from "../../../../../components/DesigneTokens/metrics.js";
+import { Screen_Size } from "../../../../../components/DesigneTokens/metrics";
 import { PencilEdit01Icon, User03Icon } from "@hugeicons/core-free-icons";
 
 type UserProps = {
-    userName?: String
-    UID: String
-    Avatar?: String,
+    userName?: string
+    UID?: number
+    Avatar?: string,
     OnPress: () => void
 }
 
