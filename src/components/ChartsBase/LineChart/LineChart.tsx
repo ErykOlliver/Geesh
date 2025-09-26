@@ -8,6 +8,7 @@ type BarChartProps = {
     title?: string;
     data?: number[];
     labels: string[];
+    color?: {color0?: string, color60?: string, color100?: string}
 }
 
 const Options = [
@@ -26,7 +27,7 @@ export default function LineChart(props: BarChartProps) {
                     <BaseFilter title="Filter" />
                 </View>
             </View>
-            <LineChartBase data={props.data} labels={props.labels} />
+            <LineChartBase data={props.data} labels={props.labels} color={{color0: props.color.color0, color60: props.color.color60, color100: props.color.color100}} />
         </View>
     )
 }

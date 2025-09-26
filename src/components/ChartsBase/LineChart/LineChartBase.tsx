@@ -11,6 +11,7 @@ import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../DesigneToke
 type BarChartProps = {
     data?: number[];
     labels: string[];
+    color?: { color0?: string, color60?: string, color100?: string }
 }
 
 
@@ -82,11 +83,11 @@ export default function LineChartBase(props: BarChartProps) {
                         })};
                         <Defs>
                             <LinearGradient id="LCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Geesh_Secondary_Colors.BabyBlue} stopOpacity={0.5} />
-                                <Stop offset="100%" stopColor={Geesh_Secondary_Colors.BabyBlue} stopOpacity={0} />
+                                <Stop offset="0%" stopColor={props.color?.color0} stopOpacity={0.5} />
+                                <Stop offset="100%" stopColor={props.color?.color100} stopOpacity={0} />
                             </LinearGradient>
                         </Defs>
-                        <Path d={SvgLine} stroke={Geesh_Primmary_Colors.Azure} fill='none' strokeWidth={0.5} />
+                        <Path d={SvgLine} stroke={props.color?.color100} fill='none' strokeWidth={0.5} />
                         <Path d={SvgArea} stroke="none" fill='url(#LCGradient)' />
                     </Svg>
                 </View>

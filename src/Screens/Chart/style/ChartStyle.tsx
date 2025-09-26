@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size } from "../../../components/DesigneTokens/metrics";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
+import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
 
 const ChartStyle = StyleSheet.create({
     Body: {
@@ -35,7 +36,7 @@ const ChartStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.PoppinsRegular,
     },
     ChartIndicator: {
-        fontSize: 30 * (Screen_Size.width / 1080),
+        fontSize: 36 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.PoppinsLight,
         textTransform: 'uppercase',
     },
@@ -67,6 +68,26 @@ const ChartStyle = StyleSheet.create({
         paddingBottom: 130 * (Screen_Size.width / 1080),
         flexDirection: 'column',
         gap: 100 * (Screen_Size.width / 1080),
+    },
+    WindSunPlace:{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%'
+    },
+    SwitchChart:{
+        display: 'flex',
+        width: 244 * (Screen_Size.width / 1080),
+        height: 70 * (Screen_Size.width / 1080),
+        backgroundColor: Geesh_Secondary_Colors.White70,
+        flexDirection: 'row',
+        borderRadius: 100 * (Screen_Size.width / 1080),
+        justifyContent: 'space-between',
+        paddingHorizontal: 40 * (Screen_Size.width / 1080),
+        alignItems: 'center',
+        
+        
     }
 })
 
