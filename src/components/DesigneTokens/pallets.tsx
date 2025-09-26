@@ -1,6 +1,8 @@
 const Geesh_Primmary_Colors = {
     Azure: '#029FFC',
-    BluishWhite: '#89D3FF'
+    BluishWhite: '#89D3FF',
+    GoldenHarvest: '#EBA528',
+    SunbeamGlow: '#F5D25B'
 }
 
 const Geesh_Secondary_Colors = {
