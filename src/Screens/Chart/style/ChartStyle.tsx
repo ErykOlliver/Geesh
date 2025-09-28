@@ -43,8 +43,9 @@ const ChartStyle = StyleSheet.create({
     MainContent: {
         alignItems: 'center',
         justifyContent: 'flex-start',
+        paddingTop: 10 * (Screen_Size.width / 1080),
         width: Screen_Size.width,
-        height: '100%'
+        height: Screen_Size.height
     },
 
     MainContentContainer: {
