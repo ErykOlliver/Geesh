@@ -30,6 +30,7 @@
         "Nov": "Nov",
         "Dec": "Dec",
         "Energia Eólica": "Wind Energy",
+        "Energia Solar": "Solar Energy",
         "titulo Painel": "Battery Panel",
         "status_bateria": "Battery status",
         "energia_disponivel": "Available energy",
@@ -38,7 +39,7 @@
         "ultimo_uso": "Last used",
         "ativo": "Active",
         "botao_ativar": "Activate battery",
-        "gerenciar_dispositivos": "Manage connected devices",
+        "gerenciar_dispositivos": "Manage connected",
         "dispositivos": "devices"
     }
 }

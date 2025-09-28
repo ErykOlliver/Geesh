@@ -8,8 +8,9 @@ import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets";
 
 
 type BarChartProps = {
-    data?: number[];
-    labels: string[];
+    data?: number[],
+    labels: string[],
+    color?: {color0?: string, color60?: string, color100?: string}
 }
 
 
@@ -91,9 +92,9 @@ export default function BarChartBase(props: BarChartProps) {
                         })};
                         <Defs>
                             <LinearGradient id="BCGradient" x1="0" y1="0" x2="0" y2="1">
-                                <Stop offset="0%" stopColor={Geesh_Primmary_Colors.BluishWhite} stopOpacity={0.9} />
-                                <Stop offset="60%" stopColor={Geesh_Primmary_Colors.Azure} stopOpacity={0.9} />
-                                <Stop offset="100%" stopColor={Geesh_Primmary_Colors.Azure} stopOpacity={1} />
+                                <Stop offset="0%" stopColor={props.color?.color0} stopOpacity={0.9} />
+                                <Stop offset="60%" stopColor={props.color?.color60} stopOpacity={0.9} />
+                                <Stop offset="100%" stopColor={props.color?.color100} stopOpacity={1} />
                             </LinearGradient>
                         </Defs>
                         {bars}
