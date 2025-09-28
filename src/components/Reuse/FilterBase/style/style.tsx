@@ -12,9 +12,10 @@ const style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginRight: 120 * (Screen_Size.width / 1080)
     },
-
+    
     FilterIcon: {
         width: 70 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),

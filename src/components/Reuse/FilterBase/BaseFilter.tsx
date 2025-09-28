@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 import style from "./style/style";
 import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics";
-import { ChevronDown, SlidersHorizontal } from "lucide-react-native";
+import { ChevronDown, ChevronUp, SlidersHorizontal } from "lucide-react-native";
 
 type FilterProps = {
     title: string
@@ -16,7 +16,7 @@ export default function BaseFilter(props: FilterProps) {
 
             <View style={style.container}>
                 <Text style={style.Title}>{props.title}</Text>
-                <ChevronDown size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />
+                <ChevronUp size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />
             </View>
         </View>
     )
