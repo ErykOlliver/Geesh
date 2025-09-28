@@ -39,7 +39,7 @@
         "ultimo_uso": "Último uso",
         "ativo": "Ativa",
         "botao_ativar": "Ativar bateria",
-        "gerenciar_dispositivos": "Gerenciar dispositivos conectados",
-        "dispositivos": "dispositivos"
+        "gerenciar_dispositivos": "Gerenciar dispositivos",
+        "dispositivos": "conectados"
     }
 }
