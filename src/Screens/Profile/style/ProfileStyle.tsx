@@ -6,6 +6,8 @@ import { Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallet
 const ProfileStyle = StyleSheet.create({
     body: {
         flex: 1,
+        gap: 10 * (Screen_Size.width / 1080),
+        backgroundColor: Geesh_Secondary_Colors.White90
     },
     background: {
         position: 'absolute',
@@ -18,8 +20,6 @@ const ProfileStyle = StyleSheet.create({
     Header: {
         width: Screen_Size.width,
         height: 587 * (Screen_Size.width / 1080),
-        borderBottomWidth: 0.5,
-
     },
     
 
@@ -30,13 +30,13 @@ const ProfileStyle = StyleSheet.create({
         alignItems: 'center',
         height: "100%",
         flexDirection: 'row',
-        gap: 20
+        gap: 20 * (Screen_Size.width / 1080)
     },
 
     PhotoPlace: {
         backgroundColor: Geesh_Secondary_Colors.White70,
-        width: 100,
-        height: 100,
+        width: 100 * (Screen_Size.width / 1080),
+        height: 100 * (Screen_Size.width / 1080),
         borderRadius: '100%',
         justifyContent: 'center',
         alignItems: 'center'
@@ -45,7 +45,7 @@ const ProfileStyle = StyleSheet.create({
     NamePlace: {
         display: 'flex',
         flexDirection: 'row',
-        gap: 10,
+        gap: 10 * (Screen_Size.width / 1080),
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -70,7 +70,7 @@ const ProfileStyle = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        gap: 10,
+        gap: 10 * (Screen_Size.width / 1080),
     },
 
     ENPlace: {
@@ -80,7 +80,7 @@ const ProfileStyle = StyleSheet.create({
         width: 190,
         height: '70%',
         borderRadius: 5,
-        gap: 8,
+        gap: 8 * (Screen_Size.width / 1080),
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center'
@@ -101,8 +101,7 @@ const ProfileStyle = StyleSheet.create({
     MCContainer: {
         width: '90%',
         height: '69%',
-        gap: 8,
-        marginTop: 15
+        marginTop: 15 * (Screen_Size.width / 1080)
     },
 
     STTxT: {
@@ -110,16 +109,12 @@ const ProfileStyle = StyleSheet.create({
         fontFamily: Geesh_Fonts.InriaBold
     },
 
-
     OptionList: {
         display: 'flex',
         flexDirection: 'column',
         gap: 45 * (Screen_Size.width / 1080),
         paddingBottom: 10 * (Screen_Size.width / 1080)
     }
-
-
-
 })
 
 

@@ -9,7 +9,7 @@ export default function Profile() {
     return (
         <View style={ProfileStyle.body}>
             <Header />
-            <MainContent/>
+            <MainContent />
         </View>
     )
 }

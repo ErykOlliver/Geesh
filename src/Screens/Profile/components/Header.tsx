@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { auth, db } from "../../../../firebase"
 import { doc, getDoc } from "firebase/firestore"
 import * as ImagePicker from 'expo-image-picker'
+import { Shadow } from "react-native-shadow-2"
 
 
 export default function Header() {
@@ -45,8 +46,8 @@ export default function Header() {
         }
     }
     return (
-        <View style={ProfileStyle.Header}>
+        <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={ProfileStyle.Header}>
             <UserPanel Avatar={selectedImage} userName={userData?.name || ''} userEmail={userData?.email || ''} UID={645623} OnPress={pickImage} />
-        </View>
+        </Shadow>
     )
 }

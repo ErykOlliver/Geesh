@@ -24,7 +24,7 @@ const UserPanelStyle = StyleSheet.create({
     main: {
         flex: 1,
         width: '100%',
-        gap: 10,
+        gap: 25 * (Screen_Size.width / 1080),
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
@@ -45,14 +45,14 @@ const UserPanelStyle = StyleSheet.create({
         position: 'absolute',
         width: 70 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        borderRadius: 100,
+        borderRadius: 100 * (Screen_Size.width / 1080),
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 3 * (Screen_Size.width / 1080),
         borderColor: Geesh_Secondary_Colors.BlueSky,
-        bottom: 5,
-        right: -5,
+        bottom: 5 * (Screen_Size.width / 1080),
+        right: -5 * (Screen_Size.width / 1080),
         backgroundColor: Geesh_Secondary_Colors.White
     },
     avatar: {
