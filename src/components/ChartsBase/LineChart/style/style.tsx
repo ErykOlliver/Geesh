@@ -19,7 +19,7 @@ const style = StyleSheet.create({
     Title: {
         paddingVertical: 6 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.InriaBold,
-        fontSize: Text_Sizes.h3,
+        fontSize: Text_Sizes.h2,
     },
     FilterPlace: {
         display: 'flex',
