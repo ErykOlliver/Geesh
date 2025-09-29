@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { View, } from "react-native";
 import { Svg, Line, Text, LinearGradient, Defs, Stop, Path } from "react-native-svg";
 import { Geesh_Fonts } from "../../DesigneTokens/fonts";
-import { Text_Sizes } from "../../DesigneTokens/metrics";
+import { Screen_Size, Text_Sizes } from "../../DesigneTokens/metrics";
 import ValueInLeft from "./components/ValueInLeft";
 import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets";
 
@@ -73,7 +73,7 @@ export default function BarChartBase(props: BarChartProps) {
                     <ValueInLeft data={yTicks.reverse()} />
                 </View>
 
-                <View style={{ display: 'flex', borderBottomWidth: 0.5, flexDirection: 'column', height: ChartSize.height, width: ChartSize.width - 38, overflow: 'hidden' }}>
+                <View style={{ display: 'flex', borderBottomWidth: 0.5, flexDirection: 'column', height: ChartSize.height, width: ChartSize.width - 38, overflow: 'hidden', borderColor: '#262626fb' }}>
                     <Svg width='100%' height='100%'>
                         {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
                             const y = ChartSize.height * ratio;
@@ -84,7 +84,7 @@ export default function BarChartBase(props: BarChartProps) {
                                     y1={y}
                                     x2={ChartSize.width}
                                     y2={y}
-                                    stroke="#1c1c1c"
+                                    stroke="#262626"
                                     strokeOpacity={0.3}
                                     strokeWidth="0.5"
                                 />
@@ -98,12 +98,10 @@ export default function BarChartBase(props: BarChartProps) {
                             </LinearGradient>
                         </Defs>
                         {bars}
-
-
                     </Svg>
                 </View>
             </View>
-            <View style={{ display: 'flex', width: ChartSize.width - 25, height: sizeBottomBarOfMonths, justifyContent: 'center', alignItems: 'flex-start' }}>
+            <View style={{ display: 'flex', width: Screen_Size.width, height: sizeBottomBarOfMonths, paddingLeft: 75 * (Screen_Size.width / 1080), justifyContent: 'flex-start', alignItems: 'center' }}>
                 <Svg width='100%' height={sizeBottomBarOfMonths}>
                     {props.labels.map((label, index) => {
                         const totalBars = props.data.length;
@@ -118,7 +116,7 @@ export default function BarChartBase(props: BarChartProps) {
                                 x={x + 26}
                                 y={labelY}
                                 fontSize={sizeOfTextMonths}
-                                fill="#333"
+                                fill="#262626"
                                 textAnchor="middle"
                                 transform={`rotate(-45, ${x}, ${labelY})`}
                                 fontFamily={Geesh_Fonts.InriaRegular}

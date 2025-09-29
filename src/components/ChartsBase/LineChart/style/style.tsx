@@ -12,8 +12,8 @@ const style = StyleSheet.create({
     header: {
         display: 'flex',
         flexDirection: 'row',
-        width: '100%',
         alignItems: 'center',
+        marginHorizontal: 20 * (Screen_Size.width / 1080),
         justifyContent: 'space-between',
     },
     Title: {
