@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import style from "./style/style";
 import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics";
 import { ChevronDown, ChevronUp, SlidersHorizontal } from "lucide-react-native";
@@ -14,10 +14,10 @@ export default function BaseFilter(props: FilterProps) {
                 <SlidersHorizontal size={70 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />
             </View>
 
-            <View style={style.container}>
+            <TouchableOpacity style={style.container}>
                 <Text style={style.Title}>{props.title}</Text>
-                <ChevronUp size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />
-            </View>
+                <ChevronDown size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />
+            </TouchableOpacity>
         </View>
     )
 }

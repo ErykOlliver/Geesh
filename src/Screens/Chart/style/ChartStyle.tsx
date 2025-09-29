@@ -50,14 +50,16 @@ const ChartStyle = StyleSheet.create({
 
     MainContentContainer: {
         display: 'flex',
-        alignItems: 'center',
-        width: '90%',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        width: '100%',
         height: '77%',
         flexDirection: 'column',
     },
     ChartsPlace: {
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         paddingBottom: 10 * (Screen_Size.width / 1080),
         flexDirection: 'row',
         width: Screen_Size.width * 2,

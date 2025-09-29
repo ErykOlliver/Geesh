@@ -10,7 +10,7 @@ import { Geesh_Primmary_Colors } from "../../DesigneTokens/pallets";
 type BarChartProps = {
     data?: number[],
     labels: string[],
-    color?: {color0?: string, color60?: string, color100?: string}
+    color?: { color0?: string, color60?: string, color100?: string }
 }
 
 
@@ -61,13 +61,13 @@ export default function BarChartBase(props: BarChartProps) {
 
     return (
 
-        <View style={{ width: '100%', height: chartHeight, display: 'flex', alignItems: 'flex-end' }} onLayout={(event) => {
+        <View style={{ width: '100%', height: chartHeight, display: 'flex', alignItems: 'center' }} onLayout={(event) => {
             const { width, height } = event.nativeEvent.layout;
             if (ChartSize.width !== width || ChartSize.height !== height) {
                 SetChartSize({ width, height });
             }
         }}>
-            <View style={{ display: 'flex', flexDirection: 'row', width: '100%', height: '100%' }}>
+            <View style={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
 
                 <View style={{ borderBottomWidth: 0.5, display: 'flex', padding: 5, alignItems: 'center', justifyContent: 'center', height: ChartSize.height }}>
                     <ValueInLeft data={yTicks.reverse()} />

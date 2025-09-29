@@ -43,18 +43,6 @@ export default function MainContent(props: MainContentProps) {
     })
 
     const MouthsList = [t("Jan"), t("Feb"), t("Mar"), t("Apr"), t("May"), t("Jun"), t("Jul"), t("Aug"), t("Sep"), t("Oct"), t("Nov"), t("Dec")];
-    const navigation = useNavigation()
-    const [isSolar, setIsSolar] = useState(false);
-    const translateX = useSharedValue(0);
-
-    const toggleChart = () => {
-        setIsSolar(!isSolar);
-        translateX.value = withTiming(isSolar ? 0 : -Screen_Size.width, { duration: 400 });
-    };
-
-    const animatedStyle = useAnimatedStyle(() => ({
-        transform: [{ translateX: translateX.value }],
-    }));
     return (
         <View style={ChartStyle.MainContent}>
             <View style={ChartStyle.MainContentContainer}>

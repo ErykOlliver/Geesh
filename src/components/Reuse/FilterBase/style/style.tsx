@@ -13,7 +13,7 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight: 120 * (Screen_Size.width / 1080)
+        gap: 10 * (Screen_Size.width / 1080),
     },
     
     FilterIcon: {
