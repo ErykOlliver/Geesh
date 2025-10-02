@@ -41,7 +41,6 @@ export default function Header(props: HeaderProps) {
 
     return (
         <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={ChartStyle.Header}>
-            <LinearGradient colors={[Geesh_Secondary_Colors.White, Geesh_Secondary_Colors.White]} style={ChartStyle.HeaderBG} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1.1 }} />
             <View style={ChartStyle.HeaderContainer}>
                 <Text style={ChartStyle.ChartTitle}>{t("Gráfico")}</Text>
                 <View style={ChartStyle.WindSunPlace}>

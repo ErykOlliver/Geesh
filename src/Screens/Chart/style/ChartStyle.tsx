@@ -7,7 +7,8 @@ const ChartStyle = StyleSheet.create({
     Body: {
         display: 'flex',
         alignItems: 'center',
-        gap: 15 * (Screen_Size.width / 1080)
+        gap: 15 * (Screen_Size.width / 1080),
+        backgroundColor: Geesh_Secondary_Colors.White80,
     },
     Header: {
         display: 'flex',
@@ -15,6 +16,7 @@ const ChartStyle = StyleSheet.create({
         alignItems: 'center',
         width: Screen_Size.width,
         height: 270 * (Screen_Size.width / 1080),
+        backgroundColor: Geesh_Secondary_Colors.White,
     },
     HeaderContainer: {
         display: 'flex',
@@ -72,14 +74,14 @@ const ChartStyle = StyleSheet.create({
         flexDirection: 'column',
         gap: 100 * (Screen_Size.width / 1080),
     },
-    WindSunPlace:{
+    WindSunPlace: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%'
     },
-    SwitchChart:{
+    SwitchChart: {
         display: 'flex',
         width: 244 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
@@ -89,8 +91,8 @@ const ChartStyle = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 40 * (Screen_Size.width / 1080),
         alignItems: 'center',
-        
-        
+
+
     }
 })
 

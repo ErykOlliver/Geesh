@@ -37,6 +37,7 @@ export default StyleSheet.create({
   HomeTitle: {
     fontFamily: Geesh_Fonts.PoppinsRegular,
     fontSize: Text_Sizes.h1,
+    color: '#1E293B'
   },
   //#endregion
 
