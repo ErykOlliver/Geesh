@@ -23,13 +23,14 @@ const LoginStyle = StyleSheet.create({
     paddingTop: 100 * (Screen_Size.width / 1080),
     paddingBottom: 20 * (Screen_Size.width / 1080),
     alignItems: 'flex-start'
-    
+
   },
   main_content: {
     flex: 1,
     justifyContent: 'center',
     backgroundColor: Geesh_Secondary_Colors.White80,
     alignItems: 'center',
+    paddingBottom: 55 * (Screen_Size.width / 1080),
   },
   main_content_container: {
     flex: 1,
@@ -37,7 +38,7 @@ const LoginStyle = StyleSheet.create({
     justifyContent: 'space-between',
     width: '90%',
   },
-  form:{
+  form: {
     width: '100%',
     display: 'flex',
     gap: 15 * (Screen_Size.width / 1080)
@@ -89,7 +90,7 @@ const LoginStyle = StyleSheet.create({
     fontSize: Text_Sizes.h3,
     paddingVertical: 10 * (Screen_Size.width / 1080),
     fontFamily: Geesh_Fonts.PoppinsLight
-    
+
   },
   input_with_icon: {
     display: 'flex',
@@ -98,7 +99,7 @@ const LoginStyle = StyleSheet.create({
     borderRadius: 15 * (Screen_Size.width / 1080),
     backgroundColor: Geesh_Secondary_Colors.White70,
   },
-  input_icon:{
+  input_icon: {
     display: 'flex',
     width: 100 * (Screen_Size.width / 1080),
     height: 100 * (Screen_Size.width / 1080),

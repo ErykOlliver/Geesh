@@ -67,7 +67,8 @@ const UserPanelStyle = StyleSheet.create({
     },
     userName: {
         fontFamily: Geesh_Fonts.PoppinsMedium,
-        fontSize: Text_Sizes.h2
+        fontSize: Text_Sizes.h2,
+        color: '#1E293B'
     },
     userNamePlace: {
         gap: 6 * (Screen_Size.width / 1080),
@@ -77,7 +78,8 @@ const UserPanelStyle = StyleSheet.create({
     },
     email: {
         fontFamily: Geesh_Fonts.PoppinsLight,
-        fontSize: Text_Sizes.h4
+        fontSize: Text_Sizes.h4,
+        color: '#64748B'
 
     }
 })

@@ -1,6 +1,14 @@
 const lightTheme = {
-    background: ''
-}
+    background: '#F8FAFB',
+    surface: '#FFFFFF',
+    text: '#1E293B',
+};
+
+const darkTheme = {
+    background: '#000000',
+    surface: '#161616',
+    text: '#F1F5F9',
+};
 
 const Geesh_Primmary_Colors = {
     Azure: '#029FFC',
@@ -21,4 +29,4 @@ const Geesh_Secondary_Colors = {
     BlueSky: '#89D3FF'
 }
 
-export { Geesh_Primmary_Colors, Geesh_Secondary_Colors }
+export { Geesh_Primmary_Colors, Geesh_Secondary_Colors, lightTheme, darkTheme }

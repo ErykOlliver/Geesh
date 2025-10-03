@@ -6,6 +6,7 @@ import OptionComponent from "../../../components/Reuse/Option/OptionComponent"
 import SectionSettinsComponent from "./SectionSettings/SectionSettings"
 import { useTranslation } from "react-i18next"
 import { Bell, Instagram, Languages, LockOpen, Mails, Moon, PanelsTopLeft, Phone, RotateCcw, RotateCcwKey, SunMoon } from "lucide-react-native"
+import { useTheme } from "../../../components/DesigneTokens/themeContext"
 
 
 const data = [
@@ -15,6 +16,7 @@ const data = [
 
 
 export default function MainContent() {
+    const { toggleTheme } = useTheme()
     const { t, i18n } = useTranslation();
 
     const OpenInstagram = () => {
@@ -23,15 +25,12 @@ export default function MainContent() {
     const OpenWebsite = () => {
         Linking.openURL('https://teamgeesh.github.io/geesh-website/');
     }
-
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <View style={ProfileStyle.MainContent}>
             <View style={ProfileStyle.MCContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
                     <SectionSettinsComponent title={t("Configs")}>
-                        <OptionComponent icon={<Moon size={70 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Modo Escuro")} type='toggle' />
+                        <OptionComponent icon={<Moon size={70 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Modo Escuro")} type='toggle' function={toggleTheme} />
                         <OptionComponent icon={<Bell size={70 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Notificações")} type="toggle" />
                         <OptionComponent icon={<Languages size={70 * (Screen_Size.width / 1080)} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Idioma")} type="dropdown" data={data} function={(selected) => void i18n.changeLanguage(selected.value)} />
                     </SectionSettinsComponent>

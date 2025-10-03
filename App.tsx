@@ -1,9 +1,10 @@
 import { useFonts } from 'expo-font';
-import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TouchableWithoutFeedback } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import './i18nify'
 import { Screen_Size } from './src/components/DesigneTokens/metrics';
 import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets';
 import NavContainer from './src/routes/index';
+import { ThemeProvider, useTheme } from './src/components/DesigneTokens/themeContext';
 
 
 
@@ -21,15 +22,18 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+  const { theme } = useTheme();
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Geesh_Secondary_Colors.White }}>
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1, paddingBottom: 100 * (Screen_Size.width / 1080)}}>
-        <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
-          <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-            <NavContainer />
-          </ScrollView>
-        </TouchableWithoutFeedback>
-      </KeyboardAvoidingView>
-    </SafeAreaView>
+    <ThemeProvider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: theme.surface }}>
+        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
+          <TouchableWithoutFeedback accessible={false} onPress={Keyboard.dismiss}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+              <NavContainer />
+            </ScrollView>
+          </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }
