@@ -17,7 +17,7 @@ export default function Panel() {
   const { theme } = useTheme()
   return (
 
-    <Shadow distance={3.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.08)' endColor='rgba(0, 0, 0, 0)' style={[HomeStyle.Panel, { backgroundColor: theme.surface }]}>
+    <Shadow distance={3.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.08)' endColor='rgba(0, 0, 0, 0)' style={[HomeStyle.Panel, { backgroundColor: theme.surface, borderColor: theme.border }]}>
       <Text style={[HomeStyle.BatteryTitle, { color: theme.text }]}>{t("titulo Painel")}</Text>
       <View style={HomeStyle.Battery}>
         <View style={HomeStyle.BatteryInnerShadow}></View>

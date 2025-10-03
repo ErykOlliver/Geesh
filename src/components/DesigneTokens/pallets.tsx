@@ -1,12 +1,14 @@
 const lightTheme = {
     background: '#F8FAFB',
     surface: '#FFFFFF',
+    border: '#E5EAF0',
     text: '#1E293B',
 };
 
 const darkTheme = {
-    background: '#000000',
-    surface: '#161616',
+    background: '#161616',
+    surface: '#1E1E1E',
+    border: '#334155',
     text: '#F1F5F9',
 };
 
@@ -24,7 +26,7 @@ const Geesh_Secondary_Colors = {
     White70: '#EEEEEE',
     Gray: '#5E5E5E',
     AuroraGreen: '#8AF37C',
-    VitalGreen: '#08CC0E',
+    VitalGreen: '#10B981',
     BabyBlue: '#3CC3DF',
     BlueSky: '#89D3FF'
 }
