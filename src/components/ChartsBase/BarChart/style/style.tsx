@@ -20,7 +20,6 @@ const style = StyleSheet.create({
         paddingVertical: 6 * (Screen_Size.width / 1080),
         fontFamily: Geesh_Fonts.InriaBold,
         fontSize: Text_Sizes.h2,
-        color: '#1E293B'
     },
     FilterPlace: {
         display: 'flex',

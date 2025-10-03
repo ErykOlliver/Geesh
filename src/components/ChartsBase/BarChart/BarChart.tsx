@@ -3,6 +3,7 @@ import style from "./style/style";
 import BaseFilter from "../../Reuse/FilterBase/BaseFilter";
 import BarChartBase from "./BarChartBase";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../../DesigneTokens/themeContext";
 
 
 type BarChartProps = {
@@ -12,18 +13,14 @@ type BarChartProps = {
     color?: { color0?: string, color60?: string, color100?: string }
 }
 
-const Options = [
-    { label: 'Teste', value: 1 }
-]
-
 
 export default function BarChart(props: BarChartProps) {
-    const { t, i18n } = useTranslation();
-
+    const { t } = useTranslation();
+    const { theme } = useTheme();
     return (
         <View style={style.body}>
             <View style={style.header}>
-                <Text style={style.Title}>
+                <Text style={[style.Title, { color: theme.text }]}>
                     {props.title}
                 </Text>
                 <View style={style.FilterPlace} >

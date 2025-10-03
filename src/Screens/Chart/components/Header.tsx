@@ -8,6 +8,7 @@ import { Icon_Size, Screen_Size, Text_Sizes } from "../../../components/DesigneT
 import { Sun, Wind } from "lucide-react-native";
 import { Shadow } from "react-native-shadow-2";
 import Animated, { interpolateColor, useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
+import { useTheme } from "../../../components/DesigneTokens/themeContext";
 
 type HeaderProps = {
     switch_chart: () => void;
@@ -15,7 +16,7 @@ type HeaderProps = {
 };
 
 export default function Header(props: HeaderProps) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const translateX = useSharedValue(0);
     const progress = useSharedValue(props.isSolar ? 1 : 0)
 
@@ -38,14 +39,14 @@ export default function Header(props: HeaderProps) {
         return { backgroundColor };
     });
 
-
+    const { theme } = useTheme();
     return (
-        <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={ChartStyle.Header}>
+        <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={[ChartStyle.Header, { backgroundColor: theme.surface }]}>
             <View style={ChartStyle.HeaderContainer}>
-                <Text style={ChartStyle.ChartTitle}>{t("Gráfico")}</Text>
+                <Text style={[ChartStyle.ChartTitle, { color: theme.text }]}>{t("Gráfico")}</Text>
                 <View style={ChartStyle.WindSunPlace}>
-                    <Text style={ChartStyle.ChartIndicator}>{!props.isSolar ? t("Energia Eólica") : t("Energia Solar")}</Text>
-                    <TouchableOpacity style={ChartStyle.SwitchChart} onPress={() => { props.switch_chart(), toggleChart() }}>
+                    <Text style={[ChartStyle.ChartIndicator, { color: theme.text }]}>{!props.isSolar ? t("Energia Eólica") : t("Energia Solar")}</Text>
+                    <TouchableOpacity style={[ChartStyle.SwitchChart, { backgroundColor: theme.background }]} onPress={() => { props.switch_chart(), toggleChart() }}>
                         <Animated.View style={[{ position: 'absolute', width: 122 * (Screen_Size.width / 1080), borderRadius: 100 * (Screen_Size.width / 1080), height: 70 * (Screen_Size.width / 1080) }, !props.isSolar ? { backgroundColor: Geesh_Primmary_Colors.Azure } : { backgroundColor: Geesh_Primmary_Colors.GoldenHarvest }, animatedStyle, animatedColor]} />
                         <Wind size={Text_Sizes.h2} color={!props.isSolar ? Geesh_Secondary_Colors.White : '#B3B3B3'} />
                         <Sun size={Text_Sizes.h2} color={props.isSolar ? Geesh_Secondary_Colors.White : '#B3B3B3'} />

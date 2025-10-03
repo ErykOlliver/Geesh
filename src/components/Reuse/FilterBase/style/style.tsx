@@ -24,8 +24,6 @@ const style = StyleSheet.create({
         width: 400 * (Screen_Size.width / 1080),
         padding: 20 * (Screen_Size.width / 1080),
         height: 94 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White,
-        borderColor: '#E5EAF0',
         borderWidth: 1 * (Screen_Size.width / 1080),
         borderRadius: 15 * (Screen_Size.width / 1080),
         display: 'flex',

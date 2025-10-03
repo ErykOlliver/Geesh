@@ -23,7 +23,7 @@ export default function TabRoutes() {
     return (
         <TAB.Navigator id={undefined}
             screenOptions={{
-                tabBarStyle: [TabRoutesStyle.Tab, { backgroundColor: theme.surface }],
+                tabBarStyle: [TabRoutesStyle.Tab, { backgroundColor: theme.surface, borderColor: theme.surface }],
                 tabBarLabelStyle: [TabRoutesStyle.TabLabel],
                 headerShown: false,
                 tabBarActiveTintColor: Geesh_Primmary_Colors.Azure,

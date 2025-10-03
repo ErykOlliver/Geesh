@@ -1,10 +1,8 @@
 import { useFonts } from 'expo-font';
 import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import './i18nify'
-import { Screen_Size } from './src/components/DesigneTokens/metrics';
-import { Geesh_Secondary_Colors } from './src/components/DesigneTokens/pallets';
 import NavContainer from './src/routes/index';
-import { ThemeProvider, useTheme } from './src/components/DesigneTokens/themeContext';
+import { ThemeProvider } from './src/components/DesigneTokens/themeContext';
 
 
 
@@ -22,7 +20,7 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-  const { theme } = useTheme();
+  
   return (
     <ThemeProvider>
       <SafeAreaView style={{ flex: 1 }}>
