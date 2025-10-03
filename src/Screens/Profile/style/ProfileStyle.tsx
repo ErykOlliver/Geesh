@@ -7,15 +7,12 @@ const ProfileStyle = StyleSheet.create({
     body: {
         flex: 1,
         gap: 10 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White80
     },
     Header: {
         width: Screen_Size.width,
         height: 587 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.AuroraGreen,
     },
     MainContent: {
-        backgroundColor: Geesh_Secondary_Colors.White80,
         width: Screen_Size.width,
         height: "100%",
         justifyContent: 'flex-start',

@@ -14,12 +14,12 @@ const DropDownStyle = StyleSheet.create({
         width: 400 * (Screen_Size.width / 1080),
         height: 94 * (Screen_Size.width / 1080),
         borderRadius: 15 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White70,
         display: 'flex',
         zIndex: 2,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderWidth: 1 * (Screen_Size.width / 1080)
     },
     container: {
         width: 400 * (Screen_Size.width / 1080),
@@ -32,7 +32,7 @@ const DropDownStyle = StyleSheet.create({
     },
     SelectedOption: {
         fontSize: Text_Sizes.h4,
-        fontFamily: Geesh_Fonts.PoppinsLight
+        fontFamily: Geesh_Fonts.PoppinsLight,
     },
 
     Option: {
@@ -53,11 +53,10 @@ const DropDownStyle = StyleSheet.create({
     
     ListContent: {
         borderRadius: 15 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White70,
         padding: 15 * (Screen_Size.width / 1080),
-        gap: 3,
+        gap: 5 * (Screen_Size.width / 1080),
         borderColor: Geesh_Primmary_Colors.Azure,
-        borderWidth: 0.5/*  */
+        borderWidth: 0.5 * (Screen_Size.width / 1080)
     },
 })
 

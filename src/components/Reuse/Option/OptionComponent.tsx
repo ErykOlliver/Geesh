@@ -2,6 +2,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import DropDownComponent, { dataPrefab } from "../DropDown/DropDownComponent";
 import OptionStyle from "./style/style";
 import ToggleComponent from "../Toggle/ToggleComponent";
+import { useTheme } from "../../DesigneTokens/themeContext";
 
 type OptionType = 'default' | 'toggle' | 'dropdown' | 'information'
 
@@ -20,7 +21,7 @@ export default function OptionComponent(props: OptionProps) {
     const StartFunction = async () => {
         await props.function?.();
     }
-
+    const { theme } = useTheme();
     const renderOptions = () => {
         switch (props.type) {
             case 'default':
@@ -29,8 +30,8 @@ export default function OptionComponent(props: OptionProps) {
                         <View style={OptionStyle.icon}>
                             {props.icon}
                         </View>
-                        <View style={OptionStyle.main}>
-                            <Text style={OptionStyle.title}>{props.title}</Text>
+                        <View style={[OptionStyle.main, {borderColor: theme.text}]}>
+                            <Text style={[OptionStyle.title, { color: theme.text }]}>{props.title}</Text>
                         </View>
                     </TouchableOpacity>
                 )
@@ -40,8 +41,8 @@ export default function OptionComponent(props: OptionProps) {
                         <View style={OptionStyle.icon}>
                             {props.icon}
                         </View>
-                        <View style={OptionStyle.main}>
-                            <Text style={OptionStyle.title}>{props.title}</Text>
+                        <View style={[OptionStyle.main, {borderColor: theme.text}]}>
+                            <Text style={[OptionStyle.title, { color: theme.text }]}>{props.title}</Text>
                             <ToggleComponent function={StartFunction} />
                         </View>
                     </View>
@@ -52,8 +53,8 @@ export default function OptionComponent(props: OptionProps) {
                         <View style={OptionStyle.icon}>
                             {props.icon}
                         </View>
-                        <View style={OptionStyle.main}>
-                            <Text style={OptionStyle.title}>{props.title}</Text>
+                        <View style={[OptionStyle.main, {borderColor: theme.text}]}>
+                            <Text style={[OptionStyle.title, { color: theme.text }]}>{props.title}</Text>
                             <DropDownComponent data={props.data} onChange={props.function} />
                         </View>
                     </View>
@@ -61,10 +62,10 @@ export default function OptionComponent(props: OptionProps) {
             case 'information':
                 return (
                     <View style={OptionStyle.container}>
-                        
-                        <View style={OptionStyle.mainInfo}>
-                            <Text style={OptionStyle.title}>{props.title}</Text>
-                            <Text style={OptionStyle.title}>{props.info}</Text>
+
+                        <View style={[OptionStyle.mainInfo, {borderColor: theme.text}]}>
+                            <Text style={[OptionStyle.title, { color: theme.text }]}>{props.title}</Text>
+                            <Text style={[OptionStyle.title, { color: theme.text }]}>{props.info}</Text>
                         </View>
                     </View>
                 )
