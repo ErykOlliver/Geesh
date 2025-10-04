@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, TouchableWithoutFeedback } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StatusBar, TouchableWithoutFeedback } from 'react-native';
 import './i18nify'
 import NavContainer from './src/routes/index';
 import { ThemeProvider } from './src/components/DesigneTokens/themeContext';
@@ -20,7 +20,7 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-  
+
   return (
     <ThemeProvider>
       <SafeAreaView style={{ flex: 1 }}>

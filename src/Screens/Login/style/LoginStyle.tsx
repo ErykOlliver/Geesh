@@ -6,15 +6,13 @@ import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../componen
 const LoginStyle = StyleSheet.create({
   body: {
     flex: 1,
-    gap: 3,
-    backgroundColor: Geesh_Primmary_Colors.Azure
   },
   header: {
     width: Screen_Size.width,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Geesh_Secondary_Colors.White80,
+    borderBottomWidth: 1 * (Screen_Size.width / 1080)
   },
   header_container: {
     width: '90%',

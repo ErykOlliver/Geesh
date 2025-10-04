@@ -1,9 +1,11 @@
 import { Text, View } from "react-native";
 import LoginStyle from "../style/LoginStyle";
+import { useTheme } from "../../../components/DesigneTokens/themeContext";
 
 export default function Header() {
+    const { theme } = useTheme();
     return (
-        <View style={LoginStyle.header}>
+        <View style={[LoginStyle.header, { backgroundColor: theme.surface }]}>
             <View style={LoginStyle.header_container}>
                 <Text style={LoginStyle.title}>
                     Welcome to Geesh

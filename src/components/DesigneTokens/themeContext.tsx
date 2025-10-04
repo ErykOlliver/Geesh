@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, ReactNode } from 'react'
 import { lightTheme, darkTheme } from './pallets'
+import { useColorScheme } from 'react-native'
 
 type ThemeContextType = {
     theme: typeof lightTheme;
@@ -13,10 +14,15 @@ const ThemeContext = createContext<ThemeContextType>({
 
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [isDark, setIsDark] = useState(false)
-
-    const toggleTheme = () => setIsDark(!isDark)
-
+    const systemColor = useColorScheme();
+    const [isDark, setIsDark] = useState(systemColor === 'dark');
+    React.useEffect(() => {
+        setIsDark(systemColor === 'dark')
+    }, [systemColor])
+    
+    const toggleTheme = () => setIsDark(prev => !prev)
+    
+    console.log(isDark)
     return (
         <ThemeContext.Provider value={{ theme: isDark ? darkTheme : lightTheme, toggleTheme }}>
             {children}
