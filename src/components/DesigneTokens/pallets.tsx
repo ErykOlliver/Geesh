@@ -37,7 +37,14 @@ const Geesh_Secondary_Colors = {
     AuroraGreen: '#8AF37C',
     VitalGreen: '#10B981',
     BabyBlue: '#3CC3DF',
-    BlueSky: '#89D3FF'
+    BlueSky: '#89D3FF',
+    FlameSigil: '#F57C00',
+    EmberSoot: '#2D1F00',
+    CrimsonAbyss: '#2D0000',
+    BloodOath: '#B71C1C',
+    AbyssalEmerald: '#002D1B',
+    VerdantRite: '#388E3C'
+
 }
 
 export { Geesh_Primmary_Colors, Geesh_Secondary_Colors, lightTheme, darkTheme }

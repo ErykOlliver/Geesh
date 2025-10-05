@@ -63,7 +63,6 @@ export default function OptionComponent(props: OptionProps) {
             case 'information':
                 return (
                     <View style={OptionStyle.container}>
-
                         <View style={[OptionStyle.mainInfo, { borderColor: theme.text }]}>
                             <Text style={[OptionStyle.title, { color: theme.text }]}>{props.title}</Text>
                             <Text style={[OptionStyle.title, { color: theme.text }]}>{props.info}</Text>
