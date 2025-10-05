@@ -45,7 +45,7 @@ export default function MainContent() {
                         <OptionComponent icon={<PanelsTopLeft size={70 * (Screen_Size.width / 1080)} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Site")} type='default' function={() => OpenWebsite()} />
                     </SectionSettinsComponent>
                     <SectionSettinsComponent title={t("Sobre")}>
-                        <OptionComponent title={t("Versão")} info="1.0.2" type='information' />
+                        <OptionComponent title={t("Versão")} info="1.0.3" type='information' />
                     </SectionSettinsComponent>
                 </ScrollView >
             </View >
