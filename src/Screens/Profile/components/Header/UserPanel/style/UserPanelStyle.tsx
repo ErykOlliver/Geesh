@@ -9,7 +9,6 @@ const UserPanelStyle = StyleSheet.create({
         flex: 1,
         width: Screen_Size.width,
         height: 322 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White,
         justifyContent: 'center',
         alignItems: 'center',
 
@@ -33,7 +32,6 @@ const UserPanelStyle = StyleSheet.create({
     avatarPlace: {
         width: 230 * (Screen_Size.width / 1080),
         height: 230 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 200 * (Screen_Size.width / 1080),
         justifyContent: 'center',
         borderWidth: 3 * (Screen_Size.width / 1080),
@@ -53,7 +51,6 @@ const UserPanelStyle = StyleSheet.create({
         borderColor: Geesh_Secondary_Colors.BlueSky,
         bottom: 5 * (Screen_Size.width / 1080),
         right: -5 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White
     },
     avatar: {
         width: '100%',
@@ -67,7 +64,8 @@ const UserPanelStyle = StyleSheet.create({
     },
     userName: {
         fontFamily: Geesh_Fonts.PoppinsMedium,
-        fontSize: Text_Sizes.h2
+        fontSize: Text_Sizes.h2,
+        color: '#1E293B'
     },
     userNamePlace: {
         gap: 6 * (Screen_Size.width / 1080),
@@ -77,7 +75,8 @@ const UserPanelStyle = StyleSheet.create({
     },
     email: {
         fontFamily: Geesh_Fonts.PoppinsLight,
-        fontSize: Text_Sizes.h4
+        fontSize: Text_Sizes.h4,
+        color: '#64748B'
 
     }
 })

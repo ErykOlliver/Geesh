@@ -1,4 +1,4 @@
-import { View} from "react-native"
+import { View } from "react-native"
 import ProfileStyle from "../style/ProfileStyle"
 import UserPanel from "./Header/UserPanel/UserPanel"
 import UserCredential from "./Header/UserCredential/UserCredential"
@@ -7,11 +7,14 @@ import { auth, db } from "../../../../firebase"
 import { doc, getDoc } from "firebase/firestore"
 import * as ImagePicker from 'expo-image-picker'
 import { Shadow } from "react-native-shadow-2"
+import { useTheme } from "../../../components/DesigneTokens/themeContext"
 
 
 export default function Header() {
-    const [selectedImage, setSelectedImage] = useState (undefined)
+    const [selectedImage, setSelectedImage] = useState(undefined)
     const [userData, setUserData] = useState(null);
+    const { theme } = useTheme();
+
 
     async function getUserData() {
         const user = auth.currentUser;
@@ -46,7 +49,7 @@ export default function Header() {
         }
     }
     return (
-        <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={ProfileStyle.Header}>
+        <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={[ProfileStyle.Header, { backgroundColor: theme.surface }]}>
             <UserPanel Avatar={selectedImage} userName={userData?.name || ''} userEmail={userData?.email || ''} UID={645623} OnPress={pickImage} />
         </Shadow>
     )

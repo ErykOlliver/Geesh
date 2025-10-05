@@ -10,6 +10,7 @@ import { Geesh_Primmary_Colors } from "../../../components/DesigneTokens/pallets
 import { useNavigation } from "@react-navigation/native";
 import { Sun, Wind } from "lucide-react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../../../components/DesigneTokens/themeContext";
 
 const RandomizeValuesInCharts = (min = 0, max = 200) => {
 
@@ -24,11 +25,11 @@ const RandomizeValuesInCharts = (min = 0, max = 200) => {
 }
 
 type MainContentProps = {
-  animated_style: {};
+    animated_style: {};
 };
 
 export default function MainContent(props: MainContentProps) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const [BCData, SetBCData] = useState([])
     const [LCData, SetLCData] = useState([])
@@ -41,10 +42,10 @@ export default function MainContent(props: MainContentProps) {
 
         return () => clearInterval(Interval)
     })
-
+    const { theme } = useTheme();
     const MouthsList = [t("Jan"), t("Feb"), t("Mar"), t("Apr"), t("May"), t("Jun"), t("Jul"), t("Aug"), t("Sep"), t("Oct"), t("Nov"), t("Dec")];
     return (
-        <View style={ChartStyle.MainContent}>
+        <View style={[ChartStyle.MainContent, { backgroundColor: theme.background }]}>
             <View style={ChartStyle.MainContentContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
                     <Animated.View style={[ChartStyle.ChartsPlace, props.animated_style]}>

@@ -1,67 +1,106 @@
 import React, { useState } from 'react';
-import { TextInput, Text, View, TouchableOpacity } from 'react-native';
+import { TextInput, Text, View, TouchableOpacity, Alert } from 'react-native';
 import { auth } from '../../../../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon_Size, Screen_Size } from '../../../components/DesigneTokens/metrics';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
-import { Lock, Mail } from 'lucide-react-native';
+import { AlertTriangle, Lock, Mail } from 'lucide-react-native';
+import { useTheme } from '../../../components/DesigneTokens/themeContext';
+import Toast, { toastProps } from '../../../components/Reuse/Toast/Toast';
 
 export default function MainContent({ navigation }) {
     const [email, setMail] = useState('')
     const [password, setPass] = useState('')
-    const [errorMsg, setErrorMsg] = useState<string | any>('')
+    const [toast, setToast] = useState<toastProps | null>(null)
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
     const signIn = async () => {
         setEmailError(false);
         setPasswordError(false);
+        if (!email || !password) {
+            setToast({
+                title: "Alerta: Informações incompletas",
+                desc: "Preencha todos os campos obrigatórios antes de prosseguir.",
+                duration: 4000,
+                onClose: () => setToast(null),
+                type: 'alert'
+            })
+            return;
+        }
+
         try {
             const user = await signInWithEmailAndPassword(auth, email, password)
             if (user) {
-                navigation.replace('Tabs');
+                setToast({
+                    title: "Login bem-sucedido",
+                    duration: 4000,
+                    onClose: () => { setToast(null); navigation.replace('Tabs'); },
+                    type: 'sucess'
+                })
             }
-        } catch (error) {
-            if (error.code === 'auth/invalid-email') {
-                setErrorMsg('Email inválido');
-                setEmailError(true);
-            } else if (error.code === 'auth/missing-password') {
-                setErrorMsg('Senha inválida');
-                setPasswordError(true);
-            } else if (error.code === 'auth/invalid-credential') {
-                setErrorMsg('Usuário não encontrado');
-                setEmailError(true);
-                setPasswordError(true);
-            } else {
-                setErrorMsg('Erro ao autenticar');
-                setEmailError(true);
-                setPasswordError(true);
+        } catch (err: unknown) {
+            const error = err as { code: string }
+            if (error.code === "auth/invalid-credential") {
+                setToast({
+                    title: "Erro: conta não existe",
+                    desc: "A conta fornecida não foi encontrada. Verifique seus dados e tente novamente.",
+                    duration: 4000,
+                    onClose: () => setToast(null),
+                    type: 'error'
+                })
+                return;
             }
-            console.log(error);
+            if (error.code === "auth/too-many-requests") {
+                setToast({
+                    title: "Erro: Muitas tentativas",
+                    desc: "Tente novamente mais tarde.",
+                    duration: 4000,
+                    onClose: () => setToast(null),
+                    type: 'error'
+                })
+                return;
+            }
+            if (error.code === "auth/invalid-email") {
+                setToast({
+                    title: "Erro: Admin Inválido",
+                    desc: "Verifique seus dados e tente novamente.",
+                    duration: 4000,
+                    onClose: () => setToast(null),
+                    type: 'error'
+                })
+                return;
+            }
         }
     }
+    const { theme } = useTheme();
     return (
-        <View style={LoginStyle.main_content}>
+        <View style={[LoginStyle.main_content, { backgroundColor: theme.background }]}>
             <View style={LoginStyle.main_content_container}>
                 <View style={LoginStyle.form}>
-                    <Text style={LoginStyle.input_label}>Email</Text>
-                    <View style={[LoginStyle.input_with_icon, emailError && { borderColor: 'red', borderWidth: 1 }]}>
+                    {/* Email */}
+                    <Text style={[LoginStyle.input_label, { color: theme.text }]}>Email</Text>
+                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG }, emailError && { borderColor: theme.inputError, borderWidth: 2 * (Screen_Size.width / 1080), }]}>
                         <View style={LoginStyle.input_icon}>
-                            <Mail size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} strokeWidth={4 * (Screen_Size.width / 1080)} />
+                            <Mail size={Icon_Size.Icon6xl} color={emailError ? theme.inputError : theme.placeholder} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
-                        <TextInput style={LoginStyle.input} placeholder='user@example.com' placeholderTextColor={emailError ? 'red' : 'gray'} value={email} onChangeText={setMail} />
+                        <TextInput style={[LoginStyle.input, { color: theme.inputText }]} placeholder='user@example.com' placeholderTextColor={emailError ? theme.inputError : theme.placeholder} value={email} onChangeText={setMail} />
                     </View>
-                    <Text style={LoginStyle.input_label}>Password</Text>
-                    <View style={[LoginStyle.input_with_icon, passwordError && { borderColor: 'red', borderWidth: 1 }]}>
+
+                    {/* Password */}
+                    <Text style={[LoginStyle.input_label, { color: theme.text }]}>Password</Text>
+                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG }, passwordError && { borderColor: theme.inputError, borderWidth: 2 * (Screen_Size.width / 1080), }]}>
                         <View style={LoginStyle.input_icon}>
-                            <Lock size={Icon_Size.Icon6xl} color={emailError ? 'red' : 'gray'} strokeWidth={4 * (Screen_Size.width / 1080)} />
+                            <Lock size={Icon_Size.Icon6xl} color={passwordError ? theme.inputError : theme.placeholder} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
-                        <TextInput style={LoginStyle.input} placeholder="Geesh access code" placeholderTextColor={emailError ? 'red' : 'gray'} secureTextEntry={true} value={password} onChangeText={setPass} />
+                        <TextInput style={[LoginStyle.input, { color: theme.inputText }]} placeholder="Geesh access code" placeholderTextColor={passwordError ? theme.inputError : theme.placeholder} secureTextEntry={true} value={password} onChangeText={setPass} />
                     </View>
-                    {errorMsg !== '' && (
-                        <Text style={LoginStyle.errorMsg}>{errorMsg}</Text>
+
+                    {/* Error Message */}
+                    {toast !== null && (
+                        <Toast title={toast.title} desc={toast.desc} duration={toast.duration} type={toast.type} onClose={toast.onClose} />
                     )}
                 </View>
                 <View style={LoginStyle.form_button_place}>
@@ -70,7 +109,7 @@ export default function MainContent({ navigation }) {
                             <Text style={LoginStyle.button_text}>Enter Geesh</Text>
                         </LinearGradient>
                     </TouchableOpacity>
-                    <Text style={LoginStyle.forgot_your_pass}>
+                    <Text style={[LoginStyle.forgot_your_pass, { color: theme.text }]}>
                         Forgot your Password? <Text style={LoginStyle.recover_it_here}>Recover it here</Text>
                     </Text>
                 </View>

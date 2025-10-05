@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
 import { Geesh_Fonts } from "../../../components/DesigneTokens/fonts";
-import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../components/DesigneTokens/pallets";
+import { Geesh_Primmary_Colors, Geesh_Secondary_Colors, lightTheme } from "../../../components/DesigneTokens/pallets";
 
 export default StyleSheet.create({
   //#region Body
@@ -10,7 +10,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: Screen_Size.width,
     height: Screen_Size.height,
-    backgroundColor: Geesh_Secondary_Colors.White80
+    backgroundColor: lightTheme.background
   },
   //#endregion
 
@@ -37,6 +37,7 @@ export default StyleSheet.create({
   HomeTitle: {
     fontFamily: Geesh_Fonts.PoppinsRegular,
     fontSize: Text_Sizes.h1,
+    color: '#1E293B'
   },
   //#endregion
 
@@ -49,7 +50,7 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     width: Screen_Size.width,
   },
-  
+
   M_Content: {
     display: 'flex',
     paddingBottom: 30 * (Screen_Size.width / 1080),
@@ -65,24 +66,23 @@ export default StyleSheet.create({
 
   Panel: {
     display: 'flex',
-    width: 920 * (Screen_Size.width / 1080),
-    backgroundColor: Geesh_Secondary_Colors.White,
-    paddingVertical: 15,
-    paddingHorizontal: 20 * (Screen_Size.width / 1080),
+    width: 978 * (Screen_Size.width / 1080),
+    height: 576 * (Screen_Size.width / 1080),
+    paddingVertical: 25 * (Screen_Size.width / 1080),
+    paddingHorizontal: 25 * (Screen_Size.width / 1080),
     borderRadius: 25 * (Screen_Size.width / 1080),
-    borderColor: 'rgba(0, 0, 0, 0.08)',
-    borderWidth: 1,
+    borderWidth: 1 * (Screen_Size.width / 1080),
     alignItems: 'center',
-    gap: 15 * (Screen_Size.width / 1080),
+    justifyContent: 'space-between',
   },
 
   BatteryTitle: {
-    fontSize: Text_Sizes.h4,
+    fontSize: Text_Sizes.h3,
     fontFamily: Geesh_Fonts.InriaRegular
   },
 
   Battery: {
-    width: 880 * (Screen_Size.width / 1080),
+    width: '100%',
     height: 166 * (Screen_Size.width / 1080),
     alignItems: 'center',
     borderRadius: 15 * (Screen_Size.width / 1080),
@@ -103,13 +103,13 @@ export default StyleSheet.create({
   BatteryEnergy: {
     position: 'absolute',
     borderRadius: 15 * (Screen_Size.width / 1080),
-    width: '80%',
+    width: '100%',
     height: '100%'
   },
 
   BatteryInfoPlace: {
     display: 'flex',
-    width: 880 * (Screen_Size.width / 1080),
+    width: '100%',
     paddingVertical: 15 * (Screen_Size.width / 1080),
     gap: 10 * (Screen_Size.width / 1080),
   },
@@ -121,11 +121,11 @@ export default StyleSheet.create({
     justifyContent: 'space-between'
   },
   Info: {
-    fontSize: Text_Sizes.h5,
+    fontSize: Text_Sizes.h4,
     fontFamily: Geesh_Fonts.InriaLight
   },
   Status: {
-    fontSize: Text_Sizes.h5,
+    fontSize: Text_Sizes.h4,
     fontFamily: Geesh_Fonts.InriaLight
   },
 
@@ -140,7 +140,7 @@ export default StyleSheet.create({
     height: 448 * (Screen_Size.width / 1080),
     paddingHorizontal: 100 * (Screen_Size.width / 1080),
     paddingVertical: 20 * (Screen_Size.width / 1080),
-    gap: 42 * (Screen_Size.width / 1080)
+    gap: 30 * (Screen_Size.width / 1080)
   },
 
   Indicator: {
@@ -180,7 +180,7 @@ export default StyleSheet.create({
   },
 
   devices: {
-    fontSize: Text_Sizes.h5,
+    fontSize: Text_Sizes.h3,
     fontFamily: Geesh_Fonts.InriaLight
   },
 
