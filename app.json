@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "gerenciamento de energias renováveis",
+    "name": "Geesh",
     "slug": "Geesh",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./src/img/icons/GeeshAppIcon.png",
+    "icon": "./assets/icons/GeeshAppIcon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./src/img/icons/GIconWhite.png",
+      "image": "./assets/icons/GeeshName.png",
       "resizeMode": "contain",
       "backgroundColor": "#029FFC"
     },
@@ -17,16 +17,22 @@
     },
     "android": {
       "adaptiveIcon": {
-        "icon": "./src/img/icons/GeeshLogoNameBlack.png",
+        "foregroundImage": "./assets/icons/GeeshAppIcon.png",
         "backgroundColor": "#029FFC"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.geesh.app"
     },
     "web": {
-      "favicon": "./src/img/icons/GIconWhite.png"
+      "favicon": "./assets/icons/GIconWhite.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0dd0c8de-a0cb-4085-b0ce-fdd247b48638"
+      }
+    }
   }
 }
