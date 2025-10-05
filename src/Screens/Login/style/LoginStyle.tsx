@@ -96,7 +96,6 @@ const LoginStyle = StyleSheet.create({
     flexDirection: 'row',
     height: 135 * (Screen_Size.width / 1080),
     borderRadius: 15 * (Screen_Size.width / 1080),
-    // borderWidth: 2 * (Screen_Size.width / 1080),
     alignItems: 'center',
   },
   input_icon: {
@@ -112,10 +111,14 @@ const LoginStyle = StyleSheet.create({
     fontFamily: Geesh_Fonts.PoppinsLight
   },
   errorMsg: {
-    color: 'red',
-    fontSize: 16,
-    marginLeft: '5%',
+    fontSize: Text_Sizes.h3,
   },
+  errorPlace: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  }
 })
 
 export default LoginStyle;

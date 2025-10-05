@@ -6,7 +6,7 @@ import LoginStyle from '../style/LoginStyle';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Icon_Size, Screen_Size } from '../../../components/DesigneTokens/metrics';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
-import { Lock, Mail } from 'lucide-react-native';
+import { AlertTriangle, Lock, Mail } from 'lucide-react-native';
 import { useTheme } from '../../../components/DesigneTokens/themeContext';
 
 export default function MainContent({ navigation }) {
@@ -49,7 +49,7 @@ export default function MainContent({ navigation }) {
                 <View style={LoginStyle.form}>
                     {/* Email */}
                     <Text style={[LoginStyle.input_label, { color: theme.text }]}>Email</Text>
-                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG, borderColor: theme.inputBorder }, emailError && { borderColor: theme.inputError }]}>
+                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG }, emailError && { borderColor: theme.inputError, borderWidth: 2 * (Screen_Size.width / 1080), }]}>
                         <View style={LoginStyle.input_icon}>
                             <Mail size={Icon_Size.Icon6xl} color={emailError ? theme.inputError : theme.placeholder} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
@@ -58,7 +58,7 @@ export default function MainContent({ navigation }) {
 
                     {/* Password */}
                     <Text style={[LoginStyle.input_label, { color: theme.text }]}>Password</Text>
-                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG, borderColor: theme.inputBorder }, passwordError && { borderColor: theme.inputError }]}>
+                    <View style={[LoginStyle.input_with_icon, { backgroundColor: theme.inputBG }, passwordError && { borderColor: theme.inputError, borderWidth: 2 * (Screen_Size.width / 1080), }]}>
                         <View style={LoginStyle.input_icon}>
                             <Lock size={Icon_Size.Icon6xl} color={passwordError ? theme.inputError : theme.placeholder} strokeWidth={4 * (Screen_Size.width / 1080)} />
                         </View>
@@ -67,7 +67,10 @@ export default function MainContent({ navigation }) {
 
                     {/* Error Message */}
                     {errorMsg !== '' && (
-                        <Text style={LoginStyle.errorMsg}>{errorMsg}</Text>
+                        <View style={LoginStyle.errorPlace}>
+                            <AlertTriangle size={Icon_Size.Icon6xl} color={passwordError ? theme.inputError : theme.placeholder} strokeWidth={4 * (Screen_Size.width / 1080)}/>
+                            <Text style={LoginStyle.errorMsg}>{errorMsg}</Text>
+                        </View>
                     )}
                 </View>
                 <View style={LoginStyle.form_button_place}>

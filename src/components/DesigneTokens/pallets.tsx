@@ -3,7 +3,7 @@ const lightTheme = {
     surface: '#FFFFFF',
     border: '#E5EAF0',
     text: '#1E293B',
-    inputBG: '#EEEEEE',
+    inputBG: '#F3F3F3',
     inputBorder: '#5E5E5E',
     inputText: '#5E5E5E',
     inputError: '#EF4444',
