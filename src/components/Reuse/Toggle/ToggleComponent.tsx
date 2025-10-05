@@ -5,6 +5,7 @@ import { useTheme } from "../../DesigneTokens/themeContext";
 
 type ToggleProps = {
     function?: () => void;
+    value?: boolean
 }
 
 export default function ToggleComponent(props: ToggleProps) {
@@ -15,7 +16,7 @@ export default function ToggleComponent(props: ToggleProps) {
         props.function?.();
     }
     return (
-        <TouchableOpacity style={[!toggle ? ToggleStyle.onToggle : ToggleStyle.offToggle, { backgroundColor: theme.surface, borderColor: theme.border }]} onPress={onToggle}>
+        <TouchableOpacity style={[!props.value ? ToggleStyle.onToggle : ToggleStyle.offToggle, { backgroundColor: theme.surface, borderColor: theme.border }]} onPress={onToggle}>
             <View style={ToggleStyle.Circle}></View>
         </TouchableOpacity>
     )

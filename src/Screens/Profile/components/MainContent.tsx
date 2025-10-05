@@ -16,7 +16,7 @@ const data = [
 
 
 export default function MainContent() {
-    const { toggleTheme } = useTheme()
+    const { toggleTheme, isDark } = useTheme()
     const { t, i18n } = useTranslation();
     const { theme } = useTheme();
 
@@ -27,11 +27,11 @@ export default function MainContent() {
         Linking.openURL('https://teamgeesh.github.io/geesh-website/');
     }
     return (
-        <View style={[ProfileStyle.MainContent, {backgroundColor: theme.background}]}>
+        <View style={[ProfileStyle.MainContent, { backgroundColor: theme.background }]}>
             <View style={ProfileStyle.MCContainer}>
                 <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
                     <SectionSettinsComponent title={t("Configs")}>
-                        <OptionComponent icon={<Moon size={70 * (Screen_Size.width / 1080)} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Modo Escuro")} type='toggle' function={toggleTheme} />
+                        <OptionComponent icon={<Moon size={70 * (Screen_Size.width / 1080)} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Modo Escuro")} type='toggle' function={toggleTheme} value={isDark} />
                         <OptionComponent icon={<Bell size={70 * (Screen_Size.width / 1080)} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Notificações")} type="toggle" />
                         <OptionComponent icon={<Languages size={70 * (Screen_Size.width / 1080)} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />} title={t("Idioma")} type="dropdown" data={data} function={(selected) => void i18n.changeLanguage(selected.value)} />
                     </SectionSettinsComponent>
