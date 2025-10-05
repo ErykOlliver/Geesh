@@ -3,6 +3,12 @@ const lightTheme = {
     surface: '#FFFFFF',
     border: '#E5EAF0',
     text: '#1E293B',
+    inputBG: '#EEEEEE',
+    inputBorder: '#5E5E5E',
+    inputText: '#5E5E5E',
+    inputError: '#EF4444',
+    placeholderError: '#FEE2E2',
+    placeholder: '#5E5E5E'
 };
 
 const darkTheme = {
@@ -10,6 +16,11 @@ const darkTheme = {
     surface: '#1E1E1E',
     border: '#334155',
     text: '#F1F5F9',
+    inputBG: '#141313ff',
+    inputBorder: '#5E5E5E',
+    inputText: '#5E5E5E',
+    inputError: '#991B1B',
+    placeholder: '#5E5E5E'
 };
 
 const Geesh_Primmary_Colors = {
@@ -21,9 +32,7 @@ const Geesh_Primmary_Colors = {
 
 const Geesh_Secondary_Colors = {
     White: '#FFFFFF',
-    White90: '#F9F9F9',
     White80: '#F8FAFB',
-    White70: '#EEEEEE',
     Gray: '#5E5E5E',
     AuroraGreen: '#8AF37C',
     VitalGreen: '#10B981',

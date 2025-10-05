@@ -6,13 +6,13 @@ import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from "../../../componen
 const LoginStyle = StyleSheet.create({
   body: {
     flex: 1,
+    gap: 10 * (Screen_Size.width / 1080)
   },
   header: {
     width: Screen_Size.width,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomWidth: 1 * (Screen_Size.width / 1080)
   },
   header_container: {
     width: '90%',
@@ -45,7 +45,8 @@ const LoginStyle = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 90 * (Screen_Size.width / 1080)
+    marginBottom: 90 * (Screen_Size.width / 1080),
+    gap: 25 * (Screen_Size.width / 1080)
   },
   form_button: {
     width: '100%',
@@ -68,7 +69,7 @@ const LoginStyle = StyleSheet.create({
     borderRadius: 20 * (Screen_Size.width / 1080)
   },
   forgot_your_pass: {
-    fontSize: Text_Sizes.h4,
+    fontSize: Text_Sizes.h3,
     padding: 10 * (Screen_Size.width / 1080),
     fontFamily: Geesh_Fonts.InriaRegular,
   },
@@ -93,9 +94,10 @@ const LoginStyle = StyleSheet.create({
   input_with_icon: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
+    height: 135 * (Screen_Size.width / 1080),
     borderRadius: 15 * (Screen_Size.width / 1080),
-    backgroundColor: Geesh_Secondary_Colors.White70,
+    // borderWidth: 2 * (Screen_Size.width / 1080),
+    alignItems: 'center',
   },
   input_icon: {
     display: 'flex',
@@ -106,8 +108,6 @@ const LoginStyle = StyleSheet.create({
   },
   input: {
     flex: 1,
-    height: 135 * (Screen_Size.width / 1080),
-    color: 'gray',
     fontSize: Text_Sizes.h3,
     fontFamily: Geesh_Fonts.PoppinsLight
   },

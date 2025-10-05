@@ -83,7 +83,6 @@ const ChartStyle = StyleSheet.create({
         display: 'flex',
         width: 244 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White80,
         flexDirection: 'row',
         borderRadius: 100 * (Screen_Size.width / 1080),
         justifyContent: 'space-between',

@@ -180,7 +180,7 @@ export default StyleSheet.create({
   },
 
   devices: {
-    fontSize: Text_Sizes.h5,
+    fontSize: Text_Sizes.h3,
     fontFamily: Geesh_Fonts.InriaLight
   },
 
