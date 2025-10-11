@@ -11,24 +11,12 @@ import { StyleSheet } from 'react-native';
 
 export default function Header() {
     const { t, i18n } = useTranslation();
-    const{expoPushtoken,notification} = usePushNotification();
-    const data = JSON.stringify(notification,undefined,2);
-
-    React.useEffect(() => {
-        if (notification) {
-            Alert.alert('Nova Notificação', notification.request.content.body ?? 'Você recebeu uma notificação!');
-        }
-    }, [notification]);
 
     return (
         <Shadow distance={2.5} offset={[0, 1.5]} startColor='rgba(0, 0, 0, 0.05)' style={HomeStyle.Header}>
             <View style={HomeStyle.H_Content}>
                 <Text style={HomeStyle.HomeTitle}>{t("Inicio")}</Text>
                 <Bell size={Icon_Size.Icon3xl} strokeWidth={4 * (Screen_Size.width / 1080)} />
-            </View>
-            <View style={styles.container}>
-                  <Text>Token: {expoPushtoken?.data ?? "fefef"}</Text>
-                  <Text>{data}</Text>
             </View>
         </Shadow>
     )
