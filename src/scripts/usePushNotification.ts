@@ -4,23 +4,25 @@ import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
 import { Platform } from "react-native";
 
-export interface PushNotificationState{
- notification?: Notifications.Notification;
- expoPushtoken?: Notifications.ExpoPushToken;
+export interface PushNotificationState {
+  notifications: Notifications.Notification[];
+  expoPushtoken?: Notifications.ExpoPushToken;
+  clearNotifications: () => void;
 }
-    export const usePushNotification = (): PushNotificationState => {
+
+export const usePushNotification = (): PushNotificationState => {
     Notifications.setNotificationHandler({
         handleNotification: async () => ({
             shouldShowAlert: true,
-            shouldPlaySound: false,
+            shouldPlaySound: true,
             shouldSetBadge: false,
             shouldShowBanner: true,
             shouldShowList: true,
         }),
     });
     
+    const [notifications, setNotifications] = useState<Notifications.Notification[]>([]);
     const [expoPushtoken, setExpoPushToken] = useState<Notifications.ExpoPushToken | undefined>();
-    const [notification, setNotification] = useState<Notifications.Notification | undefined>();
 
     const notificationListener = useRef<Notifications.EventSubscription | null>(null);
     const responseListener = useRef<Notifications.EventSubscription | null>(null);
@@ -56,11 +58,13 @@ export interface PushNotificationState{
         }
     }
 
+    const clearNotifications = () => setNotifications([]);
+
     useEffect(() => {
         RegisterPushNotificationAsync().then(token => setExpoPushToken(token));
 
         notificationListener.current = Notifications.addNotificationReceivedListener((notification) => {
-            setNotification(notification);
+            setNotifications(prev => [...prev, notification]); // Adiciona nova notificação ao array
         });
 
         responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
@@ -78,7 +82,8 @@ export interface PushNotificationState{
     }, []);
 
     return {
-        notification,
-        expoPushtoken
+        notifications,
+        expoPushtoken,
+        clearNotifications // Adicione esta linha
     };
 };
