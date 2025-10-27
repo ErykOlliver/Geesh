@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import HomeStyle from '../style/HomeStyle';
 import { useTranslation } from 'react-i18next';
 import { Geesh_Primmary_Colors, Geesh_Secondary_Colors } from '../../../components/DesigneTokens/pallets';
-import * as Notifications from 'expo-notifications';
-
+import { BatteryActive, subscribeBatteryActive } from '../../../scripts/batteryController';
 
 const ActiveBatteryGradient: [string, string] = [
   Geesh_Primmary_Colors.BluishWhite,
@@ -20,10 +19,22 @@ const IndicatorGradient: [string, string] = [
 export default function Active() {
   const { t, i18n } = useTranslation();
 
+  const [isBatteryActive, setIsBatteryActive] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = subscribeBatteryActive(setIsBatteryActive);
+    return unsubscribe;
+  }, []);
+ 
+ const indicatorColor = isBatteryActive ? IndicatorGradient : ['#FF6B6B', '#C62828'];
+ 
   return (
+    
     <View style={HomeStyle.ActivePlace}>
-      <View style={HomeStyle.Indicator}> <LinearGradient colors={IndicatorGradient} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }} style={HomeStyle.IndicatorGradient} /></View>
-      <TouchableOpacity style={HomeStyle.ActiveButton}>
+      <View style={HomeStyle.Indicator}>
+        <LinearGradient colors={indicatorColor} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }} style={HomeStyle.IndicatorGradient} />
+      </View>
+      <TouchableOpacity style={HomeStyle.ActiveButton} onPress={BatteryActive}>
         <LinearGradient colors={ActiveBatteryGradient} start={{ x: 0.5, y: -0.5 }} end={{ x: 0.5, y: 1 }} style={HomeStyle.ActiveBatteryGradient} />
         <Text style={HomeStyle.ActiveButtonText}>{t("botao_ativar")}</Text>
       </TouchableOpacity>

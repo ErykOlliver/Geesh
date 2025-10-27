@@ -7,6 +7,7 @@ import { Shadow } from 'react-native-shadow-2';
 import { useTranslation } from 'react-i18next';
 import { Geesh_Primmary_Colors } from '../../../components/DesigneTokens/pallets';
 import { usePushNotification } from '../../../scripts/usePushNotification';
+import { subscribeBatteryActive } from '../../../scripts/batteryController';
 
 export default function Panel() {
   const { sendLocalNotification } = usePushNotification();
@@ -20,30 +21,44 @@ export default function Panel() {
 
   const { t, i18n } = useTranslation();
 
-  const progress = useRef(new Animated.Value(0)).current;
+  const progress = useRef(new Animated.Value(1)).current; 
+
   const [batteryWidth, setBatteryWidth] = useState(0);
   const [isDischarging, setIsDischarging] = useState(false);
   const prevProgressRef = useRef(0);
 
+  const animRef = useRef<Animated.CompositeAnimation | null>(null);
+  const activeRef = useRef(false);
+
   useEffect(() => {
-    const loop = Animated.loop(
-      Animated.sequence([
+    const unsub = subscribeBatteryActive((isActive) => {
+      if (activeRef.current === isActive) return;
+      activeRef.current = isActive;
+      if (isActive) {
+        const anim = Animated.timing(progress, {
+          toValue: 0,
+          duration: 4000,
+          easing: Easing.linear,
+          useNativeDriver: false,
+        });
+        animRef.current = anim;
+        anim.start(() => {
+          animRef.current = null;
+        });
+      } else {
+        if (animRef.current) {
+          animRef.current.stop();
+          animRef.current = null;
+        }
         Animated.timing(progress, {
           toValue: 1,
-          duration: 2000,
+          duration: 400,
           easing: Easing.linear,
-          useNativeDriver: false
-        }),
-        Animated.timing(progress, {
-          toValue: 0.05,
-          duration: 2000,
-          easing: Easing.linear,
-          useNativeDriver: false
-        })
-      ])
-    );
-    loop.start();
-    return () => loop.stop();
+          useNativeDriver: false,
+        }).start();
+      }
+    });
+    return unsub;
   }, [progress]);
 
   const LOW_THRESHOLD = 0.20;  
@@ -97,7 +112,6 @@ export default function Panel() {
             <LinearGradient colors={BatteryGradient} start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} style={[HomeStyle.BatteryEnergy, { width: '100%' }]} />
           </Animated.View>
         </View>
-
         <Image source={require('../../../../assets/icons/EnergyIcon.png')} style={{ width: Icon_Size.Icon5xl, height: Icon_Size.Icon5xl }} />
       </View>
 
