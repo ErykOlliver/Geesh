@@ -8,6 +8,7 @@ export interface PushNotificationState {
   notifications: Notifications.Notification[];
   expoPushtoken?: Notifications.ExpoPushToken;
   clearNotifications: () => void;
+  sendLocalNotification: (title: string, body: string, data?: Record<string, any>) => Promise<void>;
 }
 
 export const usePushNotification = (): PushNotificationState => {
@@ -23,6 +24,22 @@ export const usePushNotification = (): PushNotificationState => {
     
     const [notifications, setNotifications] = useState<Notifications.Notification[]>([]);
     const [expoPushtoken, setExpoPushToken] = useState<Notifications.ExpoPushToken | undefined>();
+   
+    async function sendLocalNotification(title: string, body: string, data: Record<string, any> = {}) {
+        try {
+            await Notifications.scheduleNotificationAsync({
+                content: {
+                    title,
+                    body,
+                    data,
+                    sound: 'default',
+                },
+                trigger: null, 
+            });
+        } catch (e) {
+            console.warn('Erro ao enviar notificação local:', e);
+        }
+    }
 
     const notificationListener = useRef<Notifications.EventSubscription | null>(null);
     const responseListener = useRef<Notifications.EventSubscription | null>(null);
@@ -64,7 +81,7 @@ export const usePushNotification = (): PushNotificationState => {
         RegisterPushNotificationAsync().then(token => setExpoPushToken(token));
 
         notificationListener.current = Notifications.addNotificationReceivedListener((notification) => {
-            setNotifications(prev => [...prev, notification]); // Adiciona nova notificação ao array
+            setNotifications(prev => [...prev, notification]); 
         });
 
         responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
@@ -84,6 +101,7 @@ export const usePushNotification = (): PushNotificationState => {
     return {
         notifications,
         expoPushtoken,
-        clearNotifications // Adicione esta linha
+        clearNotifications 
+      , sendLocalNotification
     };
 };
