@@ -20,7 +20,7 @@ export default StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 270 * (Screen_Size.width / 1080),
+    height: 64,
     width: Screen_Size.width,
     backgroundColor: Geesh_Secondary_Colors.White,
   },
@@ -28,7 +28,6 @@ export default StyleSheet.create({
   H_Content: {
     display: 'flex',
     width: '90%',
-    paddingTop: 90 * (Screen_Size.width / 1080),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

@@ -1,5 +1,6 @@
 import { useFonts } from 'expo-font';
-import { Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StatusBar, TouchableWithoutFeedback } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, Platform, ScrollView, StatusBar, TouchableWithoutFeedback } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import './i18nify'
 import NavContainer from './src/routes/index';
 import { ThemeProvider } from './src/components/DesigneTokens/themeContext';
@@ -12,7 +13,9 @@ export default function App() {
     'InriaSans-Bold': require('./src/components/fonts/Inria_Sans/InriaSans-Bold.ttf'),
     'InriaSans-Light': require('./src/components/fonts/Inria_Sans/InriaSans-Light.ttf'),
     'Inter-SemiBold': require('./src/components/fonts/Inter/Inter_28pt-SemiBold.ttf'),
+    'Inter-Regular': require('./src/components/fonts/Inter/Inter_18pt-Regular.ttf'),
     'Poppins-Regular': require('./src/components/fonts/Poppins/Poppins-Regular.ttf'),
+    'Poppins-SemiBold': require('./src/components/fonts/Poppins/Poppins-SemiBold.ttf'),
     'Poppins-Light': require('./src/components/fonts/Poppins/Poppins-Light.ttf'),
     'Poppins-Medium': require('./src/components/fonts/Poppins/Poppins-Medium.ttf'),
   })

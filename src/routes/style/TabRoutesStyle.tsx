@@ -7,7 +7,7 @@ import { Geesh_Fonts } from "../../components/DesigneTokens/fonts";
 const TabRoutesStyle = StyleSheet.create({
     Tab: {
         elevation: 10,
-        height: 280 * (Screen_Size.width / 1080),
+        height: 64,
         paddingTop: 10 * (Screen_Size.width / 1080),
     },
     TabLabel: {
