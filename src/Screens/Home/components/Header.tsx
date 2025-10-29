@@ -6,7 +6,6 @@ import { Shadow } from 'react-native-shadow-2';
 import { useTranslation } from 'react-i18next';
 import { Bell } from 'lucide-react-native';
 import { usePushNotification } from '../../../scripts/usePushNotification';
-import { StyleSheet } from 'react-native';
 
 export default function Header() {
     const { t, i18n } = useTranslation();

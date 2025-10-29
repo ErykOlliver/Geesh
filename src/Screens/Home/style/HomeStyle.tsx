@@ -44,7 +44,7 @@ export default StyleSheet.create({
 
   Main_Content: {
     alignItems: 'center',
-    paddingTop: 30 * (Screen_Size.width / 1080),
+    paddingTop: 50 * (Screen_Size.width / 1080),
     height: Screen_Size.height,
     justifyContent: 'flex-start',
     width: Screen_Size.width,
@@ -133,18 +133,26 @@ export default StyleSheet.create({
 
   //#region Active Place
 
+  ActiveContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    paddingTop: 75 * (Screen_Size.width / 1080),
+    height: 550 * (Screen_Size.width / 1080),
+  },
+  
   ActivePlace: {
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
+    paddingBottom: 100 * (Screen_Size.width / 1080),
     width: '100%',
     height: 448 * (Screen_Size.width / 1080),
-    paddingHorizontal: 100 * (Screen_Size.width / 1080),
-    paddingVertical: 20 * (Screen_Size.width / 1080),
-    gap: 42 * (Screen_Size.width / 1080)
+    gap: 30 * (Screen_Size.width / 1080)
   },
 
   Indicator: {
-    borderWidth: 1,
+    borderWidth: 1.5 ,
     width: 50 * (Screen_Size.width / 1080),
     height: 50 * (Screen_Size.width / 1080),
     borderRadius: 100,
@@ -160,17 +168,29 @@ export default StyleSheet.create({
 
   ActiveButton: {
     alignItems: 'center',
-    width: 650 * (Screen_Size.width / 1080),
-    height: 150 * (Screen_Size.width / 1080),
-    borderRadius: 15 * (Screen_Size.width / 1080),
+    width: 250 * (Screen_Size.width / 1080),
+    height: 250 * (Screen_Size.width / 1080),
     justifyContent: 'center',
+    borderRadius: 50 * (Screen_Size.width / 1080), 
+    borderWidth: 2 ,
+    borderColor: 'white',
+  },
+
+  OthersButton: {
+    alignItems: 'center',
+    width: 200 * (Screen_Size.width / 1080),
+    height: 200 * (Screen_Size.width / 1080),
+    justifyContent: 'center',
+    borderRadius: 50 * (Screen_Size.width / 1080), 
+    borderWidth: 2,
+    borderColor: 'white',
   },
 
   ActiveBatteryGradient: {
     width: '100%',
     height: '100%',
     position: 'absolute',
-    borderRadius: 15 * (Screen_Size.width / 1080),
+    borderRadius: 50 * (Screen_Size.width / 1080),
   },
 
   ActiveButtonText: {
@@ -206,7 +226,7 @@ export default StyleSheet.create({
     fontSize: 12,
     fontWeight: 'bold',
     },
-
+    
   //#endregion
 
 });
