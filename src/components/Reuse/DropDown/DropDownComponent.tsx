@@ -4,6 +4,7 @@ import { useState } from "react";
 import DropDownStyle from "./style/style";
 import { ChevronDown, ChevronUp } from "lucide-react-native";
 import { Icon_Size, Screen_Size } from "../../DesigneTokens/metrics";
+import { useTheme } from "../../DesigneTokens/themeContext";
 
 export type dataPrefab = {
     label: string;
@@ -21,6 +22,7 @@ export default function DropDownComponent(props: DropDownProps) {
         props.data?.[0] ?? null
     );
     const [toggle, setToggle] = useState(false)
+    const { theme } = useTheme();
 
 
     const ChooseThisOption = (Item: dataPrefab) => {
@@ -30,19 +32,19 @@ export default function DropDownComponent(props: DropDownProps) {
     }
     return (
         <View style={DropDownStyle.body}>
-            <TouchableOpacity style={DropDownStyle.main} onPress={() => setToggle(!toggle)}>
+            <TouchableOpacity style={[DropDownStyle.main, { backgroundColor: theme.surface, borderColor: theme.border }]} onPress={() => setToggle(!toggle)}>
                 <View style={style.container}>
-                    <Text style={style.SelectedOption}>{selected.label}</Text>
-                    {!toggle ? <ChevronDown size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} /> : <ChevronUp size={Icon_Size.IconXL} strokeWidth={4 * (Screen_Size.width / 1080)} />}
+                    <Text style={[style.SelectedOption, { color: theme.text }]}>{selected.label}</Text>
+                    {!toggle ? <ChevronDown size={Icon_Size.IconXL} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} /> : <ChevronUp size={Icon_Size.IconXL} color={theme.text} strokeWidth={4 * (Screen_Size.width / 1080)} />}
                 </View>
             </TouchableOpacity>
             {toggle && (
                 <View style={toggle ? DropDownStyle.ListVisible : { display: 'none' }}>
                     <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={true}>
-                        <View style={DropDownStyle.ListContent}>
+                        <View style={[DropDownStyle.ListContent, { backgroundColor: theme.surface }]}>
                             {props.data?.map((item) => (
                                 <TouchableOpacity key={item.value} onPress={() => ChooseThisOption(item)}>
-                                    <Text style={DropDownStyle.Option}>
+                                    <Text style={[DropDownStyle.Option, { color: theme.text }]}>
                                         {item.label}
                                     </Text>
                                 </TouchableOpacity>

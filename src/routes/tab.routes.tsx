@@ -5,8 +5,10 @@ import Home from "../Screens/Home/Home";
 import Chart from "../Screens/Chart/Chart";
 import Profile from "../Screens/Profile/Profile";
 import { useTranslation } from "react-i18next";
-import { Screen_Size} from "../components/DesigneTokens/metrics";
+import { Screen_Size } from "../components/DesigneTokens/metrics";
 import { ChartColumn, House, Moon, Sun, User, View, Wind } from "lucide-react-native";
+import { useTheme } from "../components/DesigneTokens/themeContext";
+import { Geesh_Primmary_Colors } from "../components/DesigneTokens/pallets";
 
 //#endregion
 
@@ -16,15 +18,16 @@ import { ChartColumn, House, Moon, Sun, User, View, Wind } from "lucide-react-na
 const TAB = createBottomTabNavigator();
 
 export default function TabRoutes() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
+    const { theme } = useTheme();
     return (
         <TAB.Navigator id={undefined}
             screenOptions={{
-                tabBarStyle: TabRoutesStyle.Tab,
-                tabBarLabelStyle: TabRoutesStyle.TabLabel,
+                tabBarStyle: [TabRoutesStyle.Tab, { backgroundColor: theme.surface, borderColor: theme.surface }],
+                tabBarLabelStyle: [TabRoutesStyle.TabLabel],
                 headerShown: false,
-                tabBarActiveTintColor: '#029FFC',
-                tabBarInactiveTintColor: '#000'
+                tabBarActiveTintColor: Geesh_Primmary_Colors.Azure,
+                tabBarInactiveTintColor: theme.text
             }
             }>
 

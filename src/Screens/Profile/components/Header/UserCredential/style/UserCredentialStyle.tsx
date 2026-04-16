@@ -25,7 +25,6 @@ const UserCredentialStyle = StyleSheet.create({
     },
     Pop: {
         flex: 1,
-        backgroundColor: Geesh_Secondary_Colors.White70,
         justifyContent: 'flex-start',
         alignItems: 'center',
         width: 460 * (Screen_Size.width / 1080),

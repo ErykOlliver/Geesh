@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import MainContent from "./components/MainContent"
 import { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated"
 import { Screen_Size } from "../../components/DesigneTokens/metrics"
+import { useTheme } from "../../components/DesigneTokens/themeContext"
 
 
 export default function Chart() {
@@ -19,8 +20,9 @@ export default function Chart() {
     const animatedStyle = useAnimatedStyle(() => ({
         transform: [{ translateX: translateX.value }],
     }));
+    const { theme } = useTheme()
     return (
-        <View style={ChartStyle.Body}>
+        <View style={[ChartStyle.Body, { backgroundColor: theme.background }]}>
             <Header isSolar={isSolar} switch_chart={toggleChart} />
             <MainContent animated_style={animatedStyle} />
         </View>

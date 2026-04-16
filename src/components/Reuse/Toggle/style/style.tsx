@@ -6,22 +6,26 @@ const ToggleStyle = StyleSheet.create({
     onToggle: {
         display: 'flex',
         alignItems: 'flex-start',
+        justifyContent: 'center',
+        paddingHorizontal: 15 * (Screen_Size.width / 1080),
         width: 150 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 100 * (Screen_Size.width / 1080),
+        borderWidth: 1 * (Screen_Size.width / 1080)
     },
     offToggle: {
         display: 'flex',
         alignItems: 'flex-end',
+        justifyContent: 'center',
+        paddingHorizontal: 15 * (Screen_Size.width / 1080),
         width: 150 * (Screen_Size.width / 1080),
         height: 70 * (Screen_Size.width / 1080),
-        backgroundColor: Geesh_Secondary_Colors.White70,
         borderRadius: 100 * (Screen_Size.width / 1080),
+        borderWidth: 1 * (Screen_Size.width / 1080)
     },
     Circle: {
-        width: 70 * (Screen_Size.width / 1080),
-        height: 70 * (Screen_Size.width / 1080),
+        width: 50 * (Screen_Size.width / 1080),
+        height: 50 * (Screen_Size.width / 1080),
         backgroundColor: Geesh_Primmary_Colors.Azure,
         borderRadius: 100 * (Screen_Size.width / 1080),
 

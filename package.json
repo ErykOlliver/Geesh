@@ -1,16 +1,19 @@
 {
   "name": "geesh",
   "license": "0BSD",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.tsx",
   "type": "module",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "devbuild": "eas build -p android --profile preview",
+    "probuild": "eas build -p android --profile production"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
     "@react-navigation/bottom-tabs": "^7.4.7",
     "@react-navigation/elements": "^2.6.4",
     "@react-navigation/native": "^7.1.17",
