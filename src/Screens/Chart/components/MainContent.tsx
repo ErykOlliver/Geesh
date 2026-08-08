@@ -4,12 +4,8 @@ import ChartStyle from "../style/ChartStyle";
 import BarChart from "../../../components/ChartsBase/BarChart/BarChart";
 import LineChart from "../../../components/ChartsBase/LineChart/LineChart";
 import { useTranslation } from "react-i18next";
-import Animated, { useSharedValue, withTiming, useAnimatedStyle } from "react-native-reanimated";
-import { Screen_Size, Text_Sizes } from "../../../components/DesigneTokens/metrics";
+import Animated from "react-native-reanimated";
 import { Geesh_Primmary_Colors } from "../../../components/DesigneTokens/pallets";
-import { useNavigation } from "@react-navigation/native";
-import { Sun, Wind } from "lucide-react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "../../../components/DesigneTokens/themeContext";
 
 const RandomizeValuesInCharts = (min = 0, max = 200) => {

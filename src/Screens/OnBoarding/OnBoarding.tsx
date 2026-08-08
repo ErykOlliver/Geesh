@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Screen_Size } from '../../components/DesigneTokens/metrics';
 
 
+
 const slides = [
     {
         id: 1,
@@ -36,10 +37,9 @@ const slides = [
     },
 ];
 
-export default function OnBoarding() {
+export default function OnBoarding({ navigation }) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const flatListRef = useRef<FlatList>(null);
-    const navigation = useNavigation();
 
     const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
         const slideIndex = Math.round(event.nativeEvent.contentOffset.x / Screen_Size.width);
@@ -73,7 +73,8 @@ export default function OnBoarding() {
     const completeOnBoarding = async () => {
         try {
             await AsyncStorage.setItem('@geesh_onboarding_completed', 'true');
-            //   navigation.replace('Login');
+            console.log("Salvo")
+            navigation.replace('Login');
         } catch (error) {
             console.error('Erro ao salvar onboarding:', error);
         }

@@ -14,9 +14,9 @@ type BarChartProps = {
 }
 
 
-const maxValue = 250 ;
-const step = 50 ;
-const chartHeight = 250 ;
+const maxValue = 250;
+const step = 50;
+const chartHeight = 250;
 
 
 export default function BarChartBase(props: BarChartProps) {
